@@ -1307,6 +1307,17 @@
     function closeChat(){
       openChat.style.display = "none"
     }
+
+    // -----scrollTop-------
+    const btnScrollTop = document.querySelector(".topheader__btn")
+    
+    btnScrollTop.addEventListener("click",function(){
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+      })
+    })
     </script>
   </body>
 </html>
