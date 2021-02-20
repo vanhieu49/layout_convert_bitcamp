@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="#" type="image/x-icon" />
-    <title>Directions Page</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
+    <script
+      src="https://kit.fontawesome.com/ce85036718.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Bitcamp introduction Page</title>
     <style>
       * {
         margin: 0;
@@ -17,37 +16,296 @@
         font-family: Arial, Helvetica, sans-serif;
       }
 
-      :root {
-        --text-color-black: #333;
-        --text-color-white: #fff;
-        --bg-color-red: #da5c5f;
-        --bg-color-f5: #f5f5f5;
-        --bg-color-white: #fff;
-        --boder-color-d3: #d3d3d3;
-      }
-
-      li,
-      ul {
-        list-style: none;
-      }
-      .pc-layout {
-        margin: 0 auto;
-        width: 1200px;
-      }
-      .font25 {
-        font-size: 25px;
-      }
-      .font20 {
-        font-size: 20px;
-      }
-      .font13 {
-        font-size: 13px;
-      }
       .bold {
         font-weight: 700;
       }
+      .purple {
+        color: #7b49b9;
+      }
+      .coral {
+        color: #da5c5f;
+      }
 
-      /* ----------------------------------------------- */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      input:focus {
+        box-shadow: 0 0 5px #9ed4ff;
+        border: 1px solid #558ab7;
+        outline: none;
+      }
+      textarea:focus {
+        box-shadow: 0 0 5px #9ed4ff;
+        border: 1px solid #558ab7;
+        outline: none;
+      }
+      input[type="text"] {
+        width: 100%;
+        border: 1px solid #ccc;
+        background: #fff;
+        color: #000;
+        vertical-align: middle;
+        border-radius: 0px;
+        padding: 5px;
+        margin-top: 10px;
+        height: 40px;
+      }
+      .contacts input {
+        width: 33.3333%;
+      }
+      .contact_input {
+        display: flex;
+      }
+      .title {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        position: relative;
+      }
+
+      .title img {
+        width: 100%;
+      }
+
+      .title p {
+        position: absolute;
+        top: 40%;
+        text-align: center;
+        color: #fff;
+        font-size: 35px;
+      }
+      .content1 {
+        margin-top: 60px;
+      }
+      .title_content1 {
+        display: inline;
+        border-bottom: 2px solid #333;
+        font-size: 25px;
+        margin-bottom: 50px;
+      }
+      .body_content1 {
+        line-height: 1.6em;
+        font-size: 20px;
+        margin: 30px 0;
+        cursor: default;
+      }
+      textarea {
+        border: 1px solid #ccc;
+        background: #fff;
+        color: #000;
+        vertical-align: middle;
+        border-radius: 0px;
+        padding: 5px;
+        width: 100%;
+        height: 120px;
+        -webkit-box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+        -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+        resize: none;
+        margin-top: 10px;
+      }
+      .line1,
+      .line2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        margin-bottom: 20px;
+      }
+      .required:after {
+        content: " *";
+        color: red;
+      }
+      .company_name {
+        position: relative;
+      }
+      .required {
+        position: absolute;
+        top: 20%;
+      }
+      .com_name_required {
+        top: 42%;
+        left: 98%;
+      }
+      .contact_input1_required {
+        left: 31%;
+      }
+      .contact_input2_required {
+        left: 64%;
+      }
+      .contact_input3_required {
+        left: 98%;
+      }
+      .contact_input {
+        position: relative;
+      }
+      label {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      button {
+        background: #041d79;
+        width: 320px;
+        height: 50px;
+        line-height: 50px;
+        color: #fff;
+        font-size: 20px;
+        border-radius: 0;
+        padding: 0 20px;
+        font-size: 1.167em;
+      }
+      .btn_submit {
+        display: grid;
+        justify-content: center;
+      }
+      .span {
+        border: 1px solid black;
+        cursor: pointer;
+      }
+      .span_content {
+        display: none;
+      }
+      #checkbox:checked ~ .span_content {
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 600px;
+        height: 525px;
+        margin-top: -250px;
+        margin-left: -300px;
+        z-index: 99999;
+        box-shadow: 2px 5px 5px 2px rgb(0 0 0 / 50%);
+        background: #fff;
+      }
+      .title_check {
+        height: 50px;
+        line-height: 50px;
+        background: #fff;
+        color: #b78bff;
+        text-align: center;
+        font-size: 20px;
+        position: relative;
+      }
+      .content_check {
+        width: 100%;
+        height: 470px;
+        border: none;
+        resize: none;
+        padding: 15px;
+        background: #fff;
+        font-size: 1em;
+        line-height: 14px;
+      }
+      .close {
+        position: absolute;
+        top: -10%;
+        right: 3%;
+        color: black;
+      }
+      .write_agree {
+        display: grid;
+        justify-items: center;
+        margin: 20px 0;
+      }
+      @media only screen and (max-width: 600px) and (min-width: 360px) {
+        .title {
+          overflow: hidden;
+        }
+        .title img {
+          height: 200px;
+          width: auto;
+        }
+        .title p {
+          font-size: 25px;
+        }
+        .line1,
+        .line2 {
+          grid-template-columns: 1fr;
+          row-gap: 20px;
+        }
+        #checkbox:checked ~ .span_content {
+          width: 90%;
+          margin-left: -45%;
+          height: 300px;
+          margin-top: -150px;
+          overflow: hidden;
+        }
+        .title_content1 {
+          font-size: 20px;
+        }
+        .body_content1 {
+          font-size: 16px;
+        }
+        .com_name_required {
+          left: 97%;
+        }
+        .contact_input1_required {
+          left: 30%;
+        }
+        .contact_input2_required {
+          left: 62%;
+        }
+        .contact_input3_required {
+          left: 96%;
+        }
+        label[for="check"] {
+          font-size: 12px;
+        }
+        .span {
+          padding: 5px 15px;
+          font-size: 12px;
+        }
+      }
+
+      @media only screen and (max-width: 360px) {
+        .container {
+          max-width: 324px;
+        }
+      }
+      @media only screen and (max-width: 375px) and (min-width: 361px) {
+        .container {
+          max-width: 337.5px;
+        }
+      }
+      @media only screen and (max-width: 414px) and (min-width: 376px) {
+        .container {
+          max-width: 372.6px;
+        }
+      }
+      @media only screen and (max-width: 480px) and (min-width: 415px) {
+        .container {
+          max-width: 432px;
+        }
+      }
+      @media only screen and (max-width: 600px) and (min-width: 481px) {
+        .container {
+          max-width: 540px;
+        }
+      }
+      @media only screen and (max-width: 768px) and (min-width: 601px) {
+        .container {
+          max-width: 691.2px;
+        }
+        .contact_input1_required {
+          left: 30%;
+        }
+        .contact_input2_required {
+          left: 62%;
+        }
+        .contact_input3_required {
+          left: 96%;
+        }
+        .com_name_required {
+          left: 97%;
+        }
+      }
+      @media only screen and (max-width: 1024px) and (min-width: 769px) {
+        .container {
+          max-width: 921.6px;
+        }
+      }
+
       /* HEADER */
       .header {
         background-color: #151726;
@@ -439,214 +697,8 @@
       }
       /* END POPUP CHAT MESSAGE */
       /* -------END FOOTER----- */
-      #wapper {
-      }
-      #container_title_box {
-        position: relative;
-      }
-      #container_title_box p {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        transform: translateY(-50%);
-        color: var(--text-color-white);
-        text-align: center;
-        text-transform: uppercase;
-      }
-      #container_title_box img {
-        width: 100%;
-        vertical-align: middle;
-      }
-      .tabs_location {
-        width: 100%;
-        border-bottom: 1px solid var(--boder-color-d3);
-      }
-      .tabs_location .listtab {
-        text-align: center;
-      }
-      .tabs_location .listtab li {
-        float: left;
-        text-decoration: none;
-        width: 25%;
-        outline-style: none;
-        border-right: 1px solid var(--boder-color-d3);
-      }
-      .tabs_location .listtab li a {
-        width: 100%;
-        height: 100%;
-      }
-      .tabs_location .listtab li a.active {
-        color: var(--text-color-white);
-        background-color: var(--bg-color-red);
-        display: block;
-      }
-      .tabs_location .listtab li:first-child {
-        border-left: 1px solid var(--boder-color-d3);
-      }
-
-      /*  -------------------------------------------------------*/
-      .tabpanel_location {
-      }
-
-      .tabpanel_location .container_location {
-        margin: 80px auto;
-        min-height: 500px;
-      }
-      .container_location h1 {
-        border-bottom: 1px solid var(--boder-color-d3);
-        width: fit-content;
-      }
-      .container_location .wap_map {
-        margin: 10px 0;
-        position: relative;
-        width: 100%;
-        height: 350px;
-      }
-      .container_location .wap_map #map {
-        width: 100%;
-        height: 100%;
-      }
-
-      .tabpanel_location .content_location {
-      }
-
-      .content_location .address_location {
-      }
-
-      .address_location li .div_label {
-        padding: 10px;
-        border-top: 1px solid var(--boder-color-d3);
-        border-bottom: 1px solid var(--boder-color-d3);
-        background-color: var(--bg-color-f5);
-      }
-      .address_location li .div_desc {
-        padding: 10px;
-      }
-      .radius_border {
-        border: 1px solid var(--boder-color-d3);
-        border-radius: 5px;
-      }
-      .custom_typecontrol {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        overflow: hidden;
-        height: 30px;
-        margin: 0;
-        padding: 0;
-        z-index: 1;
-        font-size: 12px;
-      }
-      .custom_typecontrol span {
-        display: block;
-        width: 65px;
-        height: 30px;
-        float: left;
-        text-align: center;
-        line-height: 30px;
-        cursor: pointer;
-      }
-      .custom_typecontrol .btn {
-        background: var(--bg-color-white);
-        background: linear-gradient(#fff, #e6e6e6);
-      }
-      .custom_typecontrol .btn:hover {
-        background: #f5f5f5;
-        background: linear-gradient(#f5f5f5, #e3e3e3);
-      }
-      .custom_typecontrol .btn:active {
-        background: #e6e6e6;
-        background: linear-gradient(#e6e6e6, #fff);
-      }
-      .custom_typecontrol .selected_btn {
-        color: var(--text-color-white);
-        background: #425470;
-        background: linear-gradient(#425470, #5b6d8a);
-      }
-      .custom_typecontrol .selected_btn:hover {
-        color: var(--text-color-white);
-      }
-      .custom_zoomcontrol {
-        position: absolute;
-        top: 50px;
-        right: 10px;
-        width: 36px;
-        height: 80px;
-        overflow: hidden;
-        z-index: 1;
-        background-color: var(--bg-color-f5);
-      }
-      .custom_zoomcontrol span {
-        display: block;
-        width: 36px;
-        height: 40px;
-        text-align: center;
-        cursor: pointer;
-        line-height: 2.6;
-      }
-      .custom_zoomcontrol span img {
-        width: 15px;
-        height: 15px;
-        border: none;
-      }
-      .custom_zoomcontrol span:first-child {
-        border-bottom: 1px solid #bfbfbf;
-      }
-
-      @media only screen and (min-width: 320px) {
-        /* For mobile */
-        .container_location {
-          width: 90%;
-        }
-        #container_title_box img {
-          height: 200px;
-        }
-        .tabs_location .listtab {
-          width: 100%;
-          height: 40px;
-          line-height: 40px;
-        }
-        .container_location .wap_map {
-          height: 200px;
-        }
-      }
-
-      @media only screen and (min-width: 600px) {
-        /* For tablets: */
-        .tabs_location .listtab {
-          height: 60px;
-          line-height: 60px;
-        }
-        .container_location {
-          width: 90%;
-        }
-        .container_location .wap_map {
-          height: 200px;
-        }
-        .font25 {
-          font-size: 35px;
-        }
-        .font20 {
-          font-size: 20px;
-        }
-        .font13 {
-          font-size: 16px;
-        }
-      }
-      @media only screen and (min-width: 1200px) {
-        /* For desktop: */
-        .tabs_location .listtab {
-          width: 1200px;
-          height: 60px;
-          line-height: 60px;
-        }
-        .container_location {
-          width: 1200px;
-        }
-      }
     </style>
   </head>
-
   <body>
     <!-- HEADER -->
     <header class="header">
@@ -734,81 +786,98 @@
       </div>
     </section>
     <!-- END HEADER -->
-    <div id="wapper">
-      <div id="container_title_box">
-        <img
-          src="https://www.bitcamp.co.kr/theme/basic/img/title_01.jpg"
-          alt=""
-          class="full"
-        />
-        <p class="font25 bold">Directions</p>
+    <div class="wrapper">
+      <div class="title">
+        <img src="./img-cong/title_06.jpg" alt="" />
+        <p class="title_main bold">CONTACT US</p>
       </div>
-      <div class="tabs_location">
-        <ul class="listtab pc-layout">
-          <li class="font13 bold"><a class="active">Seocho Main Garden</a></li>
-          <li class="font13 bold"><a>Gangnam Center</a></li>
-          <li class="font13 bold"><a>Jongno Center</a></li>
-          <li class="font13 bold"><a>Sinchon Center</a></li>
-        </ul>
-      </div>
-      <div class="tabpanel_location">
-        <div class="container_location pc-layout">
-          <h1 class="font20">Seocho Main Garden</h1>
-          <div class="wap_map">
-            <div id="map"></div>
-            <div class="custom_typecontrol radius_border">
-              <span
-                id="btnRoadmap"
-                class="selected_btn"
-                onclick="setMapType('roadmap')"
-                >Map</span
-              >
-              <span id="btnSkyview" class="btn" onclick="setMapType('skyview')"
-                >Sky View</span
-              >
-            </div>
-            <div class="custom_zoomcontrol radius_border">
-              <span onclick="zoomIn()"
-                ><img
-                  src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png"
-                  alt="확대"
-              /></span>
-              <span onclick="zoomOut()"
-                ><img
-                  src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png"
-                  alt="축소"
-              /></span>
-            </div>
+      <div class="container">
+        <div class="content1">
+          <div class="title_content1 bold">CONTACT US</div>
+          <div class="body_content1">
+            비트캠프 인재들과 함께할 제휴사를 기다리고 있습니다. <br />
+            제휴를 원하는 기업은 제휴문의를 남겨주시면 연락 드리겠습니다.
           </div>
-          <div class="content_location">
-            <ul class="address_location">
-              <li class="font13">
-                <div class="div_label bold">Address</div>
-                <div class="div_desc">
-                  1F, Baekam Building, 459 Gangnam-daero, Seocho-gu, Seoul
+          <form class="form">
+            <div class="line1">
+              <div class="company_name">
+                <label for="com_name">업체명</label><br />
+                <input type="text" placeholder="업체명" required />
+                <div class="com_name_required required"></div>
+              </div>
+              <div class="pic">
+                <label for="com_name">담당자명</label><br />
+                <input type="text" placeholder="담당자명" />
+              </div>
+            </div>
+            <div class="line2">
+              <div class="contacts">
+                <label for="com_name">연락처 </label><br />
+                <div class="contact_input">
+                  <input type="text" placeholder="010" required />
+                  <input type="text" placeholder="1234" required />
+                  <input type="text" placeholder="5678" required />
+                  <div class="contact_input1_required required"></div>
+                  <div class="contact_input2_required required"></div>
+                  <div class="contact_input3_required required"></div>
                 </div>
-              </li>
-              <li class="font13">
-                <div class="div_label bold">Representative number</div>
-                <div class="div_desc">02)3486-9600</div>
-              </li>
-              <li class="font13">
-                <div class="div_label bold">Subway</div>
-                <div class="div_desc">
-                  Sinnonhyeon Station Line 9, Exit 6-3 minutes walk toward
-                  <br />Gangnam Station Gangnam Station Line 2, Exit 10-7
-                  minutes on foot toward Sinnonhyeon Station
+              </div>
+              <div class="email">
+                <label for="com_name">이메일</label><br />
+                <input type="text" placeholder="이메일" />
+              </div>
+            </div>
+            <div class="contents">
+              <label for="내용">내용</label>
+              <br />
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="write_agree">
+              <div class="checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">개인정보 취급방침에 동의</label>
+                <label class="span" for="checkbox">자세히보기</label>
+                <input type="checkbox" id="checkbox" hidden />
+                <div class="span_content">
+                  <div class="title_check">
+                    개인정보 취급방침
+                    <label class="close" for="checkbox">
+                      <i class="fas fa-times"></i>
+                    </label>
+                  </div>
+                  <textarea class="content_check">
+                    개인정보 수집 및 처리 방침
+                    
+                    (주)비트캠프는 (이하 '회사'는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다.
+                    회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
+                    
+                    수집하는 개인정보 항목
+                    회사는 회원가입, 상담, 서비스 신청 등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+                    - 수집항목
+                    회원가입정보 : 이메일, 비밀번호, 닉네임, 휴대폰번호, 주력매체정보, 메신져주소, 회사명, 회사전화번호, 주소, 유선전화번호, 쿠키, 접속 IP 정보, 결제기록
+                    정산시 필요한 정보 : 은행명, 예금주명, 계좌번호, 신분증사본, 통장사본
+                    그 외 회사의 광고주 별 요구하는 기타 입력정보 : 성명, 전화번호, 생년월일, 성별 등
+                    - 개인정보 수집방법
+                    비트캠프 홈페이지
+                    
+                    개인정보의 수집 및 이용목적
+                    회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+                    - 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산 콘텐츠 제공, 금융거래 본인 인증 및 금융 서비스
+                    - 회원 관리, 회원제 서비스 이용에 따른 본인확인 , 개인 식별 , 불량회원의 부정 이용 방지와 비인가 사용 방지 , 가입 의사 확인 , 불만 및 민원처리 , 고지사항 전달
+                    - 마케팅 및 광고에 활용 이벤트 등 광고성 정보 전달, 접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계
+                    
+                    개인정보의 보유 및 이용기간
+                    원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다.
+                    단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 아래와 같이 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다.
+                  </textarea>
                 </div>
-              </li>
-              <li class="font13">
-                <div class="div_label bold">Bus</div>
-                <div class="div_desc">
-                  Get off) Sinnonhyeon Station, (formerly) Kyobo Tower
-                  Intersection / Sinnonhyeon Station, Citibank
-                </div>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </div>
+
+            <div class="btn_submit">
+              <button type="submit">작성완료</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -1036,51 +1105,6 @@
             changeColora[i].style.color = "white";
           }
         }
-      }
-    </script>
-
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    <script
-      type="text/javascript"
-      src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=08de360f91696ae84c4f89558e22f5e6"
-    ></script>
-    <script>
-      const markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
-      const marker = {
-        position: markerPosition,
-        text: "텍스트를 표시할 수 있어요!",
-      };
-
-      const staticMapContainer = document.getElementById("map"),
-        staticMapOption = {
-          center: new kakao.maps.LatLng(33.450701, 126.570667),
-          level: 3,
-          marker: marker,
-        };
-      const staticMap = new kakao.maps.StaticMap(
-        staticMapContainer,
-        staticMapOption
-      );
-      function setMapType(maptype) {
-        const roadmapControl = document.getElementById("btnRoadmap");
-        const skyviewControl = document.getElementById("btnSkyview");
-        if (maptype === "roadmap") {
-          staticMap.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
-          roadmapControl.className = "selected_btn";
-          skyviewControl.className = "btn";
-        } else {
-          staticMap.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
-          skyviewControl.className = "selected_btn";
-          roadmapControl.className = "btn";
-        }
-      }
-
-      function zoomIn() {
-        staticMap.setLevel(staticMap.getLevel() - 1);
-      }
-
-      function zoomOut() {
-        staticMap.setLevel(staticMap.getLevel() + 1);
       }
     </script>
   </body>

@@ -54,7 +54,8 @@
       .header__menu-nav-btn:hover +.nav__menu{
         display: block;
       }
-      /* nav menu */
+      /* END HEADER */
+      /* nav menu show/hidden when click icon */
       .nav__menu{
         display: none;
         width: 100%;
@@ -133,6 +134,7 @@
         text-decoration: none;
         color: #555;       
       }
+      /* END nav menu show/hidden when click icon */
       /* SIDEBAR */
       .siderbar {
         width: 100%;
@@ -184,7 +186,7 @@
       .siderbar__bottom .siderbar__bottom-controller i:first-child{
         margin-right: 5px;
       }
-      
+      /* END SIDERBAR */
       /* CONTAINER */
       .container{
         box-sizing: border-box;
@@ -332,6 +334,8 @@
        width: 100%;
         background-color: red;
      }
+     /* END CONTAINER */
+
      /* FOOTER */
      footer{
        margin-top: 120px;
@@ -399,6 +403,7 @@
        color: white;
        border: 1px solid #000;
      }
+     /* POPUP MESSAGE CHAT */
      .mess{
        position: fixed;
        bottom: 23px;
@@ -416,7 +421,8 @@
        font-size: 30px;
        cursor: pointer;
      }
-
+     /* END POPUP MESSAGE CHAT */
+     /* BUTTON TOP HEADER SCROLL */
      .topheader{
        position: fixed;
        bottom: 80px;
@@ -443,7 +449,7 @@
        color: white;
        border: none;
      }
-     
+     /* POPUP CHAT MESSAGE */
      .popupchat{
       display: none;
       position: fixed;
@@ -602,6 +608,7 @@
        border-radius: 50%;
        color: #fff;
      }
+     /* END POPUP CHAT MESSAGE */
     </style>
   </head>
   <body>
@@ -1203,6 +1210,7 @@
       <div class="mess">
         <i class="fas fa-comment-dots"></i>
       </div>
+      <!-- popup chat message -->
       <div class="popupchat">
         <div class="popupchat__content">
           <div class="popupchat__content-title">
@@ -1336,7 +1344,7 @@
         }
       } else {
         headerChange.style.backgroundColor = '#151726';
-        changeImg.style.backgroundColor = 'white';
+        changeImg.style.backgroundColor = '';
         changeIcon.style.color = 'white';  
         for(let i = 0; i < changeColora.length;i++){
           changeColora[i].style.color="white";

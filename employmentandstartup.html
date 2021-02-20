@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="#" type="image/x-icon" />
-    <title>Directions Page</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
+    <script
+      src="https://kit.fontawesome.com/ce85036718.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Employment and start up Page</title>
     <style>
       * {
         margin: 0;
@@ -16,38 +15,6 @@
         box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif;
       }
-
-      :root {
-        --text-color-black: #333;
-        --text-color-white: #fff;
-        --bg-color-red: #da5c5f;
-        --bg-color-f5: #f5f5f5;
-        --bg-color-white: #fff;
-        --boder-color-d3: #d3d3d3;
-      }
-
-      li,
-      ul {
-        list-style: none;
-      }
-      .pc-layout {
-        margin: 0 auto;
-        width: 1200px;
-      }
-      .font25 {
-        font-size: 25px;
-      }
-      .font20 {
-        font-size: 20px;
-      }
-      .font13 {
-        font-size: 13px;
-      }
-      .bold {
-        font-weight: 700;
-      }
-
-      /* ----------------------------------------------- */
       /* HEADER */
       .header {
         background-color: #151726;
@@ -439,214 +406,576 @@
       }
       /* END POPUP CHAT MESSAGE */
       /* -------END FOOTER----- */
-      #wapper {
-      }
-      #container_title_box {
-        position: relative;
-      }
-      #container_title_box p {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        transform: translateY(-50%);
-        color: var(--text-color-white);
-        text-align: center;
-        text-transform: uppercase;
-      }
-      #container_title_box img {
-        width: 100%;
-        vertical-align: middle;
-      }
-      .tabs_location {
-        width: 100%;
-        border-bottom: 1px solid var(--boder-color-d3);
-      }
-      .tabs_location .listtab {
-        text-align: center;
-      }
-      .tabs_location .listtab li {
-        float: left;
+      a {
         text-decoration: none;
-        width: 25%;
-        outline-style: none;
-        border-right: 1px solid var(--boder-color-d3);
       }
-      .tabs_location .listtab li a {
-        width: 100%;
-        height: 100%;
+      .bold {
+        font-weight: 700;
       }
-      .tabs_location .listtab li a.active {
-        color: var(--text-color-white);
-        background-color: var(--bg-color-red);
-        display: block;
+      .purple {
+        color: #7b49b9;
       }
-      .tabs_location .listtab li:first-child {
-        border-left: 1px solid var(--boder-color-d3);
+      .coral {
+        color: #da5c5f;
       }
-
-      /*  -------------------------------------------------------*/
-      .tabpanel_location {
+      header {
+        height: 80px;
       }
-
-      .tabpanel_location .container_location {
-        margin: 80px auto;
-        min-height: 500px;
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
       }
-      .container_location h1 {
-        border-bottom: 1px solid var(--boder-color-d3);
-        width: fit-content;
-      }
-      .container_location .wap_map {
-        margin: 10px 0;
+      .title {
+        display: grid;
+        align-items: center;
+        justify-items: center;
         position: relative;
+      }
+      .title img {
         width: 100%;
-        height: 350px;
       }
-      .container_location .wap_map #map {
-        width: 100%;
-        height: 100%;
-      }
-
-      .tabpanel_location .content_location {
-      }
-
-      .content_location .address_location {
-      }
-
-      .address_location li .div_label {
-        padding: 10px;
-        border-top: 1px solid var(--boder-color-d3);
-        border-bottom: 1px solid var(--boder-color-d3);
-        background-color: var(--bg-color-f5);
-      }
-      .address_location li .div_desc {
-        padding: 10px;
-      }
-      .radius_border {
-        border: 1px solid var(--boder-color-d3);
-        border-radius: 5px;
-      }
-      .custom_typecontrol {
+      .title p {
         position: absolute;
-        top: 10px;
-        right: 10px;
-        overflow: hidden;
-        height: 30px;
-        margin: 0;
-        padding: 0;
-        z-index: 1;
+        top: 40%;
+        text-align: center;
+        color: #fff;
+        font-size: 35px;
+      }
+      .content1,
+      .content2,
+      .content3,
+      .content4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .body_content6 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+      }
+      .content1 {
+        margin-top: 200px;
+      }
+      .content2,
+      .content3,
+      .content4 {
+        margin-top: 80px;
+        margin-bottom: 80px;
+      }
+      .title_content1,
+      .title_content2,
+      .title_content3,
+      .title_content4 {
+        padding: 35px 0 20px;
+        font-size: 35px;
+      }
+      .desc_content1,
+      .desc_content2,
+      .desc_content3,
+      .desc_content4 {
+        font-size: 20px;
+        font-weight: 300;
+      }
+      .content2_right,
+      .content4_right {
+        display: grid;
+        justify-content: end;
+      }
+      .content5 {
+        height: 120px;
+        line-height: 120px;
+        text-align: center;
+        background: #f8f8f8;
+        font-size: 25px;
+        font-weight: 300;
+      }
+      .content6 {
+        margin-top: 120px;
+      }
+      .title_content6 {
+        display: inline;
+        border-bottom: 2px solid #333;
+        font-size: 25px;
+        margin-bottom: 50px;
+      }
+      .body_content6 {
+        margin-top: 40px;
+      }
+      .line2 {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .line3,
+      .line4 {
         font-size: 12px;
       }
-      .custom_typecontrol span {
-        display: block;
-        width: 65px;
-        height: 30px;
-        float: left;
-        text-align: center;
-        line-height: 30px;
-        cursor: pointer;
+      .line4 span {
+        background-color: #333333;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 10px;
       }
-      .custom_typecontrol .btn {
-        background: var(--bg-color-white);
-        background: linear-gradient(#fff, #e6e6e6);
+      .line1 img {
+        width: 100%;
       }
-      .custom_typecontrol .btn:hover {
-        background: #f5f5f5;
-        background: linear-gradient(#f5f5f5, #e3e3e3);
+      .line1 {
+        margin-bottom: 10px;
       }
-      .custom_typecontrol .btn:active {
-        background: #e6e6e6;
-        background: linear-gradient(#e6e6e6, #fff);
+      .line2 {
+        margin-bottom: 50px;
       }
-      .custom_typecontrol .selected_btn {
-        color: var(--text-color-white);
-        background: #425470;
-        background: linear-gradient(#425470, #5b6d8a);
+      .line3 {
+        margin-bottom: 20px;
       }
-      .custom_typecontrol .selected_btn:hover {
-        color: var(--text-color-white);
+      .line3 span:nth-child(2) {
+        margin: 0 20px;
+        color: #777;
       }
-      .custom_zoomcontrol {
-        position: absolute;
-        top: 50px;
-        right: 10px;
-        width: 36px;
-        height: 80px;
-        overflow: hidden;
-        z-index: 1;
-        background-color: var(--bg-color-f5);
+      .line3 span:nth-child(3) {
+        color: #777;
       }
-      .custom_zoomcontrol span {
-        display: block;
-        width: 36px;
-        height: 40px;
-        text-align: center;
-        cursor: pointer;
-        line-height: 2.6;
-      }
-      .custom_zoomcontrol span img {
-        width: 15px;
-        height: 15px;
-        border: none;
-      }
-      .custom_zoomcontrol span:first-child {
-        border-bottom: 1px solid #bfbfbf;
-      }
-
-      @media only screen and (min-width: 320px) {
-        /* For mobile */
-        .container_location {
-          width: 90%;
+      /* -----------------mobile---------------------- */
+      /* -----galaxy------ */
+      @media only screen and (max-width: 360px) {
+        .container {
+          max-width: 324px;
         }
-        #container_title_box img {
+        .title {
+          overflow: hidden;
+        }
+        .title img {
           height: 200px;
+          width: auto;
         }
-        .tabs_location .listtab {
+        .title p {
+          font-size: 25px;
+        }
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          padding: 10px 0 20px;
+        }
+        .content1,
+        .content2,
+        .content3,
+        .content4 {
+          grid-template-columns: 1fr;
+          grid-row-gap: 10px;
+        }
+        .body_content6 {
+          grid-template-columns: 1fr;
+        }
+        .content1_left img,
+        .content2_right img,
+        .content3_left img,
+        .content4_right img {
           width: 100%;
-          height: 40px;
-          line-height: 40px;
         }
-        .container_location .wap_map {
-          height: 200px;
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          font-size: 25px;
         }
-      }
-
-      @media only screen and (min-width: 600px) {
-        /* For tablets: */
-        .tabs_location .listtab {
-          height: 60px;
-          line-height: 60px;
-        }
-        .container_location {
-          width: 90%;
-        }
-        .container_location .wap_map {
-          height: 200px;
-        }
-        .font25 {
-          font-size: 35px;
-        }
-        .font20 {
-          font-size: 20px;
-        }
-        .font13 {
+        .desc_content1,
+        .desc_content2,
+        .desc_content3,
+        .desc_content4 {
           font-size: 16px;
         }
-      }
-      @media only screen and (min-width: 1200px) {
-        /* For desktop: */
-        .tabs_location .listtab {
-          width: 1200px;
-          height: 60px;
-          line-height: 60px;
+        .content1_right,
+        .content3_right {
+          grid-column-start: 1;
+          grid-row-start: 1;
         }
-        .container_location {
-          width: 1200px;
+        .content5 {
+          height: auto;
+          line-height: 1.6em;
+          padding: 20px;
+          text-align: left;
+          word-break: keep-all;
+          font-size: 20px;
+        }
+        .title_content6 {
+          font-size: 20px;
+        }
+        .body_content6 {
+          row-gap: 40px;
+        }
+      }
+      /* ---ip6,7,8------- */
+      @media only screen and (max-width: 375px) and (min-width: 361px) {
+        .container {
+          max-width: 337.5px;
+        }
+        .title {
+          overflow: hidden;
+        }
+        .title img {
+          height: 200px;
+          width: auto;
+        }
+        .title p {
+          font-size: 25px;
+        }
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          padding: 10px 0 20px;
+        }
+        .content1,
+        .content2,
+        .content3,
+        .content4 {
+          grid-template-columns: 1fr;
+          grid-row-gap: 10px;
+        }
+        .body_content6 {
+          grid-template-columns: 1fr;
+        }
+        .content1_left img,
+        .content2_right img,
+        .content3_left img,
+        .content4_right img {
+          width: 100%;
+        }
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          font-size: 25px;
+        }
+        .desc_content1,
+        .desc_content2,
+        .desc_content3,
+        .desc_content4 {
+          font-size: 16px;
+        }
+        .content1_right,
+        .content3_right {
+          grid-column-start: 1;
+          grid-row-start: 1;
+        }
+        .content5 {
+          height: auto;
+          line-height: 1.6em;
+          padding: 20px;
+          text-align: left;
+          word-break: keep-all;
+          font-size: 20px;
+        }
+        .title_content6 {
+          font-size: 20px;
+        }
+        .body_content6 {
+          row-gap: 40px;
+        }
+      }
+      /* ---ip6,7,8 plus------- */
+      @media only screen and (max-width: 414px) and (min-width: 376px) {
+        .container {
+          max-width: 372.6px;
+        }
+        .title {
+          overflow: hidden;
+        }
+        .title img {
+          height: 200px;
+          width: auto;
+        }
+        .title p {
+          font-size: 25px;
+        }
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          padding: 10px 0 20px;
+        }
+        .content1,
+        .content2,
+        .content3,
+        .content4 {
+          grid-template-columns: 1fr;
+          grid-row-gap: 10px;
+        }
+        .body_content6 {
+          grid-template-columns: 1fr;
+        }
+        .content1_left img,
+        .content2_right img,
+        .content3_left img,
+        .content4_right img {
+          width: 100%;
+        }
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          font-size: 25px;
+        }
+        .desc_content1,
+        .desc_content2,
+        .desc_content3,
+        .desc_content4 {
+          font-size: 16px;
+        }
+        .content1_right,
+        .content3_right {
+          grid-column-start: 1;
+          grid-row-start: 1;
+        }
+        .content5 {
+          height: auto;
+          line-height: 1.6em;
+          padding: 20px;
+          text-align: left;
+          word-break: keep-all;
+          font-size: 20px;
+        }
+        .title_content6 {
+          font-size: 20px;
+        }
+        .body_content6 {
+          row-gap: 40px;
+        }
+      }
+      /* ---nokia N9------- */
+      @media only screen and (max-width: 480px) and (min-width: 415px) {
+        .container {
+          max-width: 432px;
+        }
+        .title {
+          overflow: hidden;
+        }
+        .title img {
+          height: 200px;
+          width: auto;
+        }
+        .title p {
+          font-size: 25px;
+        }
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          padding: 10px 0 20px;
+        }
+        .content1,
+        .content2,
+        .content3,
+        .content4 {
+          grid-template-columns: 1fr;
+          grid-row-gap: 10px;
+        }
+        .body_content6 {
+          grid-template-columns: 1fr;
+        }
+        .content1_left img,
+        .content2_right img,
+        .content3_left img,
+        .content4_right img {
+          width: 100%;
+        }
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          font-size: 25px;
+        }
+        .desc_content1,
+        .desc_content2,
+        .desc_content3,
+        .desc_content4 {
+          font-size: 16px;
+        }
+        .content1_right,
+        .content3_right {
+          grid-column-start: 1;
+          grid-row-start: 1;
+        }
+        .content5 {
+          height: auto;
+          line-height: 1.6em;
+          padding: 20px;
+          text-align: left;
+          word-break: keep-all;
+          font-size: 20px;
+        }
+        .title_content6 {
+          font-size: 20px;
+        }
+        .body_content6 {
+          row-gap: 40px;
+        }
+      }
+      /* ---nexus 7------- */
+      @media only screen and (max-width: 600px) and (min-width: 481px) {
+        .container {
+          max-width: 540px;
+        }
+        .title {
+          overflow: hidden;
+        }
+        .title img {
+          height: 200px;
+          width: auto;
+        }
+        .title p {
+          font-size: 25px;
+        }
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          padding: 10px 0 20px;
+        }
+        .content1,
+        .content2,
+        .content3,
+        .content4 {
+          grid-template-columns: 1fr;
+          grid-row-gap: 10px;
+        }
+        .body_content6 {
+          grid-template-columns: 1fr;
+        }
+        .content1_left img,
+        .content2_right img,
+        .content3_left img,
+        .content4_right img {
+          width: 100%;
+        }
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          font-size: 25px;
+        }
+        .desc_content1,
+        .desc_content2,
+        .desc_content3,
+        .desc_content4 {
+          font-size: 16px;
+        }
+        .content1_right,
+        .content3_right {
+          grid-column-start: 1;
+          grid-row-start: 1;
+        }
+        .content5 {
+          height: auto;
+          line-height: 1.6em;
+          padding: 20px;
+          text-align: left;
+          word-break: keep-all;
+          font-size: 20px;
+        }
+        .title_content6 {
+          font-size: 20px;
+        }
+        .body_content6 {
+          row-gap: 40px;
+        }
+      }
+      /* ---ipad ------- */
+      @media only screen and (max-width: 768px) and (min-width: 601px) {
+        .container {
+          max-width: 691.2px;
+        }
+        .content1_left img {
+          width: 100%;
+        }
+        .content2_right img {
+          width: 100%;
+        }
+        .content3_left img {
+          width: 100%;
+        }
+        .content4_right img {
+          width: 100%;
+        }
+        .content1,
+        .content2,
+        .content3,
+        .content4 {
+          column-gap: 70px;
+        }
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          font-size: 20px;
+        }
+        .desc_content1,
+        .desc_content2,
+        .desc_content3,
+        .desc_content4 {
+          font-size: 16px;
+        }
+        .content5 {
+          font-size: 20px;
+          height: auto;
+          line-height: 1.6em;
+          padding: 20px;
+          text-align: left;
+          word-break: keep-all;
+        }
+        .title_content6 {
+          font-size: 20px;
+        }
+      }
+      /* ---ipad pro------- */
+      @media only screen and (max-width: 1024px) and (min-width: 769px) {
+        .container {
+          max-width: 921.6px;
+        }
+        .content1_left img {
+          width: 100%;
+        }
+        .content2_right img {
+          width: 100%;
+        }
+        .content3_left img {
+          width: 100%;
+        }
+        .content4_right img {
+          width: 100%;
+        }
+        .content1,
+        .content2,
+        .content3,
+        .content4 {
+          column-gap: 70px;
+        }
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          font-size: 20px;
+        }
+        .desc_content1,
+        .desc_content2,
+        .desc_content3,
+        .desc_content4 {
+          font-size: 16px;
+        }
+        .content5 {
+          font-size: 20px;
+          height: auto;
+          line-height: 1.6em;
+          padding: 20px;
+          text-align: left;
+          word-break: keep-all;
+        }
+        .title_content6 {
+          font-size: 20px;
         }
       }
     </style>
   </head>
-
   <body>
     <!-- HEADER -->
     <header class="header">
@@ -734,80 +1063,121 @@
       </div>
     </section>
     <!-- END HEADER -->
-    <div id="wapper">
-      <div id="container_title_box">
-        <img
-          src="https://www.bitcamp.co.kr/theme/basic/img/title_01.jpg"
-          alt=""
-          class="full"
-        />
-        <p class="font25 bold">Directions</p>
+    <div class="wrapper">
+      <div class="title">
+        <img src="./img-cong/title_03.jpg" alt="" />
+        <p class="title_main bold">취업·창업 지원센터</p>
       </div>
-      <div class="tabs_location">
-        <ul class="listtab pc-layout">
-          <li class="font13 bold"><a class="active">Seocho Main Garden</a></li>
-          <li class="font13 bold"><a>Gangnam Center</a></li>
-          <li class="font13 bold"><a>Jongno Center</a></li>
-          <li class="font13 bold"><a>Sinchon Center</a></li>
-        </ul>
-      </div>
-      <div class="tabpanel_location">
-        <div class="container_location pc-layout">
-          <h1 class="font20">Seocho Main Garden</h1>
-          <div class="wap_map">
-            <div id="map"></div>
-            <div class="custom_typecontrol radius_border">
-              <span
-                id="btnRoadmap"
-                class="selected_btn"
-                onclick="setMapType('roadmap')"
-                >Map</span
-              >
-              <span id="btnSkyview" class="btn" onclick="setMapType('skyview')"
-                >Sky View</span
-              >
+      <div class="container">
+        <div class="content1">
+          <div class="content1_left">
+            <img src="./img-cong/local_img1.jpg" alt="" />
+          </div>
+          <div class="content1_right">
+            <img src="./img-cong/local_num1.jpg" alt="" />
+            <div class="title_content1 bold">
+              IT 국내 및 해외 취업·창업 전문기관
             </div>
-            <div class="custom_zoomcontrol radius_border">
-              <span onclick="zoomIn()"
-                ><img
-                  src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png"
-                  alt="확대"
-              /></span>
-              <span onclick="zoomOut()"
-                ><img
-                  src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png"
-                  alt="축소"
-              /></span>
+            <div class="desc_content1">
+              비트캠프 취.창업지원 센터는 수료생을 대상으로 다양한 IT 직종에
+              필요한 인재를 기업과 매칭하여 수료생들의 취업을 적극적으로
+              지원하고 있습니다. 더불어, 국내 및 해외 창업을 준비한
+              수료생들에게는 구체적인 창업 컨설팅 프로세스를 제공합니다.
             </div>
           </div>
-          <div class="content_location">
-            <ul class="address_location">
-              <li class="font13">
-                <div class="div_label bold">Address</div>
-                <div class="div_desc">
-                  1F, Baekam Building, 459 Gangnam-daero, Seocho-gu, Seoul
-                </div>
-              </li>
-              <li class="font13">
-                <div class="div_label bold">Representative number</div>
-                <div class="div_desc">02)3486-9600</div>
-              </li>
-              <li class="font13">
-                <div class="div_label bold">Subway</div>
-                <div class="div_desc">
-                  Sinnonhyeon Station Line 9, Exit 6-3 minutes walk toward
-                  <br />Gangnam Station Gangnam Station Line 2, Exit 10-7
-                  minutes on foot toward Sinnonhyeon Station
-                </div>
-              </li>
-              <li class="font13">
-                <div class="div_label bold">Bus</div>
-                <div class="div_desc">
-                  Get off) Sinnonhyeon Station, (formerly) Kyobo Tower
-                  Intersection / Sinnonhyeon Station, Citibank
-                </div>
-              </li>
-            </ul>
+        </div>
+        <div class="content2">
+          <div class="content2_left">
+            <img src="./img-cong/local_num2.jpg" alt="" />
+            <div class="title_content2 bold">IT취업 매칭 프로그램</div>
+            <div class="desc_content2">
+              재학생, 수료생 출신 개발 경력자들의 5만 명 인재풀을 운용하여,
+              제휴된 800여 개 이상의 기업에 인재를 공급하고 있습니다.
+              재학생에게는 개인별 맞춤식 직무별 프로그램을 수료생과 경력자에게는
+              성과 및 경력개발을 위한 프로세스 및 TOOl을 보유하고 있어 취업 매칭
+              프로그램을 제공합니다. 또한 해외 IT 인력에 대한 수요, 특히
+              프로그래머나 SW 개발 인력에 대한 수요가 높아 인력육성을 추진하고
+              다수의 기업 및 취업 지원 인프라를 보유하고 있습니다.
+            </div>
+          </div>
+          <div class="content2_right">
+            <img src="./img-cong/local_img2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="content3">
+          <div class="content3_left">
+            <img src="./img-cong/local_img3.jpg" alt="" />
+          </div>
+          <div class="content3_right">
+            <img src="./img-cong/local_num3.jpg" alt="" />
+            <div class="title_content3 bold">멘토링 운영</div>
+            <div class="desc_content3">
+              취업, 창업, 정부과제 등 분야별 특화된 전문가 멘토풀을 통해 대면,
+              비대면 멘토링 서비스를 지원합니다. 다양한 분야에서의 벤처기업들의
+              풍부한 경험과 노하우를 바탕으로 혁신기술을 보유한 창업가의 기술
+              경영 애로사항 등을 진단하고 해결방안을 제시합니다.
+            </div>
+          </div>
+        </div>
+        <div class="content4">
+          <div class="content4_left">
+            <img src="./img-cong/local_num4.jpg" alt="" />
+            <div class="title_content4 bold">온라인 오프라인 세미나</div>
+            <div class="desc_content4">
+              비트 출신 사업가 혹은 분야별 전문가를 초빙하여 재학생 대상으로
+              현업에 있는 선배들의 이야기를 들려주며 소통하는 자리를 마련하고
+              있습니다.
+            </div>
+          </div>
+          <div class="content4_right">
+            <img src="./img-cong/local_img4.jpg" alt="" />
+          </div>
+        </div>
+        <div class="content5">
+          취업창업 지원센터 서비스는 신규
+          <span class="coral bold">
+            수료생, 수료생 출신들 대상으로만 지원되는 서비스</span
+          >입니다.
+        </div>
+        <div class="content6">
+          <div class="title_content6 bold">함께하면 좋을 컨텐츠</div>
+          <div class="body_content6">
+            <div class="body6_p1">
+              <div class="line1"><img src="./img-cong/body1.png" alt="" /></div>
+              <div class="line2">국민취업지원제도</div>
+              <div class="line3">
+                <span>마스터</span>
+                <span><i class="far fa-clock"></i>01-29</span>
+                <span><i class="far fa-eye"></i>76</span>
+              </div>
+              <div class="line4">
+                <a href="#"><span>자세히보기 +</span></a>
+              </div>
+            </div>
+            <div class="body6_p2">
+              <div class="line1"><img src="./img-cong/body2.png" alt="" /></div>
+              <div class="line2">국민취업지원제도</div>
+              <div class="line3">
+                <span>마스터</span>
+                <span><i class="far fa-clock"></i>01-29</span>
+                <span><i class="far fa-eye"></i>76</span>
+              </div>
+              <div class="line4">
+                <a href="#"><span>자세히보기 +</span></a>
+              </div>
+            </div>
+            <div class="body6_p3">
+              <div class="line1"><img src="./img-cong/body3.png" alt="" /></div>
+              <div class="line2 bold">국민취업지원제도</div>
+              <div class="line3">
+                <span>마스터</span>
+                <span><i class="far fa-clock"></i>01-29</span>
+                <span><i class="far fa-eye"></i>76</span>
+              </div>
+              <div class="line4">
+                <a href="#"><span>자세히보기 +</span></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1036,51 +1406,6 @@
             changeColora[i].style.color = "white";
           }
         }
-      }
-    </script>
-
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    <script
-      type="text/javascript"
-      src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=08de360f91696ae84c4f89558e22f5e6"
-    ></script>
-    <script>
-      const markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
-      const marker = {
-        position: markerPosition,
-        text: "텍스트를 표시할 수 있어요!",
-      };
-
-      const staticMapContainer = document.getElementById("map"),
-        staticMapOption = {
-          center: new kakao.maps.LatLng(33.450701, 126.570667),
-          level: 3,
-          marker: marker,
-        };
-      const staticMap = new kakao.maps.StaticMap(
-        staticMapContainer,
-        staticMapOption
-      );
-      function setMapType(maptype) {
-        const roadmapControl = document.getElementById("btnRoadmap");
-        const skyviewControl = document.getElementById("btnSkyview");
-        if (maptype === "roadmap") {
-          staticMap.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
-          roadmapControl.className = "selected_btn";
-          skyviewControl.className = "btn";
-        } else {
-          staticMap.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
-          skyviewControl.className = "selected_btn";
-          roadmapControl.className = "btn";
-        }
-      }
-
-      function zoomIn() {
-        staticMap.setLevel(staticMap.getLevel() - 1);
-      }
-
-      function zoomOut() {
-        staticMap.setLevel(staticMap.getLevel() + 1);
       }
     </script>
   </body>
