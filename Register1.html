@@ -1,0 +1,1121 @@
+  <!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ce85036718.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Register1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+      }
+      .wrapper{
+        overflow: hidden;
+      }
+      .bold {
+        font-weight: 700;
+      }
+      .purple {
+        color: #7b49b9;
+      }
+      .coral {
+        color: #da5c5f;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 150px;
+        margin-bottom: 0;
+      }
+      
+    
+    
+      /* HEADER */
+      .header {
+        background-color: #151726;
+        width: 100%;
+        color: white;
+        height: 75px;
+        line-height: 75px;
+        box-shadow: 0 1px white;
+        z-index: 9999;
+        border-bottom: -2px solid rgb(243, 237, 237);
+        position: fixed;
+      }
+      .header .header__menu .header__menu-icon {
+        margin-top: 10px;
+      }
+      .header .header__menu {
+        width: 96%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+      }
+      .header__menu .header__menu-nav ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+      }
+      .header__menu-nav li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+      .header .header__menu .header__menu-nav-btn {
+        text-align: right;
+        cursor: pointer;
+      }
+      .header__menu-nav-btn:hover + .nav__menu {
+        display: block;
+      }
+      /* END HEADER */
+      /* nav menu show/hidden when click icon */
+      .nav__menu {
+        display: none;
+        width: 100%;
+        background-color: rgb(234, 238, 225);
+        position: fixed;
+        top: 12%;
+        z-index: 999999;
+        border: 1px solid black;
+      }
+      .nav__menu-title {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+      .nav__menu hr {
+        width: 95%;
+      }
+      .nav__menu-btn {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 10px;
+        text-align: center;
+        grid-gap: 5px;
+        box-sizing: border-box;
+      }
+      .nav__menu-btn button {
+        width: 100%;
+        padding: 10px 15px;
+        cursor: pointer;
+        border: 1px solid black;
+        outline: none;
+      }
+      .nav__menu-link {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 94%;
+        margin: 0 auto;
+      }
+      .nav__menu-link > div {
+        border-right: 1px solid rgb(202, 196, 196);
+        padding: 15px;
+      }
+      .nav__menu-link > div:last-child {
+        border: none;
+      }
+      .nav__menu-link > div ul {
+        list-style-type: none;
+        margin-top: 12px;
+      }
+      .nav__menu-link > div h5 {
+        cursor: pointer;
+      }
+      .nav__menu-link > div a {
+        text-decoration: none;
+        color: #555;
+        font-size: 12px;
+        line-height: 30px;
+        cursor: pointer;
+      }
+      #closesubmenu {
+        cursor: pointer;
+      }
+      .contactus {
+        padding: 20px;
+        margin-bottom: 50px;
+      }
+      .contactus h5 {
+        text-align: center;
+      }
+      .contactus a {
+        text-decoration: none;
+        color: #555;
+      }
+      /* END nav menu show/hidden when click icon */
+      /* FOOTER */
+      footer {
+        margin-top: 120px;
+        background-color: #151726;
+        margin-bottom: -25px;
+      }
+      .footer__content {
+        width: 95%;
+        margin: 20px auto;
+        box-sizing: border-box;
+        color: white;
+        padding: 50px 0;
+      }
+      .footer__content-title {
+        line-height: 30px;
+        margin-bottom: 30px;
+      }
+      .footer__content-title h5 {
+        font-size: 20px;
+      }
+      .footer__content-infor {
+        display: grid;
+        grid-template-columns: 60% 40%;
+      }
+      .infor__left ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 20px 0;
+      }
+      .infor__right {
+        display: flex;
+        justify-content: space-around;
+        justify-content: flex-end;
+        margin-top: 20px;
+      }
+      .infor__right img {
+        width: 90%;
+      }
+      .hrfooter {
+        margin: 20px 0;
+      }
+      .footer__content-company {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 87% 13%;
+        margin-top: 40px;
+        justify-content: space-between;
+      }
+      .footer__content-company .footer__right img {
+        margin-left: 18px;
+      }
+      .footer__content-btn {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-bottom: 100px;
+      }
+      .footer__buton-left button {
+        padding: 10px 20px;
+        outline: none;
+        border-radius: 5px;
+        background-color: #000;
+        color: white;
+        border: 1px solid #000;
+      }
+      /* POPUP MESSAGE CHAT */
+      .mess {
+        position: fixed;
+        bottom: 23px;
+        left: 20px;
+      }
+      .mess i {
+        padding: 10px;
+        background-color: #125177;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      /* END POPUP MESSAGE CHAT */
+      /* BUTTON TOP HEADER SCROLL */
+      .topheader {
+        position: fixed;
+        bottom: 80px;
+        right: 5px;
+      }
+      .topheader__call img {
+        width: 80%;
+        cursor: pointer;
+      }
+      .topheader__btn {
+        position: absolute;
+        right: 25px;
+        padding: 13px 17px;
+        background-color: rgba(117, 112, 112, 0.3);
+        text-align: center;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all ease-in-out 0.2s;
+        border: 2px solid black;
+      }
+      .topheader__btn:hover {
+        background-color: #3059c7;
+        color: white;
+        border: none;
+      }
+      /* POPUP CHAT MESSAGE */
+      .popupchat {
+        display: none;
+        position: fixed;
+        top: 12%;
+        left: 1%;
+        width: 30%;
+        border-radius: 25px 25px 0 0;
+        background-color: #135278; /* For browsers that do not support gradients */
+        background-image: linear-gradient(#135278, #f6f6f7);
+        box-sizing: border-box;
+      }
+      .popupchat__content {
+        width: 98%;
+        margin: 10px auto;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      #closeChat {
+        cursor: pointer;
+      }
+      .popupchat__content-title {
+        display: flex;
+        justify-content: space-between;
+      }
+      .popupchat__content-title > div i {
+        color: #fff;
+      }
+      .popupchat__content-title > div i:first-child {
+        margin-right: 20px;
+      }
+      .popupchat__content-active {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+      }
+      .popupchat__active h5::before {
+        content: "";
+        position: absolute;
+        top: 80px;
+        left: 75px;
+        background-color: rgb(14, 226, 96);
+        height: 9px;
+        width: 9px;
+        border-radius: 50%;
+        border: 1px solid rgb(223, 220, 220);
+      }
+      .popupchat__online {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        box-sizing: border-box;
+        grid-gap: 1px;
+      }
+      .popupchat__online > div img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }
+      .startchat {
+        width: 100%;
+        height: 80%;
+        background-color: #fff;
+        border-radius: 10px;
+        z-index: 999999;
+        box-shadow: -1px 2px rgb(248, 239, 239);
+        padding: 15px 0;
+      }
+      .startchat__title {
+        display: flex;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        transition: all ease-in-out 0.3s;
+        margin-left: -2px;
+      }
+      .startchat__title:hover {
+        background-color: rgb(226, 225, 225);
+        cursor: pointer;
+      }
+      .startchat__title > div p {
+        font-size: 12px;
+        color: rgb(115, 115, 116);
+        letter-spacing: 1px;
+      }
+      .startchat__title img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .startchat__title h5 {
+        line-height: 25px;
+      }
+      .startchat__btn {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      .startchat__btn button {
+        padding: 10px 20px;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        background-color: #125177;
+        cursor: pointer;
+      }
+      .link .link__icon {
+        background-color: rgb(195, 197, 202);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 15px;
+        margin: 30px auto;
+        transition: all ease-in-out 0.3s;
+        cursor: pointer;
+      }
+      .link__icon i {
+        line-height: 45px;
+        font-size: 14px;
+        color: rgb(114, 116, 119);
+      }
+      .link__hover {
+        display: none;
+        text-align: center;
+        padding: 15px 5px;
+        background-color: black;
+        color: #fff;
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 90px;
+        left: 35px;
+      }
+      .link__icon:hover + .link__hover {
+        display: block;
+      }
+      .popupchat__bottom {
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .popupchat__bottom p {
+        box-sizing: border-box;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        color: rgb(181, 183, 187);
+      }
+      .popupchat__bottom p span {
+        color: black;
+      }
+      .popupchat__bottom p i {
+        padding: 5px;
+        background-color: rgb(102, 100, 237);
+        background-image: linear-gradient(rgb(102, 100, 237), rgb(35, 33, 177));
+        border-radius: 50%;
+        color: #fff;
+      }
+      /* END POPUP CHAT MESSAGE */
+      /* -------END FOOTER----- */
+      .content1{
+        position: relative;
+        text-align: center;
+        color: #fff;
+        height: 50px;
+        line-height: 50px;
+        font-size: 13.2px;
+        background: #333;
+        margin: 0 0 10px;
+        border-radius: 5px;
+      }
+      .content_section1{
+        display: block;
+        padding: 20px;
+        width: 100%;
+        height: 150px;
+        background: #fff;
+        border: 0;
+        line-height: 1.6em;
+        font-size: 12px;
+      }
+      section{
+        border: 1px solid #dde7e9;
+        margin-bottom: 20px;
+      }
+      .fregister_term, .fregister_private{
+        position: relative;
+      }
+      section h2{
+        font-size: 14.4px;
+        text-align: left;
+        padding: 20px;
+        border-bottom: 1px solid #dde7e9;
+      }
+      #fregister_term input[type=checkbox]{
+        position: absolute;
+        top: 40%;
+        right: 2%;
+      }
+      #fregister_private input[type=checkbox]{
+        position: absolute;
+        top: 40%;
+        right: 2%;
+      }
+      textarea:focus {
+        box-shadow: 0 0 5px #9ed4ff;
+        border: 1px solid #558ab7;
+        outline: none;
+      }
+      .table{
+        width: 90%;
+        margin: 20px auto;
+      }
+      .title, .line1, .line2{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        font-size: 12px;
+        border: 1px solid #dde7e9;
+      }
+      .line1, .line2{
+        text-align: left;
+      }
+      .line1{
+        border-bottom: none;
+        border-top: none;
+      }
+      .th, .td{
+        padding: 10px;
+        display: grid;
+        align-content: center;
+      }
+      .title{
+        background-color: #f7f7f9;
+        border: 1px solid #d8dbdf;
+
+      }
+      .th1, .td1, .td4, .th2, .td2, .td5{
+        border-right: 1px solid #dde7e9;
+      }
+      .th1, .th2{
+        border-right: 1px solid #d8dbdf;
+      }
+      .fregister_chkall{
+        border: 1px solid #dde7e9;
+        background-color: #f5f7fa;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+      }
+      .fregister_chkall input{
+        position: absolute;
+        top: 35%;
+        right: 2%;
+      }
+      label{
+        font-size: 14.4px;
+        text-align: left;
+        padding: 20px;
+      }
+      label:hover{
+        color: #2172f8;
+      }
+      .confirm{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        margin-top: 20px;
+        column-gap: 20px;
+      }
+      button{
+        outline: none;
+        border: none;
+        float: left;
+        height: 50px !important;
+        font-size: 13px;
+        background: #333;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 3px;
+      }
+      .confirm a{
+        color: black;
+        font-size: 13px;
+        float: left;
+        height: 50px !important;
+        border: 1px solid #dcdcdc;
+        cursor: pointer;
+        border-radius: 3px;
+        background: #fff;
+        display: grid;
+        align-content: center;
+      }
+      
+      @media only screen and (min-width: 360px) and (max-width: 1024px){
+        .container{
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+   <!-- HEADER -->
+   <header class="header">
+    <div class="header__menu">
+      <div class="header__menu-icon">
+        <img src="./images/logo.png" alt="" />
+      </div>
+      <nav class="header__menu-nav">
+        <ul>
+          <li><a href="">Beat Camp</a></li>
+          <li><a href="">Curriculum</a></li>
+          <li><a href="">Employment and Startup Support Center</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Mentoring</a></li>
+          <li><a href="">CONTACT US</a></li>
+        </ul>
+      </nav>
+      <div class="header__menu-nav-btn">
+        <i class="fas fa-align-justify" id="subnav"></i>
+      </div>
+    </div>
+  </header>
+  <!-- menu nav when hover -->
+  <section class="nav__menu">
+    <div class="nav__menu-title">
+      <h5>All Menu</h5>
+      <i class="fas fa-times" id="closesubmenu"></i>
+    </div>
+    <hr />
+    <div class="nav__menu-btn">
+      <div class="language">
+        <button>Ko</button>
+      </div>
+      <div class="language">
+        <button>En</button>
+      </div>
+      <div class="singup">
+        <button>Sign Up</button>
+      </div>
+      <div class="login">
+        <button>Login</button>
+      </div>
+    </div>
+    <div class="nav__menu-link">
+      <div class="item1">
+        <h5>Beat Camp</h5>
+        <ul>
+          <li><a href="">Bit Camp Introduction</a></li>
+          <li><a href="">Directions</a></li>
+        </ul>
+      </div>
+      <div class="item2">
+        <h5>Curriculum</h5>
+        <ul>
+          <li><a href="">Government funding process</a></li>
+          <li><a href="">Incumbent Course</a></li>
+          <li><a href="">Basic lecture</a></li>
+          <li><a href="">General Course</a></li>
+        </ul>
+      </div>
+      <div class="item3">
+        <h5>Employment and Startup Support Center</h5>
+        <ul>
+          <li><a href="">Employment and Startup Support Center</a></li>
+          <li><a href="">Recruitment Announcement</a></li>
+          <li><a href="">Overseas employment and start-up</a></li>
+        </ul>
+      </div>
+      <div class="item4">
+        <h5>blog</h5>
+        <ul>
+          <li><a href="">blog</a></li>
+        </ul>
+      </div>
+      <div class="item5">
+        <h5>Mentoring</h5>
+        <ul>
+          <li><a href="">Mentoring</a></li>
+          <li><a href="">Find a Mentor</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="contactus">
+      <h5><a href="">CONTACT US</a></h5>
+    </div>
+  </section>
+  <!-- END HEADER -->
+    <div class="wrapper">
+      <div class="container">
+        <form action="">
+          <div class="content1 bold">
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            회원가입약관 및 개인정보처리방침안내의 내용에 동의하셔야 회원가입 하실 수 있습니다.
+          </div>
+          <section id="fregister_term">
+            <div class="fregister_term">
+              <h2>회원가입약관</h2>
+              <input type="checkbox" id="term">
+            </div>
+            <textarea class="content_section1">
+파트너회원 가입약관
+
+제 1 조 목적
+본 약관은 전기통신사업법 및 동법 시행령 등 관련 법령의 규정에 의하여 (주)비트캠프(이하 "운영자"라 한다)에서 제공하는 제휴마케팅 서비스 비트캠프(이하 "서비스"라 한다)의 이용조건 및 절차에 관한 사항을 규정함을 목적으로 한다.
+
+제 2 조 약관의 공지 및 준용
+① 본 약관의 내용은 서비스 화면에 게시하거나 기타의 방법으로 서비스 파트너 가입자(이하 "가입자" 라 한다)에게 공지하고 가입자가 본 약관의 내용에 동의하고 자신에 대한 정보를 운영자에게 제출하면 운영자가 그 신청을 전자우편 등을 통해 승인함으로써 효력이 발생한다.
+② 운영자는 본 약관을 변경할 수 있으며, 변경된 약관은 가입자에게 전자우편 및 공지사항 등을 통해 통보하고 통보시 정한 일정기한내에 이의가 없으면 동의한 것으로 해석하여 효력이 발생한다.
+③ 본 약관은 가입자의 서비스 가입후 1년간 유효함을 원칙으로하며 1년후 가입자 또는 운영자의 별도 통지가 없는 경우 자동적으로 효력이 1년간 연장된다.
+
+제 3 조 약관외 준칙>
+본 약관에 명시되지 않은 사항은 전기통신기본법, 전기통신사업법 및 기타 관계 법령의 규정에 따른다.
+
+제 4 조 용어의 정의
+본 약관에서 사용하는 용어의 정의는 다음과 같다.
+① 서비스
+인터넷 광고 및 상품의 판매를 원하는 광고주와 자신의 사이트에 인터넷 광고 등을 게재하기를 원하는 사이트 운영자를 인터넷 상에서 매개하여 인터넷 광고 및 상품의 유통 중개 등을 실행시키는 서비스를 의미한다.
+② 운영자
+서비스를 통해 가입자의 모집, 가입자와 광고주의 연결 중개, 광고 및 상품판매 등 실적의 측정과 보고, 실적에 따른 수수료 정산 및 지급업무를 대행하는 자를 말한다.
+③ 가입자 (파트너)
+운영자가 중개하는 광고 등을 자신의 사이트에 게재하여 그 성과에 대한 수익을 취할 목적으로 서비스에 등록한 자를 말한다. 가입자는 개인이나 단체 또는 법인 모두 가능하며 성과에 대해 운영자로부터 약정된 대가를 받는다.
+④ 방문자
+가입자의 사이트 상의 각종 광고 및 프로모션을 경유하여 광고주의 사이트를 통한 상거래 및 기타 인터넷 사용행위를 하게 되는 일반 인터넷 이용자를 의미한다.
+⑤ 광고주
+자사의 광고물을 인터넷상의 여러 사이트(가입자 사이트)를 통해 광고하도록 의뢰하고 이에 대한 수수료를 지급하는 자를 말한다. 광고주는 온라인 상거래가 가능한 재화 및 서비스를 보유하고 영업활동을 하고 있는 개인 또는 법인이어야 하며 기타 상세 자격요건은 운영자 내부의 규정에 따른다
+⑥ 성과당 지불방식 - CPA(Cost Per Action)
+가입자의 사이트에서 링크 등을 통해 접속한 새로운 방문자가 설문에 응답하거나 추가 정보를 제공하거나, 회원 가입을 하는 등 약관에 미리 정해진 행동을 하는 경우에 가입자에게 약정 금액을 지불하는 방식을 의미한다.
+⑦ 수수료와 광고비
+수수료는 성과가 이루어졌을 때 운영자가 가입자에게 지급하게 되는 금액을 의미한다.
+광고비는 성과가 이루어졌을 때 광고주가 운영자에게 지급하게 되는 금액을 의미한다.
+⑧ 해지
+가입자가 서비스 개통 후 해지사유 발생으로 인해 상호간 이용 약관의 법적효력이 종료됨을 의미한다.
+
+제 5 조 (서비스 가입절차)
+① 운영자가 제공하는 서비스에 가입하기 위해 신청인은 본 약관에 동의하여야 한다.
+② 신청인은 신의성실의 원칙에 의해 신청서를 작성해야한다.
+
+제 6 조 (서비스 가입자격)
+① 신청인의 신청서 내용 및 사이트가 다음에 관련된 내용일 경우 운영자는 가입승인을 거절할 수 있다.
+신청서의 내용이 다음에 해당되는 경우
+가. 본인의 이메일이 아닌 경우.
+나. 다른 사람의 명의를 사용하여 신청한 경우.
+다. 신청서 내용을 허위로 게재한 경우.
+라. 신청자의 연령이 만 19세 미만인 경우.
+마. 기타 회사가 정한 이용 신청 요건이 미비한 경우.
+활동 내용이 다음에 해당되는 경우
+가. 범죄적 행위에 결부 및 불법 행위를 조장하는 내용.
+나. 운영자 및 제3자의 저작권, 지적 재산권을 침해한 내용.
+다. 공공질서 및 미풍양속에 위반되는 내용.
+라. 다른 가입 및 인터넷 사용자를 비방하여 명예를 손상시키거나 모독하는 내용.
+마. 관계법령에 위반되는 내용
+바. 기타 운영자가 판단하기에 부적절하다고 판단되는 내용.
+② 만일 가입승인을 거절당한 경우 신청인은 운영자와 상의하여 내용 조정을 거친 후 재신청 할 수 있다.
+
+제 7 조 (운영자의 의무)
+① 운영자는 서비스 제공과 관련하여 알고 있는 가입자의 신상 정보를 본인의 허가 없이 제3자에게 누설 배포하지 않는다. 단, 전기통신사업법 등 관련 법령의 규정에 의해 국가기관의 요구가 있는 경우, 수사기관 또는 정보통신 윤리위원회 기타 공공기관의 요청이 있는 경우, 또는 기타 관계 법령에서 정한 절차에 따른 요청이 있는 경우는 예외로 한다.
+② 운영자는 제7조 1항의 목적 범위 내에서, 운영자의 업무와 관련하여 가입자 전체 또는 일부의 개인 정보에 대한 통계 자료를 작성하여 이를 사용 또는 제3자에게 제공할 수 있고, 서버를 통하여 가입자의 컴퓨터에 쿠키를 발송할 수 있다.
+③ 운영자는 신의 성실의 원칙에 따라 가입자 사이트에서 발생되는 성과를 정확하게 추적하고 이를 가입자 및 광고주에게 보고함으로써 양 당사자간 수수료의 정산이 원활히 이루어질 수 있도록 할 의무가 있다.
+④ 운영자는 가입자가 원할 경우 별도 계약에 의거 가입자의 수익증대를 위한 정보제공 및 컨설팅을 제공할 수 있다.
+
+제 8 조 (가입자(파트너)의 의무)
+① 가입자는 운영자가 제공하는 실적 측정결과에 대해 이의를 제기하지 않는다.
+② 가입자는 정당하고 합법적인 방법으로 방문자들에게 광고물을 소개 또는 권유하여야 한다. 허가받지 않은 스팸메일의 발송, 방문자에게 보상이 주어지는 리워드, 타 사이트 게시판에의 광고물 게시, 부당 제작 광고물 활용 등 운영자와 광고주의 명성에 해를 끼칠 수 있는 방법을 사용하지 않아야 한다.
+③ 가입자는 서비스 이용시 다음 각 호의 행위를 할 수 없으며 적발시 가입자 자격은 즉시 박탈된다.
+1. 다른 가입자의 계정을 부정하게 사용하는 행위.
+2. 서비스에서 얻은 정보를 운영자의 사전 허가 없이 제3자에게 공개 또는 배포하는 행위.
+3. 운영자 및 제3자의 저작권을 포함한 지적재산권 기타 권리를 침해하는 행위.
+4. 공공질서 및 미풍양속에 위반되는 내용의 정보,문장,도형 등을 타인에게 유포하는 행위.
+5. 범죄와 결부되는 행위.
+6. 허가받지 않은 스팸메일, 게시판 등의 활용으로 운영자의 명성에 해를 끼치는 행위.
+7. 관계법령에 위배되는 행위.
+8. 방문자에게 현금, 포인트 등 보상을 제공하는 리워드 마케팅.
+9. 유명인사 및 연예인 등 해당광고에 연관되지 않는 이미지사용.
+10. 기타 명백한 부정 행위.
+11. 운영자가 별도 공지를 통해 금지하는 행위.
+12. 기타 명백한 부정 행위.
+13. 운영자가 별도 공지를 통해 금지하는 행위.
+④ 가입자는 서비스의 이용권한, 기타 약관상 지위를 타인에게 양도, 대여 및 기타 처분할 수 없다.
+⑤ 가입자(파트너)는 합법적인 범위내에서 마케팅 활동을 하여야 하며, 불법적인 방법이나 기타 홍보활동으로 인한 모든 피해에 대한 책임은 가입자(파트너)에게 있다.
+
+제 9 조 (가입자 ID와 비밀번호 관리에 대한 가입자의 의무)
+① ID와 비밀번호에 관한 모든 관리책임은 가입자에게 있으며 부여된 ID와 비밀번호의 관리소홀, 부정사용에 의하여 발생하는 모든 결과에 대한 책임은 가입자에게 있다.
+② 자신의 ID가 부정하게 사용된 것을 알게 된 경우 가입자는 운영자에게 그 사실을 즉시 통보해야 한다.
+
+제 10 조 (정보의 제공)
+운영자는 가입자가 서비스를 이용할 때 필요하다고 판단되는 다양한 정보를 전자우편 등의 방법으로 가입자에게 제공할 수 있으며 가입자는 원치 않을 경우 가입신청 메뉴와 가입자 정보수정 메뉴에서 정보수신을 거부하도록 설정할 수 있다.
+단, 긴급 상황에 대해 신속한 알림이 필요할 경우 수신거부와 관계 없이 전자우편이나 SMS발송 등 개별적인 연락을 취할 수 있다.
+
+제 11 조 (가입자의 게시물)
+운영자는 가입자가 운영하는 사이트의 내용이 제6조 ①항 2호에 해당하거나, 운영자가 규정한 게시물 또는 광고물 규격을 지키지 않은 경우에 이의 시정을 명령할 수 있으며 지켜지지 않을 경우 가입 탈퇴를 명할 수 있다.
+
+제 12 조 (서비스 제공의 중지 및 사이트 폐쇄)
+① 회사는 긴급한 시스템 점검, 증설 및 교체, 천재지변, 국가비상사태, 정전, 서비스 설비의 장애, 또는 서비스 이용자의 폭주 등으로 정상적인 서비스가 불가능할 경우 사전 공지나 예고 없이 서비스를 일시적으로 혹은 영구적으로 중단 할 수 있다.
+② 회사의 사정 혹은 기타사유에 의해서 서비스 이용종료 및 사이트 폐쇄시 1개월 전 사전에 공지사항 게시판에 공지 한다. 이 경우 사전 공지 시 서비스 이용종료 및 사이트 폐쇄에 따른 회원에 대해서는 책임을 지지 않는다.
+③ 서비스 이용종료 및 사이트 폐쇄까지 적립된 수수료는 폐쇄 후 익월 15일에 지급한다.
+④ 서비스 이용종료 및 사이트 폐쇄 시 회사는 모든 회원의 개인정보 및 수수료 등의 관련 정보는 모두 삭제한다.
+
+제 13 조 (방문자 처리)
+가입자의 사이트를 통해 접속한 방문자와 관련한 모든 서비스는 방문자와 광고주의 책임하에 처리하며, 처리 과정으로 인하여 생기는 모든 책임은 전적으로 방문자와 광고주에게 있다.
+
+제 14 조 (제휴실적 측정)
+가입자의 사이트에서 클릭하여 발생하는 모든 실적집계는 운영중인 서비스 페이지에서 제공되는 실적을 기준으로 한다.
+
+제 15 조 (가입자(파트너) 수수료 지급방법)
+① 수수료 지급은 운영자의 사이트를 통하여 전산처리된 실적과 그에 따른 수수료 금액에 근거하여 가입자의 송금신청으로 이루어진다.
+② 수수료 지급은 일주일에 한번만 신청할 수 있으며 최소 1만원 이상 신청해야하며 천원단위로 신청이 가능하다.
+③ 지급되는 수수료는 개인의 경우 신청한 금액에서 3.3%을 원천징수 후 지급하며 일반사업자의 경우 그러하지 아니한다.
+④ 수수료는 현금으로 지급함을 원칙으로 하며 가입자가 원할 경우 수수료를 현금이외의 유가증권(상품권 등) 및 운영자가 제공하는 마일리지 포인트로 지급할 수 있다. 수수료 지급에 따른 제세공과금이나 송금료, 우송료 등은 가입자 부담으로 한다.
+⑤ 수수료를 지급하는 날은 영업일 기준으로 3일 이내에 지급한다.
+⑥ 수수료 지급에 대한 세금계산서(사업자)나 원천징수 서류(개인)는 지급 전날까지 운영자에게 실물이 도착해야 하며, 그렇지 않은 경우에는 수수료 지급이 거절된다.
+⑦ 가입자가 통보한 잘못된 은행정보로 인하여 적립금 지급을 받지 못하는 경우 귀책사유는 가입자 본인에게 있으며 운영자는 이를 보상하지 아니한다.
+⑧ 당해 연도에 발생한 수수료는 차기년도 수수료로 이월되지 않는다. 당해 연도에 발생한 수수료는 차기년도 2월 마지막 출금신청 기간까지 출금 신청 할 수 있으며, 해당일까지 정상적으로 출금신청 하지 않은 수수료는 3월 자동 소멸된다.
+
+제 16 조 (약관 해지시 수수료 지급방법)
+① 본 약관이 해지된 경우에는 해지된 날까지 수수료가 5만원 이상인 경우에만 지급하고 그 미만은 소멸된다.
+② 제 18 조에 의해 약관이 해지된 경우에는 수수료를 지급하지 아니할 수 있다.
+
+제 17 조 (로고 표시)
+운영자는 로고를 이용하여 가입자의 사이트에 운영자와의 제휴관계를 나타낼 수 있으며, 가입자는 이 로고를 자신의 사이트에 표시할 수 있다.
+
+제 18 조 (약관 해지 및 이용제한)
+① 가입자가 본 약관을 해지하고자 하는 때에는 서비스상의 회원탈퇴를 진행하거나 운영자에게 전자 우편 등으로 해지신청 을 해야 한다. 운영자는 도착한 전자우편 등의 내용을 확인하고 계약해지를 허가하는 내용의 전자우편 등을 가입자에게 발송해야 한다.
+② 광고를 의뢰한 광고주 또는 광고주와 운영자간의 사정에 의하여 특정광고물을 더 이상 게시하기 어려운 경우에는 운영자는 공지사항 등으로 가입자에게 해당 광고에 대한 게시중지 예고를 최소 3일전에 통보하여야 하며 그 광고물로 인한 수수료 적립은 게시중시 예고일부터 중단되는 것으로 한다.
+③ 가입자가 회사에서 제공하는 서비스화면에 1년동안 1번 이상 로그인을 하지 않는 경우 서비스을 사용하지 않겠다는 것으로 판단하여 본 약관을 해지할 수 있다.
+④ 가입자가 제 6 조 서비스 가입자격 제 1항 및 2항과 제 8조 가입자의 의무 제 3항에 해당하는 경우, 제 5조 서비스의 가입절차를 완료한 경우에도 불구하고 운영자는 가입자와의 약관을 해지할 수 있다.
+⑤ 불법홍보에 해당되는 경우 운영팀의 정책에따라 수익금은 몰수되며 통보없이 탈퇴됨에 동의한다.
+⑥ 타업체 유사문서 공격및 타상호 사용 시 계정 삭제는 물론, 법적인 문제가 발생할시 그문제는 해당회원이 법적인 문제를 책임지며 회사는 어떤 책임도 지지않는다.
+⑦ 본사의 위배되는 홍보방법이 확인되어 제지할시 즉각 처리할 의무가있다.
+
+제 19 조 (손해배상)
+① 운영자는 가입자의 실적이 없는 동안의 서비스 이용과 관련하여 가입자에게 발생한 어떠한 손해에 관하여도 책임을 지지 않는다.
+② 가입자는 운영자의 정상적인 영업활동을 방해하거나 약관을 위반하여 발생한 운영자의 모든 물질적, 금전적 손해를 배상할 책임을 지며, 제3자에게 손해가 발생한 경우 운영자는 책임지지 않는다.
+
+제 20 조 (상계)
+① 가입자가 기한의 도래, 기한전 변제의무로 운영자에 대한 채무를 이행하여야 하는 경우에는 그 채무와 가입자가 운영자에게서 지급 받아야할 채권을 그 채권의 기한도래 여부에도 불구하고, 운영자는 전자우편 등에 의한 통지에 의하여 상계할 수 있다.
+② ①항에 의한 상계를 하는 경우 이자등과 지연배상금의 계산 기간은 운영자가 상계를 위한 계산을 하는 날까지 하기로 한다.
+
+제 21 조 (신고사항과 그 변경 등)
+① 가입자는 거래에 필요한 명칭·상호·대표자·주소 등을 사이트상에 운영자가 정한 양식에 정확히 기입하여야 한다.
+② ①항에 의한 신고사항에 변경이 있는 때 가입자는 즉시 사이트상에 운영자가 정한 양식에 변경 신고하여야 하며, 신고가 있기 전에는 변경없는 것으로 처리하여도 이의 없기로 하며, 변경없는 것으로 처리함으로써 생긴 손해는 가입자가 부담하고 운영자에 대한 아무런 청구도 아니하기로 한다.
+
+제 22 조 (통지의 효력)
+① 가입자가 신고한 최종 주소(전자우편 또는 우편물 수취 가능한 주소)로 전자우편 등으로 발송한 경우에는 보통의 우송기간이 경과한 때에 도달한 것으로 추정한다.
+② 전자우편의 도착여부는 수취인이 항상 확인해야 하며, 발송인은 전자우편을 발송한 것으로 전자우편 발송에 관한 모든 사무는 종결된다.
+
+제 23 조 (면책조항)
+① 운영자는 천재지변 또는 이에 준하는 불가항력으로 인하여 서비스를 제공할 수 없는 경우에는 서비스 제공에 관한 책임이 면제된다.
+② 운영자는 가입자의 귀책사유로 인한 서비스 이용의 장애에 대하여 책임을 지지 않는다.
+③ 운영자는 가입자가 서비스에서 기대하는 수익을 상실한 것에 대하여 책임을 지지 않으며 그밖에 서비스를 통하여 얻은 자료로 인한 손해에 관하여 책임을 지지 않는다.
+④ 운영자는 가입자 및 광고주가 서비스에 게재한 정보, 자료, 사실의 신뢰도, 정확성 등 내용에 관하여는 책임을 지지 않는다.
+⑤ 운영자는 가입자에게 일정금액 이상의 수수료 수입을 보증하지 않는다.
+⑥ 운영자는 가입자 또는 방문자의 불법행위, 부당한 행위 기타 행위에 대하여 책임지지 않는다.
+⑦ 운영자는 가입자(파트너)의 마케팅 활동에 관여하지 않으며, 가입자(파트너)가 타인의 저작권을 포함한 지적재산권 및 기타 권리를 침해한 불법적인 방법이나 기타 홍보활동으로 인한 모든 피해에 대해서 책임을 지지 않으며, 그에 대한 책임은 가입자(파트너)에게 있다.
+
+제 24 조 (관할)
+서비스 이용으로 발생한 분쟁에 대해 운영자와 가입자는 최대한 협의하여 해결토록 노력하며, 소송이 제기될 시 관할법원은 운영자의 주소지 관할로 한다.
+
+ο 본 약관은 : 2018년 02월 09일 부터 시행됩니다.</textarea>
+
+          </section>
+          <section id="fregister_private">
+            <div class="fregister_private">
+              <h2>개인정보처리방침안내</h2>
+              <input type="checkbox" id="private">
+            </div>
+            <div class="table">
+              <div class="title">
+                <div class="th1 th">목적</div>
+                <div class="th2 th">항목</div>
+                <div class="th3 th">보유기간</div>
+              </div>
+              <div class="line1">
+                <div class="td1 td">이용자 식별 및 본인여부 확인</div>
+                <div class="td2 td">아이디, 이름, 비밀번호</div>
+                <div class="td3 td">회원 탈퇴 시까지</div>
+              </div>
+              <div class="line2">
+                <div class="td4 td">고객서비스 이용에 관한 통지, <br>CS대응을 위한 이용자 식별</div>
+                <div class="td5 td">연락처 (이메일, 휴대전화번호)</div>
+                <div class="td6 td">회원 탈퇴 시까지</div>
+              </div>
+            </div>
+
+          </section>
+          <div class="fregister_chkall">
+            <label for="check_all">개인정보처리방침안내</label>
+            <input type="checkbox" id="check_all">
+          </div>
+          <div class="confirm">
+            <a href="" class="cancel bold">취소 </a>
+            <button type="submit" class="bold submit">회원가입</button>
+          </div>
+        </form>
+        
+
+      </div>
+    </div>
+    <footer>
+      <div class="footer__content">
+        <!-- Title -->
+        <div class="footer__content-title">
+          <h5>Bitcamp representative inquiry</h5>
+          <h5>080-861-0909</h5>
+        </div>
+        <!-- Infor -->
+        <div class="footer__content-infor">
+          <div class="infor__left">
+            <h5>
+              * For administrative work of existing students, please contact the
+              relevant center.
+            </h5>
+            <ul>
+              <li>Seocho Main Garden</li>
+              <li>02. 3486. 9600</li>
+              <li>Sinchon Center</li>
+              <li>02. 707. 1480</li>
+            </ul>
+            <ul>
+              <li>Gangnam Center</li>
+              <li>02. 3453. 5404</li>
+              <li>Jongno Center</li>
+              <li>02. 722. 1481</li>
+            </ul>
+            <ul>
+              <li>weekday</li>
+              <li>AM 09:00-PM 18:30</li>
+              <li>Saturdays, Sundays, and holidays</li>
+              <li>AM 09:00-PM 18:00</li>
+            </ul>
+          </div>
+          <div class="infor__right">
+            <div class="infor__right-icon1">
+              <img src="./images/ft_icon1.png" alt="icon 1" />
+            </div>
+            <div class="infor__right-icon2">
+              <img src="./images/ft_icon2.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <hr class="hrfooter" />
+        <div class="footer__content-company">
+          <div class="footer__left">
+            <p>
+              Bit Camp ｜ 459 Gangnam-daero, Seocho-gu, Seoul (Seocho-dong,
+              Baekam Building) ｜ Business Registration Number: 214-85-24928
+            </p>
+            <p>
+              Bit Computer Co., Ltd. Seo Cho Bonwon CEO: Cho Hyun-jung ｜
+              Inquiries : 02-3486-9600 ｜ Fax: 02-6007-1245
+            </p>
+            <p>
+              Mail-order business report number: Seocho-00098 ｜ Personal
+              information protection manager: Choi Jong- jin
+            </p>
+          </div>
+          <div class="footer__right">
+            <img src="./images/logo.png" alt="" />
+          </div>
+        </div>
+        <div class="footer__content-btn">
+          <div class="footer__buton-left">
+            <button>Privacy Policy</button>
+            <button>Terms of Use</button>
+            <button>Directions</button>
+          </div>
+          <div class="footer__copyright">
+            <p>Copyright (c) Bitcamp All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+      <!-- message chatbox -->
+      <div class="mess">
+        <i class="fas fa-comment-dots"></i>
+      </div>
+      <!-- popup chat message -->
+      <div class="popupchat">
+        <div class="popupchat__content">
+          <div class="popupchat__content-title">
+            <div>
+              <h5>Beat camp</h5>
+            </div>
+            <div>
+              <i class="fas fa-cog"></i>
+              <i class="fas fa-times" id="closeChat"></i>
+            </div>
+          </div>
+          <div class="popupchat__content-active">
+            <div class="popupchat__active">
+              <h5>Available</h5>
+              <p>Replies within an hour</p>
+            </div>
+            <div class="popupchat__online">
+              <div>
+                <img src="./images/available_1.png" alt="" />
+              </div>
+              <div>
+                <img src="./images/available_2.png" alt="" />
+              </div>
+              <div>
+                <img src="./images/available_3.png" alt="" />
+              </div>
+              <div>
+                <img src="./images/available_4.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="startchat">
+            <div class="startchat__title">
+              <img src="./images/startchat.png" alt="" />
+              <div>
+                <h5>Bitcamp</h5>
+                <p>Welcome! How can I help you today?</p>
+              </div>
+            </div>
+            <div class="startchat__btn">
+              <button>
+                <p><i class="fas fa-play"></i> Start a new chat</p>
+              </button>
+            </div>
+          </div>
+          <div class="link">
+            <div class="link__icon">
+              <i class="fas fa-link"></i>
+            </div>
+            <div class="link__hover">
+              <p>Chat link copy: bitcamp1:chann...</p>
+            </div>
+          </div>
+        </div>
+        <div class="popupchat__bottom">
+          <p>
+            <i class="far fa-comment-dots"></i> Powered by
+            <span>Channel.io</span>
+          </p>
+        </div>
+      </div>
+      <!-- topheader -->
+      <div class="topheader">
+        <div class="topheader__call">
+          <img src="./images/call_quick.png" alt="" />
+        </div>
+        <div class="topheader__btn">
+          <i class="fas fa-arrow-up"></i>
+        </div>
+      </div>
+    </footer>
+    <script>
+
+
+      //check all
+        let check_all = document.querySelector('#check_all')
+        let private = document.querySelector('#private')
+        let term = document.querySelector('#term')
+        let submit = document.querySelector('.submit')
+        check_all.onchange = function(){
+          if(check_all.checked){
+            private.checked = true
+            term.checked = true
+          }
+          else{
+            private.checked = false
+            term.checked = false
+          }
+        }
+        submit.onclick = function(e){
+          if(term.checked ===false || private.checked===false){
+            e.preventDefault();
+            alert('회원가입익관의 내용에 동의하셔야 회원가밉 하실 수 있습니다 ')
+          }
+        }
+
+      // -------sub menu-------------
+      // get element event
+      const iconmenu = document.querySelector("#subnav");
+      const popupnav = document.querySelector(".nav__menu");
+      const closemenu = document.querySelector("#closesubmenu");
+
+      //add event "click"
+      iconmenu.addEventListener("click", openModal);
+      closemenu.addEventListener("click", closesub);
+
+      // function event
+      // open
+      function openModal() {
+        popupnav.style.display = "block";
+      }
+      // close menu
+      function closesub() {
+        popupnav.style.display = "none";
+      }
+
+      //-------message----------
+      const mes = document.querySelector(".mess");
+      const openChat = document.querySelector(".popupchat");
+      const turnoff = document.querySelector("#closeChat");
+
+      mes.addEventListener("click", openMes);
+      turnoff.addEventListener("click", closeChat);
+
+      function openMes() {
+        openChat.style.display = "block";
+      }
+
+      function closeChat() {
+        openChat.style.display = "none";
+      }
+
+      // -----scrollTop-------
+      const btnScrollTop = document.querySelector(".topheader__btn");
+
+      btnScrollTop.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // scroll header if scroll >30 then change background
+      const headerChange = document.querySelector(".header");
+      const changeColora = document.querySelectorAll(".header__menu-nav li a");
+      const changeImg = document.querySelector(".header__menu-icon img");
+      const changeIcon = document.querySelector(".header__menu-nav-btn i");
+      window.onscroll = function () {
+        myFunction();
+      };
+      function myFunction() {
+        if (
+          document.body.scrollTop > 50 ||
+          document.documentElement.scrollTop > 50
+        ) {
+          headerChange.style.backgroundColor = "#fff";
+          changeImg.style.backgroundColor = "blue";
+          changeIcon.style.color = "black";
+          for (let i = 0; i < changeColora.length; i++) {
+            changeColora[i].style.color = "black";
+          }
+        } else {
+          headerChange.style.backgroundColor = "#151726";
+          changeImg.style.backgroundColor = "";
+          changeIcon.style.color = "white";
+          for (let i = 0; i < changeColora.length; i++) {
+            changeColora[i].style.color = "white";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
