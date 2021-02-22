@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="#" type="image/x-icon" />
-    <title>Find a mentor Page</title>
+    <title>Mentor Page</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
     <style>
-    /* -------------------------BEGIN RESET AND DEFAUT VALUE CSS---------------------- */
+     /* -------------------------BEGIN RESET AND DEFAUT VALUE CSS---------------------- */
       * {
         margin: 0;
         padding: 0;
@@ -32,13 +32,15 @@
         --boder-color-ff: #fff;
       }
 
-      li,ul {
+      li,
+      ul {
         list-style: none;
       }
       a {
         color: var(--text-color-black);
         text-decoration: none;
       }
+
       .pc-layout {
         margin: 0 auto;
         width: 1200px;
@@ -64,8 +66,8 @@
       .mr_bt_15{
         margin-bottom: 15px;
       }
-      /* -------------------------BEGIN RESET AND DEFAUT VALUE CSS---------------------- */
-      
+      /* -------------------------END RESET AND DEFAUT VALUE CSS---------------------- */
+
       /* HEADER */
       .header {
         background-color: #151726;
@@ -456,10 +458,8 @@
         color: #fff;
       }
       /* END POPUP CHAT MESSAGE */
-      /* -------END FOOTER----- */
 
       /* -----------------------------BEGIN MAIN -----------------------------------------*/
-      
       #wapper {
         padding-top: 75px;
       }
@@ -467,6 +467,7 @@
       #container_title_box {
         position: relative;
       }
+
       #container_title_box p {
         position: absolute;
         top: 50%;
@@ -477,6 +478,7 @@
         text-align: center;
         text-transform: uppercase;
       }
+
       #container_title_box img {
         width: 100%;
         vertical-align: middle;
@@ -487,40 +489,6 @@
         margin: 80px auto;
         width: 1200px;
       }
-      .container_nav_filter div p {
-        padding-bottom: 10px;
-      }
-      .container_nav_filter div ul {
-        padding: 11px 10px 11px 0;
-      }
-      .container_nav_filter div ul li {
-        display: inline-block;
-        margin: 0 5px 5px 0;
-      }
-      .container_nav_filter div ul li a {
-        width: fit-content;
-        height: 100%;
-        padding: 10px;
-        border: 1px solid var(--boder-color-33);
-        border-radius: 3px;
-        display: block;
-      }
-      .container_nav_filter div ul li a.active {
-        background-color: var(--bg-color-black);
-        color: var(--text-color-white);
-      }
-      .container_nav_filter div ul li a:hover {
-        background-color: var(--bg-color-black);
-        color: var(--text-color-white);
-      }
-
-      .container_nav_filter .nav_filter_center {
-        margin: 25px auto 0;
-        width: 80%;
-        color: var(--text-color-black);
-      }
-     
-      /* RESULT FILTER */
       .container_cm h1 {
         margin: 40px 0 10px 0;
         border-bottom: 3px solid var(--boder-color-33);
@@ -630,8 +598,7 @@
       .pagination a:hover:not(.active) {
         background-color: var(--bg-color-white);
       } */
-
-      /* MODAL SEARCH */
+      /* ------------------- */
       .modal_search_wrap{
         display: none;
         position: fixed;
@@ -673,6 +640,7 @@
       .modal_search_wrap fieldset .title_search button:focus{
         outline: none;
       }
+      
       .modal_search_wrap fieldset .form_search select{
         width: 100%;
         padding: 10px;
@@ -815,7 +783,8 @@
       </div>
     </section>
     <!-- END HEADER -->
-    <!---------------------------------BEGIN MAIN ------------------------------------->
+    <!-- BEGIN -->
+     <!---------------------------------BEGIN MAIN ------------------------------------->
     <div id="wapper">
       <div id="container_title_box">
         <img
@@ -823,24 +792,11 @@
           alt=""
           class="full"
         />
-        <p class="font25 bold">Find a mentor</p>
+        <p class="font25 bold">Mentoring</p>
       </div>
       <div id="div_cm">
         <div class="container_cm">
-          <nav class="container_nav_filter">
-            <div class="nav_filter_center">
-              <p class="font20 bold">Field of expertise</p>
-              <ul>
-                <li><a class="active">All</a></li>
-                <li><a>IT education</a></li>
-                <li><a>Employment</a></li>
-                <li><a>Founded</a></li>
-                <li><a>Overseas employment</a></li>
-                <li><a>Overseas startup</a></li>
-              </ul>
-            </div>
-          </nav>
-          <h1 class="font20 bold">Find a Mentor</h1>
+          <h1 class="font20 bold">Mentoring</h1>
           <div class="result_filter">
             <div class="bar_search">
                 <button id="open_modal_search"><i class="fas fa-search"></i></button>
