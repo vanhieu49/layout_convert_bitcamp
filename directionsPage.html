@@ -1,785 +1,784 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="#" type="image/x-icon" />
-    <title>Directions Page</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="#" type="image/x-icon" />
+  <title>Directions Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    :root {
+      --text-color-black: #333;
+      --text-color-white: #fff;
+      --bg-color-red: #da5c5f;
+      --bg-color-f5: #f5f5f5;
+      --bg-color-white: #fff;
+      --boder-color-d3: #d3d3d3;
+    }
+
+    li,
+    ul {
+      list-style: none;
+    }
+
+    .pc-layout {
+      margin: 0 auto;
+    }
+
+    .font25 {
+      font-size: 25px;
+    }
+
+    .font20 {
+      font-size: 20px;
+    }
+
+    .font13 {
+      font-size: 13px;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+
+    /* ----------------------------------------------- */
+    /* HEADER */
+    .header {
+      background-color: #151726;
+      width: 100%;
+      color: white;
+      height: 75px;
+      line-height: 75px;
+      box-shadow: 0 1px white;
+      z-index: 9999;
+      border-bottom: -2px solid rgb(243, 237, 237);
+      position: fixed;
+    }
+
+    .header .header__menu .header__menu-icon {
+      margin-top: 10px;
+    }
+
+    .header .header__menu {
+      width: 96%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 15% 70% 15%;
+    }
+
+    .header__menu .header__menu-nav ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+    }
+
+    .header__menu-nav li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .header .header__menu .header__menu-nav-btn {
+      text-align: right;
+      cursor: pointer;
+    }
+
+    .header__menu-nav-btn:hover+.nav__menu {
+      display: block;
+    }
+
+    /* END HEADER */
+    /* nav menu show/hidden when click icon */
+    .nav__menu {
+      display: none;
+      width: 100%;
+      background-color: rgb(234, 238, 225);
+      position: fixed;
+      top: 12%;
+      z-index: 999999;
+      border: 1px solid black;
+    }
+
+    .nav__menu-title {
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    .nav__menu hr {
+      width: 95%;
+    }
+
+    .nav__menu-btn {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      width: 95%;
+      margin: 0 auto;
+      margin-top: 10px;
+      text-align: center;
+      grid-gap: 5px;
+      box-sizing: border-box;
+    }
+
+    .nav__menu-btn button {
+      width: 100%;
+      padding: 10px 15px;
+      cursor: pointer;
+      border: 1px solid black;
+      outline: none;
+    }
+
+    .nav__menu-link {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      width: 94%;
+      margin: 0 auto;
+    }
+
+    .nav__menu-link>div {
+      border-right: 1px solid rgb(202, 196, 196);
+      padding: 15px;
+    }
+
+    .nav__menu-link>div:last-child {
+      border: none;
+    }
+
+    .nav__menu-link>div ul {
+      list-style-type: none;
+      margin-top: 12px;
+    }
+
+    .nav__menu-link>div h5 {
+      cursor: pointer;
+    }
+
+    .nav__menu-link>div a {
+      text-decoration: none;
+      color: #555;
+      font-size: 12px;
+      line-height: 30px;
+      cursor: pointer;
+    }
+
+    #closesubmenu {
+      cursor: pointer;
+    }
+
+    .contactus {
+      padding: 20px;
+      margin-bottom: 50px;
+    }
+
+    .contactus h5 {
+      text-align: center;
+    }
+
+    .contactus a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    /* END nav menu show/hidden when click icon */
+    /* FOOTER */
+    footer {
+      margin-top: 120px;
+      background-color: #151726;
+      margin-bottom: -25px;
+    }
+
+    .footer__content {
+      width: 95%;
+      margin: 20px auto;
+      box-sizing: border-box;
+      color: white;
+      padding: 50px 0;
+    }
+
+    .footer__content-title {
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer__content-title h5 {
+      font-size: 20px;
+    }
+
+    .footer__content-infor {
+      display: grid;
+      grid-template-columns: 60% 40%;
+    }
+
+    .infor__left ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: space-between;
+      list-style-type: none;
+      margin: 20px 0;
+    }
+
+    .infor__right {
+      display: flex;
+      justify-content: space-around;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+
+    .infor__right img {
+      width: 90%;
+    }
+
+    .hrfooter {
+      margin: 20px 0;
+    }
+
+    .footer__content-company {
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 87% 13%;
+      margin-top: 40px;
+      justify-content: space-between;
+    }
+
+    .footer__content-company .footer__right img {
+      margin-left: 18px;
+    }
+
+    .footer__content-btn {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      margin-bottom: 100px;
+    }
+
+    .footer__buton-left button {
+      padding: 10px 20px;
+      outline: none;
+      border-radius: 5px;
+      background-color: #000;
+      color: white;
+      border: 1px solid #000;
+    }
+
+    /* POPUP MESSAGE CHAT */
+    .mess {
+      position: fixed;
+      bottom: 23px;
+      left: 20px;
+    }
+
+    .mess i {
+      padding: 10px;
+      background-color: #125177;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    /* END POPUP MESSAGE CHAT */
+    /* BUTTON TOP HEADER SCROLL */
+    .topheader {
+      position: fixed;
+      bottom: 80px;
+      right: 5px;
+    }
+
+    .topheader__call img {
+      width: 80%;
+      cursor: pointer;
+    }
+
+    .topheader__btn {
+      position: absolute;
+      right: 25px;
+      padding: 13px 17px;
+      background-color: rgba(117, 112, 112, 0.3);
+      text-align: center;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all ease-in-out 0.2s;
+      border: 2px solid black;
+    }
+
+    .topheader__btn:hover {
+      background-color: #3059c7;
+      color: white;
+      border: none;
+    }
+
+    /* POPUP CHAT MESSAGE */
+    .popupchat {
+      display: none;
+      position: fixed;
+      top: 12%;
+      left: 1%;
+      width: 30%;
+      border-radius: 25px 25px 0 0;
+      background-color: #135278;
+      /* For browsers that do not support gradients */
+      background-image: linear-gradient(#135278, #f6f6f7);
+      box-sizing: border-box;
+    }
+
+    .popupchat__content {
+      width: 98%;
+      margin: 10px auto;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    #closeChat {
+      cursor: pointer;
+    }
+
+    .popupchat__content-title {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .popupchat__content-title>div i {
+      color: #fff;
+    }
+
+    .popupchat__content-title>div i:first-child {
+      margin-right: 20px;
+    }
+
+    .popupchat__content-active {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .popupchat__active h5::before {
+      content: "";
+      position: absolute;
+      top: 80px;
+      left: 75px;
+      background-color: rgb(14, 226, 96);
+      height: 9px;
+      width: 9px;
+      border-radius: 50%;
+      border: 1px solid rgb(223, 220, 220);
+    }
+
+    .popupchat__online {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      box-sizing: border-box;
+      grid-gap: 1px;
+    }
+
+    .popupchat__online>div img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+
+    .startchat {
+      width: 100%;
+      height: 80%;
+      background-color: #fff;
+      border-radius: 10px;
+      z-index: 999999;
+      box-shadow: -1px 2px rgb(248, 239, 239);
+      padding: 15px 0;
+    }
+
+    .startchat__title {
+      display: flex;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      transition: all ease-in-out 0.3s;
+      margin-left: -2px;
+    }
+
+    .startchat__title:hover {
+      background-color: rgb(226, 225, 225);
+      cursor: pointer;
+    }
+
+    .startchat__title>div p {
+      font-size: 12px;
+      color: rgb(115, 115, 116);
+      letter-spacing: 1px;
+    }
+
+    .startchat__title img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .startchat__title h5 {
+      line-height: 25px;
+    }
+
+    .startchat__btn {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .startchat__btn button {
+      padding: 10px 20px;
+      outline: none;
+      border: none;
+      border-radius: 20px;
+      color: #fff;
+      background-color: #125177;
+      cursor: pointer;
+    }
+
+    .link .link__icon {
+      background-color: rgb(195, 197, 202);
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 15px;
+      margin: 30px auto;
+      transition: all ease-in-out 0.3s;
+      cursor: pointer;
+    }
+
+    .link__icon i {
+      line-height: 45px;
+      font-size: 14px;
+      color: rgb(114, 116, 119);
+    }
+
+    .link__hover {
+      display: none;
+      text-align: center;
+      padding: 15px 5px;
+      background-color: black;
+      color: #fff;
+      width: 80%;
+      margin: 0 auto;
+      border-radius: 10px;
+      position: absolute;
+      bottom: 90px;
+      left: 35px;
+    }
+
+    .link__icon:hover+.link__hover {
+      display: block;
+    }
+
+    .popupchat__bottom {
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .popupchat__bottom p {
+      box-sizing: border-box;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      color: rgb(181, 183, 187);
+    }
+
+    .popupchat__bottom p span {
+      color: black;
+    }
+
+    .popupchat__bottom p i {
+      padding: 5px;
+      background-color: rgb(102, 100, 237);
+      background-image: linear-gradient(rgb(102, 100, 237), rgb(35, 33, 177));
+      border-radius: 50%;
+      color: #fff;
+    }
+
+    /* END POPUP CHAT MESSAGE */
+    /* -------END FOOTER----- */
+    /* -----------------------------BEGIN MAIN CSS-----------------------------------------*/
+    #wapper {
+      padding-top: 75px;
+    }
+
+    /* BOX TITLE */
+    #container_title_box {
+      position: relative;
+    }
+
+    #container_title_box p {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      color: var(--text-color-white);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    #container_title_box img {
+      width: 100%;
+      vertical-align: middle;
+    }
+
+    /* --------------------------------- */
+    .tabs_location {
+      width: 100%;
+      /* border-bottom: 1px solid var(--boder-color-d3); */
+    }
+    .tabs .tablist{
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+    }
+    .tabs .tablist button{
+      background-color: var(--bg-color-white);
+      border: 1px solid var(--boder-color-d3);
+      padding: 15px;
+      border-radius: 0;
+      border-right: none;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    .tabs .tablist button:nth-child(4){
+      border: 1px solid var(--boder-color-d3);
+    }
+    .tabs .tablist button:focus{
+      outline: none;
+    }
+    .tabs .tablist button[aria-selected="true"] {
+      color: var(--text-color-white);
+      background-color: var(--bg-color-red);
+      border: none;
+    }
+
+   
+
+    /*  ----------------------------------------------*/
+    .container_location {
+      margin: 80px auto;
+      min-height: 500px;
+    }
+
+    .container_location h1 {
+      border-bottom: 1px solid var(--boder-color-d3);
+      width: fit-content;
+      margin-bottom: 15px;
+    }
+
+    .container_location .wap_map {
+      margin: 10px 0;
+      position: relative;
+      width: 100%;
+      height: 350px;
+    }
+
+    .container_location .wap_map #map {
+      width: 100%;
+      height: 100%;
+    }
+
+    .address_location li .div_label {
+      padding: 10px;
+      border-top: 1px solid var(--boder-color-d3);
+      border-bottom: 1px solid var(--boder-color-d3);
+      background-color: var(--bg-color-f5);
+    }
+
+    .address_location li .div_desc {
+      padding: 10px;
+    }
+
+    
+
+    
+    /*----------------- RESPOSIVE------------------------- */
+    @media only screen and (min-width: 320px) {
+      /* For mobile */
+      .pc-layout{
+        width: 100%;
+      }
+      .container_location {
+        width: 90%;
       }
 
-      :root {
-        --text-color-black: #333;
-        --text-color-white: #fff;
-        --bg-color-red: #da5c5f;
-        --bg-color-f5: #f5f5f5;
-        --bg-color-white: #fff;
-        --boder-color-d3: #d3d3d3;
+      #container_title_box img {
+        height: 200px;
       }
 
-      li,
-      ul {
-        list-style: none;
+      .tabs_location .listtab {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
       }
-      .pc-layout {
-        margin: 0 auto;
-        width: 1200px;
+
+      .container_location .wap_map {
+        height: 200px;
       }
+    }
+
+    @media only screen and (min-width: 600px) {
+      /* For tablets: */
+      .container_location {
+        width: 90%;
+      }
+
+      .container_location .wap_map {
+        height: 200px;
+      }
+
       .font25 {
-        font-size: 25px;
+        font-size: 35px;
       }
+
       .font20 {
         font-size: 20px;
       }
+
       .font13 {
-        font-size: 13px;
+        font-size: 16px;
       }
-      .bold {
-        font-weight: 700;
-      }
+    }
 
-      /* ----------------------------------------------- */
-      /* HEADER */
-      .header {
-        background-color: #151726;
-        width: 100%;
-        color: white;
-        height: 75px;
-        line-height: 75px;
-        box-shadow: 0 1px white;
-        z-index: 9999;
-        border-bottom: -2px solid rgb(243, 237, 237);
-        position: fixed;
-      }
-      .header .header__menu .header__menu-icon {
-        margin-top: 10px;
-      }
-      .header .header__menu {
-        width: 96%;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 15% 70% 15%;
-      }
-      .header__menu .header__menu-nav ul {
-        display: flex;
-        justify-content: space-between;
-        list-style-type: none;
-      }
-      .header__menu-nav li a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-      }
-      .header .header__menu .header__menu-nav-btn {
-        text-align: right;
-        cursor: pointer;
-      }
-      .header__menu-nav-btn:hover + .nav__menu {
-        display: block;
-      }
-      /* END HEADER */
-      /* nav menu show/hidden when click icon */
-      .nav__menu {
-        display: none;
-        width: 100%;
-        background-color: rgb(234, 238, 225);
-        position: fixed;
-        top: 12%;
-        z-index: 999999;
-        border: 1px solid black;
-      }
-      .nav__menu-title {
-        width: 95%;
-        display: flex;
-        justify-content: space-between;
-        margin: 0 auto;
-        padding: 20px 0;
-      }
-      .nav__menu hr {
-        width: 95%;
-      }
-      .nav__menu-btn {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        width: 95%;
-        margin: 0 auto;
-        margin-top: 10px;
-        text-align: center;
-        grid-gap: 5px;
-        box-sizing: border-box;
-      }
-      .nav__menu-btn button {
-        width: 100%;
-        padding: 10px 15px;
-        cursor: pointer;
-        border: 1px solid black;
-        outline: none;
-      }
-      .nav__menu-link {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        width: 94%;
-        margin: 0 auto;
-      }
-      .nav__menu-link > div {
-        border-right: 1px solid rgb(202, 196, 196);
-        padding: 15px;
-      }
-      .nav__menu-link > div:last-child {
-        border: none;
-      }
-      .nav__menu-link > div ul {
-        list-style-type: none;
-        margin-top: 12px;
-      }
-      .nav__menu-link > div h5 {
-        cursor: pointer;
-      }
-      .nav__menu-link > div a {
-        text-decoration: none;
-        color: #555;
-        font-size: 12px;
-        line-height: 30px;
-        cursor: pointer;
-      }
-      #closesubmenu {
-        cursor: pointer;
-      }
-      .contactus {
-        padding: 20px;
-        margin-bottom: 50px;
-      }
-      .contactus h5 {
-        text-align: center;
-      }
-      .contactus a {
-        text-decoration: none;
-        color: #555;
-      }
-      /* END nav menu show/hidden when click icon */
-      /* FOOTER */
-      footer {
-        margin-top: 120px;
-        background-color: #151726;
-        margin-bottom: -25px;
-      }
-      .footer__content {
-        width: 95%;
-        margin: 20px auto;
-        box-sizing: border-box;
-        color: white;
-        padding: 50px 0;
-      }
-      .footer__content-title {
-        line-height: 30px;
-        margin-bottom: 30px;
-      }
-      .footer__content-title h5 {
-        font-size: 20px;
-      }
-      .footer__content-infor {
-        display: grid;
-        grid-template-columns: 60% 40%;
-      }
-      .infor__left ul {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        justify-content: space-between;
-        list-style-type: none;
-        margin: 20px 0;
-      }
-      .infor__right {
-        display: flex;
-        justify-content: space-around;
-        justify-content: flex-end;
-        margin-top: 20px;
-      }
-      .infor__right img {
-        width: 90%;
-      }
-      .hrfooter {
-        margin: 20px 0;
-      }
-      .footer__content-company {
-        box-sizing: border-box;
-        display: grid;
-        grid-template-columns: 87% 13%;
-        margin-top: 40px;
-        justify-content: space-between;
-      }
-      .footer__content-company .footer__right img {
-        margin-left: 18px;
-      }
-      .footer__content-btn {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 30px;
-        margin-bottom: 100px;
-      }
-      .footer__buton-left button {
-        padding: 10px 20px;
-        outline: none;
-        border-radius: 5px;
-        background-color: #000;
-        color: white;
-        border: 1px solid #000;
-      }
-      /* POPUP MESSAGE CHAT */
-      .mess {
-        position: fixed;
-        bottom: 23px;
-        left: 20px;
-      }
-      .mess i {
-        padding: 10px;
-        background-color: #125177;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 30px;
-        color: white;
-        font-size: 30px;
-        cursor: pointer;
-      }
-      /* END POPUP MESSAGE CHAT */
-      /* BUTTON TOP HEADER SCROLL */
-      .topheader {
-        position: fixed;
-        bottom: 80px;
-        right: 5px;
-      }
-      .topheader__call img {
-        width: 80%;
-        cursor: pointer;
-      }
-      .topheader__btn {
-        position: absolute;
-        right: 25px;
-        padding: 13px 17px;
-        background-color: rgba(117, 112, 112, 0.3);
-        text-align: center;
-        font-size: 18px;
-        cursor: pointer;
-        transition: all ease-in-out 0.2s;
-        border: 2px solid black;
-      }
-      .topheader__btn:hover {
-        background-color: #3059c7;
-        color: white;
-        border: none;
-      }
-      /* POPUP CHAT MESSAGE */
-      .popupchat {
-        display: none;
-        position: fixed;
-        top: 12%;
-        left: 1%;
-        width: 30%;
-        border-radius: 25px 25px 0 0;
-        background-color: #135278; /* For browsers that do not support gradients */
-        background-image: linear-gradient(#135278, #f6f6f7);
-        box-sizing: border-box;
-      }
-      .popupchat__content {
-        width: 98%;
-        margin: 10px auto;
-        padding: 10px;
-        box-sizing: border-box;
-      }
-      #closeChat {
-        cursor: pointer;
-      }
-      .popupchat__content-title {
-        display: flex;
-        justify-content: space-between;
-      }
-      .popupchat__content-title > div i {
-        color: #fff;
-      }
-      .popupchat__content-title > div i:first-child {
-        margin-right: 20px;
-      }
-      .popupchat__content-active {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 40px;
-      }
-      .popupchat__active h5::before {
-        content: "";
-        position: absolute;
-        top: 80px;
-        left: 75px;
-        background-color: rgb(14, 226, 96);
-        height: 9px;
-        width: 9px;
-        border-radius: 50%;
-        border: 1px solid rgb(223, 220, 220);
-      }
-      .popupchat__online {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        box-sizing: border-box;
-        grid-gap: 1px;
-      }
-      .popupchat__online > div img {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-      }
-      .startchat {
-        width: 100%;
-        height: 80%;
-        background-color: #fff;
-        border-radius: 10px;
-        z-index: 999999;
-        box-shadow: -1px 2px rgb(248, 239, 239);
-        padding: 15px 0;
-      }
-      .startchat__title {
-        display: flex;
-        padding: 10px 20px;
-        box-sizing: border-box;
-        transition: all ease-in-out 0.3s;
-        margin-left: -2px;
-      }
-      .startchat__title:hover {
-        background-color: rgb(226, 225, 225);
-        cursor: pointer;
-      }
-      .startchat__title > div p {
-        font-size: 12px;
-        color: rgb(115, 115, 116);
-        letter-spacing: 1px;
-      }
-      .startchat__title img {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
-      .startchat__title h5 {
-        line-height: 25px;
-      }
-      .startchat__btn {
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 10px;
-      }
-      .startchat__btn button {
-        padding: 10px 20px;
-        outline: none;
-        border: none;
-        border-radius: 20px;
-        color: #fff;
-        background-color: #125177;
-        cursor: pointer;
-      }
-      .link .link__icon {
-        background-color: rgb(195, 197, 202);
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 15px;
-        margin: 30px auto;
-        transition: all ease-in-out 0.3s;
-        cursor: pointer;
-      }
-      .link__icon i {
-        line-height: 45px;
-        font-size: 14px;
-        color: rgb(114, 116, 119);
-      }
-      .link__hover {
-        display: none;
-        text-align: center;
-        padding: 15px 5px;
-        background-color: black;
-        color: #fff;
-        width: 80%;
-        margin: 0 auto;
-        border-radius: 10px;
-        position: absolute;
-        bottom: 90px;
-        left: 35px;
-      }
-      .link__icon:hover + .link__hover {
-        display: block;
-      }
-      .popupchat__bottom {
-        text-align: center;
-        box-sizing: border-box;
-      }
-      .popupchat__bottom p {
-        box-sizing: border-box;
-        margin-top: 60px;
-        margin-bottom: 20px;
-        color: rgb(181, 183, 187);
-      }
-      .popupchat__bottom p span {
-        color: black;
-      }
-      .popupchat__bottom p i {
-        padding: 5px;
-        background-color: rgb(102, 100, 237);
-        background-image: linear-gradient(rgb(102, 100, 237), rgb(35, 33, 177));
-        border-radius: 50%;
-        color: #fff;
-      }
-      /* END POPUP CHAT MESSAGE */
-      /* -------END FOOTER----- */
-      #wapper {
-        padding-top: 75px;
-      }
-      #container_title_box {
-        position: relative;
-      }
-      #container_title_box p {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        transform: translateY(-50%);
-        color: var(--text-color-white);
-        text-align: center;
-        text-transform: uppercase;
-      }
-      #container_title_box img {
-        width: 100%;
-        vertical-align: middle;
-      }
-      .tabs_location {
-        width: 100%;
-        border-bottom: 1px solid var(--boder-color-d3);
-      }
-      .tabs_location .listtab {
-        text-align: center;
-      }
-      .tabs_location .listtab li {
-        float: left;
-        text-decoration: none;
-        width: 25%;
-        outline-style: none;
-        border-right: 1px solid var(--boder-color-d3);
-      }
-      .tabs_location .listtab li a {
-        width: 100%;
-        height: 100%;
-      }
-      .tabs_location .listtab li a.active {
-        color: var(--text-color-white);
-        background-color: var(--bg-color-red);
-        display: block;
-      }
-      .tabs_location .listtab li:first-child {
-        border-left: 1px solid var(--boder-color-d3);
-      }
+    @media only screen and (min-width: 1200px) {
+      /* For desktop: */
+      .container_location {
+        width: 1200px;
+      }
+      .pc-layout {
+        width: 1200px;
+      }
+    }
+  </style>
+</head>
 
-      /*  -------------------------------------------------------*/
-      .tabpanel_location {
-      }
-
-      .tabpanel_location .container_location {
-        margin: 80px auto;
-        min-height: 500px;
-      }
-      .container_location h1 {
-        border-bottom: 1px solid var(--boder-color-d3);
-        width: fit-content;
-      }
-      .container_location .wap_map {
-        margin: 10px 0;
-        position: relative;
-        width: 100%;
-        height: 350px;
-      }
-      .container_location .wap_map #map {
-        width: 100%;
-        height: 100%;
-      }
-
-      .tabpanel_location .content_location {
-      }
-
-      .content_location .address_location {
-      }
-
-      .address_location li .div_label {
-        padding: 10px;
-        border-top: 1px solid var(--boder-color-d3);
-        border-bottom: 1px solid var(--boder-color-d3);
-        background-color: var(--bg-color-f5);
-      }
-      .address_location li .div_desc {
-        padding: 10px;
-      }
-      .radius_border {
-        border: 1px solid var(--boder-color-d3);
-        border-radius: 5px;
-      }
-      .custom_typecontrol {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        overflow: hidden;
-        height: 30px;
-        margin: 0;
-        padding: 0;
-        z-index: 1;
-        font-size: 12px;
-      }
-      .custom_typecontrol span {
-        display: block;
-        width: 65px;
-        height: 30px;
-        float: left;
-        text-align: center;
-        line-height: 30px;
-        cursor: pointer;
-      }
-      .custom_typecontrol .btn {
-        background: var(--bg-color-white);
-        background: linear-gradient(#fff, #e6e6e6);
-      }
-      .custom_typecontrol .btn:hover {
-        background: #f5f5f5;
-        background: linear-gradient(#f5f5f5, #e3e3e3);
-      }
-      .custom_typecontrol .btn:active {
-        background: #e6e6e6;
-        background: linear-gradient(#e6e6e6, #fff);
-      }
-      .custom_typecontrol .selected_btn {
-        color: var(--text-color-white);
-        background: #425470;
-        background: linear-gradient(#425470, #5b6d8a);
-      }
-      .custom_typecontrol .selected_btn:hover {
-        color: var(--text-color-white);
-      }
-      .custom_zoomcontrol {
-        position: absolute;
-        top: 50px;
-        right: 10px;
-        width: 36px;
-        height: 80px;
-        overflow: hidden;
-        z-index: 1;
-        background-color: var(--bg-color-f5);
-      }
-      .custom_zoomcontrol span {
-        display: block;
-        width: 36px;
-        height: 40px;
-        text-align: center;
-        cursor: pointer;
-        line-height: 2.6;
-      }
-      .custom_zoomcontrol span img {
-        width: 15px;
-        height: 15px;
-        border: none;
-      }
-      .custom_zoomcontrol span:first-child {
-        border-bottom: 1px solid #bfbfbf;
-      }
-
-      @media only screen and (min-width: 320px) {
-        /* For mobile */
-        .container_location {
-          width: 90%;
-        }
-        #container_title_box img {
-          height: 200px;
-        }
-        .tabs_location .listtab {
-          width: 100%;
-          height: 40px;
-          line-height: 40px;
-        }
-        .container_location .wap_map {
-          height: 200px;
-        }
-      }
-
-      @media only screen and (min-width: 600px) {
-        /* For tablets: */
-        .tabs_location .listtab {
-          height: 60px;
-          line-height: 60px;
-        }
-        .container_location {
-          width: 90%;
-        }
-        .container_location .wap_map {
-          height: 200px;
-        }
-        .font25 {
-          font-size: 35px;
-        }
-        .font20 {
-          font-size: 20px;
-        }
-        .font13 {
-          font-size: 16px;
-        }
-      }
-      @media only screen and (min-width: 1200px) {
-        /* For desktop: */
-        .tabs_location .listtab {
-          width: 1200px;
-          height: 60px;
-          line-height: 60px;
-        }
-        .container_location {
-          width: 1200px;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- HEADER -->
-    <header class="header">
-      <div class="header__menu">
-        <div class="header__menu-icon">
-          <img src="./images/logo.png" alt="" />
-        </div>
-        <nav class="header__menu-nav">
-          <ul>
-            <li><a href="">Beat Camp</a></li>
-            <li><a href="">Curriculum</a></li>
-            <li><a href="">Employment and Startup Support Center</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Mentoring</a></li>
-            <li><a href="">CONTACT US</a></li>
-          </ul>
-        </nav>
-        <div class="header__menu-nav-btn">
-          <i class="fas fa-align-justify" id="subnav"></i>
-        </div>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__menu">
+      <div class="header__menu-icon">
+        <img src="./images/logo.png" alt="" />
       </div>
-    </header>
-    <!-- menu nav when hover -->
-    <section class="nav__menu">
-      <div class="nav__menu-title">
-        <h5>All Menu</h5>
-        <i class="fas fa-times" id="closesubmenu"></i>
+      <nav class="header__menu-nav">
+        <ul>
+          <li><a href="">Beat Camp</a></li>
+          <li><a href="">Curriculum</a></li>
+          <li><a href="">Employment and Startup Support Center</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Mentoring</a></li>
+          <li><a href="">CONTACT US</a></li>
+        </ul>
+      </nav>
+      <div class="header__menu-nav-btn">
+        <i class="fas fa-align-justify" id="subnav"></i>
       </div>
-      <hr />
-      <div class="nav__menu-btn">
-        <div class="language">
-          <button>Ko</button>
-        </div>
-        <div class="language">
-          <button>En</button>
-        </div>
-        <div class="singup">
-          <button>Sign Up</button>
-        </div>
-        <div class="login">
-          <button>Login</button>
-        </div>
+    </div>
+  </header>
+  <!-- menu nav when hover -->
+  <section class="nav__menu">
+    <div class="nav__menu-title">
+      <h5>All Menu</h5>
+      <i class="fas fa-times" id="closesubmenu"></i>
+    </div>
+    <hr />
+    <div class="nav__menu-btn">
+      <div class="language">
+        <button>Ko</button>
       </div>
-      <div class="nav__menu-link">
-        <div class="item1">
-          <h5>Beat Camp</h5>
-          <ul>
-            <li><a href="">Bit Camp Introduction</a></li>
-            <li><a href="">Directions</a></li>
-          </ul>
-        </div>
-        <div class="item2">
-          <h5>Curriculum</h5>
-          <ul>
-            <li><a href="">Government funding process</a></li>
-            <li><a href="">Incumbent Course</a></li>
-            <li><a href="">Basic lecture</a></li>
-            <li><a href="">General Course</a></li>
-          </ul>
-        </div>
-        <div class="item3">
-          <h5>Employment and Startup Support Center</h5>
-          <ul>
-            <li><a href="">Employment and Startup Support Center</a></li>
-            <li><a href="">Recruitment Announcement</a></li>
-            <li><a href="">Overseas employment and start-up</a></li>
-          </ul>
-        </div>
-        <div class="item4">
-          <h5>blog</h5>
-          <ul>
-            <li><a href="">blog</a></li>
-          </ul>
-        </div>
-        <div class="item5">
-          <h5>Mentoring</h5>
-          <ul>
-            <li><a href="">Mentoring</a></li>
-            <li><a href="">Find a Mentor</a></li>
-          </ul>
-        </div>
+      <div class="language">
+        <button>En</button>
       </div>
-      <div class="contactus">
-        <h5><a href="">CONTACT US</a></h5>
+      <div class="singup">
+        <button>Sign Up</button>
       </div>
-    </section>
-    <!-- END HEADER -->
-    <div id="wapper">
-      <div id="container_title_box">
-        <img
-          src="https://www.bitcamp.co.kr/theme/basic/img/title_01.jpg"
-          alt=""
-          class="full"
-        />
-        <p class="font25 bold">Directions</p>
+      <div class="login">
+        <button>Login</button>
       </div>
-      <div class="tabs_location">
-        <ul class="listtab pc-layout">
-          <li class="font13 bold"><a class="active">Seocho Main Garden</a></li>
-          <li class="font13 bold"><a>Gangnam Center</a></li>
-          <li class="font13 bold"><a>Jongno Center</a></li>
-          <li class="font13 bold"><a>Sinchon Center</a></li>
+    </div>
+    <div class="nav__menu-link">
+      <div class="item1">
+        <h5>Beat Camp</h5>
+        <ul>
+          <li><a href="">Bit Camp Introduction</a></li>
+          <li><a href="">Directions</a></li>
         </ul>
       </div>
-      <div class="tabpanel_location">
-        <div class="container_location pc-layout">
+      <div class="item2">
+        <h5>Curriculum</h5>
+        <ul>
+          <li><a href="">Government funding process</a></li>
+          <li><a href="">Incumbent Course</a></li>
+          <li><a href="">Basic lecture</a></li>
+          <li><a href="">General Course</a></li>
+        </ul>
+      </div>
+      <div class="item3">
+        <h5>Employment and Startup Support Center</h5>
+        <ul>
+          <li><a href="">Employment and Startup Support Center</a></li>
+          <li><a href="">Recruitment Announcement</a></li>
+          <li><a href="">Overseas employment and start-up</a></li>
+        </ul>
+      </div>
+      <div class="item4">
+        <h5>blog</h5>
+        <ul>
+          <li><a href="">blog</a></li>
+        </ul>
+      </div>
+      <div class="item5">
+        <h5>Mentoring</h5>
+        <ul>
+          <li><a href="">Mentoring</a></li>
+          <li><a href="">Find a Mentor</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="contactus">
+      <h5><a href="">CONTACT US</a></h5>
+    </div>
+  </section>
+  <!-- END HEADER -->
+  <!---------------------------------BEGIN MAIN HTML------------------------------------->
+  <div id="wapper">
+    <div id="container_title_box">
+      <img src="https://www.bitcamp.co.kr/theme/basic/img/title_01.jpg" alt="" class="full" />
+      <p class="font25 bold">Directions</p>
+    </div>
+    <div class="tabs_location">
+      <div class="tabs pc-layout">
+        <div class="tablist" role="tablist" aria-label="Sample Tabs">
+          <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">
+            Seocho Main Garden
+              </button>
+          <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">
+            Gangnam Center
+              </button>
+          <button role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1">
+            Jongno Center
+              </button>
+          <button role="tab" aria-selected="false" aria-controls="panel-4" id="tab-4" tabindex="-1">
+            Sinchon Center
+              </button>
+        </div>
+        <div class="container_location" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
           <h1 class="font20">Seocho Main Garden</h1>
           <div class="wap_map">
-            <div id="map"></div>
-            <div class="custom_typecontrol radius_border">
-              <span
-                id="btnRoadmap"
-                class="selected_btn"
-                onclick="setMapType('roadmap')"
-                >Map</span
-              >
-              <span id="btnSkyview" class="btn" onclick="setMapType('skyview')"
-                >Sky View</span
-              >
-            </div>
-            <div class="custom_zoomcontrol radius_border">
-              <span onclick="zoomIn()"
-                ><img
-                  src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png"
-                  alt="확대"
-              /></span>
-              <span onclick="zoomOut()"
-                ><img
-                  src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png"
-                  alt="축소"
-              /></span>
-            </div>
+            <iframe id="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.204140741738!2d127.02225031532987!3d37.50310313551609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca158a8d5dd53%3A0xaf6376543bcb7b3!2z67Cx7JWU67mM65Sp!5e0!3m2!1sen!2s!4v1614067162151!5m2!1sen!2s"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
           <div class="content_location">
             <ul class="address_location">
@@ -811,278 +810,398 @@
             </ul>
           </div>
         </div>
+        <div class="container_location pc-layout"  id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+          <h1 class="font20">Gangnam Center</h1>
+          <div class="wap_map">
+            <iframe id="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.204140741738!2d127.02225031532987!3d37.50310313551609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca158a8d5dd53%3A0xaf6376543bcb7b3!2z67Cx7JWU67mM65Sp!5e0!3m2!1sen!2s!4v1614067162151!5m2!1sen!2s"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="content_location">
+            <ul class="address_location">
+              <li class="font13">
+                <div class="div_label bold">Address</div>
+                <div class="div_desc">
+                  5th floor, Baekam Building, 459 Gangnam-daero, Seocho-gu, Seoul
+                </div>
+              </li>
+              <li class="font13">
+                <div class="div_label bold">Representative number</div>
+                <div class="div_desc">02)3453-5404</div>
+              </li>
+              <li class="font13">
+                <div class="div_label bold">Subway</div>
+                <div class="div_desc">
+                  Sinnonhyeon Station Line 9, Exit 6-3 minutes walk toward Gangnam Station
+                  <br />Gangnam Station Line 2, Exit 10-7 minutes on foot toward Sinnonhyeon Station
+                </div>
+              </li>
+              <li class="font13">
+                <div class="div_label bold">Bus</div>
+                <div class="div_desc">
+                  Get off at) Sinnonhyeon Station, (formerly) Kyobo Tower Intersection / Sinnonhyeon Station, Citibank
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container_location pc-layout"  id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
+          <h1 class="font20">Jongno Center</h1>
+          <div class="wap_map">
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.340099505577!2d126.98310321533158!3d37.57060843165265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2e88a3acb0f%3A0x906e9abe1d3cf700!2s69%20Jong-ro%2C%20Jongno%202(i)-ga%2C%20Jongno-gu%2C%20Seoul%2C%20South%20Korea!5e0!3m2!1sen!2s!4v1614071892890!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="content_location">
+            <ul class="address_location">
+              <li class="font13">
+                <div class="div_label bold">Address</div>
+                <div class="div_desc">
+                  7th floor of YMCA, 69, Jong-ro, Jongno-gu, Seoul
+                </div>
+              </li>
+              <li class="font13">
+                <div class="div_label bold">Representative number</div>
+                <div class="div_desc">02)722-1481</div>
+              </li>
+              <li class="font13">
+                <div class="div_label bold">Subway</div>
+                <div class="div_desc">
+                  Jonggak Station Line 1, Exits 8 and 11-3 min walk
+                </div>
+              </li>
+              <li class="font13">
+                <div class="div_label bold">Bus</div>
+                <div class="div_desc">
+                  Get off) Jongno 2-ga
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container_location pc-layout"  id="panel-4" role="tabpanel" tabindex="0" aria-labelledby="tab-4" hidden>
+          <h1 class="font20">Sinchon Center</h1>
+          <div class="wap_map">
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.1103800595256!2d126.93563751533104!3d37.55246313269159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98be0a2cf6e3%3A0x4d8963de2196f6dc!2s23%20Baekbeom-ro%2C%20Daeheung-dong%2C%20Mapo-gu%2C%20Seoul%2C%20South%20Korea!5e0!3m2!1sen!2s!4v1614072050755!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="content_location">
+            <ul class="address_location">
+              <li class="font13">
+                <div class="div_label bold">Address</div>
+                <div class="div_desc">
+                  3F, Gu Plaza, 23 Baekbeom-ro, Mapo-gu, Seoul
+                </div>
+              </li>
+              <li class="font13">
+                <div class="div_label bold">Representative number</div>
+                <div class="div_desc">02)707-1480</div>
+              </li>
+              <li class="font13">
+                <div class="div_label bold">Subway</div>
+                <div class="div_desc">
+                  Sinchon Station Line 2, Exit 6-8 min walk
+                </div>
+              </li>
+              <li class="font13">
+                <div class="div_label bold">Bus</div>
+                <div class="div_desc">
+                  Get off) Shinchon Rotary, Sogang University
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-    <footer>
-      <div class="footer__content">
-        <!-- Title -->
-        <div class="footer__content-title">
-          <h5>Bitcamp representative inquiry</h5>
-          <h5>080-861-0909</h5>
+  </div>
+  <!---------------------------------END MAIN HTML------------------------------------->
+  <footer>
+    <div class="footer__content">
+      <!-- Title -->
+      <div class="footer__content-title">
+        <h5>Bitcamp representative inquiry</h5>
+        <h5>080-861-0909</h5>
+      </div>
+      <!-- Infor -->
+      <div class="footer__content-infor">
+        <div class="infor__left">
+          <h5>
+            * For administrative work of existing students, please contact the
+            relevant center.
+          </h5>
+          <ul>
+            <li>Seocho Main Garden</li>
+            <li>02. 3486. 9600</li>
+            <li>Sinchon Center</li>
+            <li>02. 707. 1480</li>
+          </ul>
+          <ul>
+            <li>Gangnam Center</li>
+            <li>02. 3453. 5404</li>
+            <li>Jongno Center</li>
+            <li>02. 722. 1481</li>
+          </ul>
+          <ul>
+            <li>weekday</li>
+            <li>AM 09:00-PM 18:30</li>
+            <li>Saturdays, Sundays, and holidays</li>
+            <li>AM 09:00-PM 18:00</li>
+          </ul>
         </div>
-        <!-- Infor -->
-        <div class="footer__content-infor">
-          <div class="infor__left">
-            <h5>
-              * For administrative work of existing students, please contact the
-              relevant center.
-            </h5>
-            <ul>
-              <li>Seocho Main Garden</li>
-              <li>02. 3486. 9600</li>
-              <li>Sinchon Center</li>
-              <li>02. 707. 1480</li>
-            </ul>
-            <ul>
-              <li>Gangnam Center</li>
-              <li>02. 3453. 5404</li>
-              <li>Jongno Center</li>
-              <li>02. 722. 1481</li>
-            </ul>
-            <ul>
-              <li>weekday</li>
-              <li>AM 09:00-PM 18:30</li>
-              <li>Saturdays, Sundays, and holidays</li>
-              <li>AM 09:00-PM 18:00</li>
-            </ul>
+        <div class="infor__right">
+          <div class="infor__right-icon1">
+            <img src="./images/ft_icon1.png" alt="icon 1" />
           </div>
-          <div class="infor__right">
-            <div class="infor__right-icon1">
-              <img src="./images/ft_icon1.png" alt="icon 1" />
-            </div>
-            <div class="infor__right-icon2">
-              <img src="./images/ft_icon2.png" alt="" />
-            </div>
-          </div>
-        </div>
-        <hr class="hrfooter" />
-        <div class="footer__content-company">
-          <div class="footer__left">
-            <p>
-              Bit Camp ｜ 459 Gangnam-daero, Seocho-gu, Seoul (Seocho-dong,
-              Baekam Building) ｜ Business Registration Number: 214-85-24928
-            </p>
-            <p>
-              Bit Computer Co., Ltd. Seo Cho Bonwon CEO: Cho Hyun-jung ｜
-              Inquiries : 02-3486-9600 ｜ Fax: 02-6007-1245
-            </p>
-            <p>
-              Mail-order business report number: Seocho-00098 ｜ Personal
-              information protection manager: Choi Jong- jin
-            </p>
-          </div>
-          <div class="footer__right">
-            <img src="./images/logo.png" alt="" />
-          </div>
-        </div>
-        <div class="footer__content-btn">
-          <div class="footer__buton-left">
-            <button>Privacy Policy</button>
-            <button>Terms of Use</button>
-            <button>Directions</button>
-          </div>
-          <div class="footer__copyright">
-            <p>Copyright (c) Bitcamp All rights reserved.</p>
+          <div class="infor__right-icon2">
+            <img src="./images/ft_icon2.png" alt="" />
           </div>
         </div>
       </div>
-      <!-- message chatbox -->
-      <div class="mess">
-        <i class="fas fa-comment-dots"></i>
-      </div>
-      <!-- popup chat message -->
-      <div class="popupchat">
-        <div class="popupchat__content">
-          <div class="popupchat__content-title">
-            <div>
-              <h5>Beat camp</h5>
-            </div>
-            <div>
-              <i class="fas fa-cog"></i>
-              <i class="fas fa-times" id="closeChat"></i>
-            </div>
-          </div>
-          <div class="popupchat__content-active">
-            <div class="popupchat__active">
-              <h5>Available</h5>
-              <p>Replies within an hour</p>
-            </div>
-            <div class="popupchat__online">
-              <div>
-                <img src="./images/available_1.png" alt="" />
-              </div>
-              <div>
-                <img src="./images/available_2.png" alt="" />
-              </div>
-              <div>
-                <img src="./images/available_3.png" alt="" />
-              </div>
-              <div>
-                <img src="./images/available_4.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="startchat">
-            <div class="startchat__title">
-              <img src="./images/startchat.png" alt="" />
-              <div>
-                <h5>Bitcamp</h5>
-                <p>Welcome! How can I help you today?</p>
-              </div>
-            </div>
-            <div class="startchat__btn">
-              <button>
-                <p><i class="fas fa-play"></i> Start a new chat</p>
-              </button>
-            </div>
-          </div>
-          <div class="link">
-            <div class="link__icon">
-              <i class="fas fa-link"></i>
-            </div>
-            <div class="link__hover">
-              <p>Chat link copy: bitcamp1:chann...</p>
-            </div>
-          </div>
-        </div>
-        <div class="popupchat__bottom">
+      <hr class="hrfooter" />
+      <div class="footer__content-company">
+        <div class="footer__left">
           <p>
-            <i class="far fa-comment-dots"></i> Powered by
-            <span>Channel.io</span>
+            Bit Camp ｜ 459 Gangnam-daero, Seocho-gu, Seoul (Seocho-dong,
+            Baekam Building) ｜ Business Registration Number: 214-85-24928
+          </p>
+          <p>
+            Bit Computer Co., Ltd. Seo Cho Bonwon CEO: Cho Hyun-jung ｜
+            Inquiries : 02-3486-9600 ｜ Fax: 02-6007-1245
+          </p>
+          <p>
+            Mail-order business report number: Seocho-00098 ｜ Personal
+            information protection manager: Choi Jong- jin
           </p>
         </div>
-      </div>
-      <!-- topheader -->
-      <div class="topheader">
-        <div class="topheader__call">
-          <img src="./images/call_quick.png" alt="" />
-        </div>
-        <div class="topheader__btn">
-          <i class="fas fa-arrow-up"></i>
+        <div class="footer__right">
+          <img src="./images/logo.png" alt="" />
         </div>
       </div>
-    </footer>
-    <script>
-      // -------sub menu-------------
-      // get element event
-      const iconmenu = document.querySelector("#subnav");
-      const popupnav = document.querySelector(".nav__menu");
-      const closemenu = document.querySelector("#closesubmenu");
+      <div class="footer__content-btn">
+        <div class="footer__buton-left">
+          <button>Privacy Policy</button>
+          <button>Terms of Use</button>
+          <button>Directions</button>
+        </div>
+        <div class="footer__copyright">
+          <p>Copyright (c) Bitcamp All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+    <!-- message chatbox -->
+    <div class="mess">
+      <i class="fas fa-comment-dots"></i>
+    </div>
+    <!-- popup chat message -->
+    <div class="popupchat">
+      <div class="popupchat__content">
+        <div class="popupchat__content-title">
+          <div>
+            <h5>Beat camp</h5>
+          </div>
+          <div>
+            <i class="fas fa-cog"></i>
+            <i class="fas fa-times" id="closeChat"></i>
+          </div>
+        </div>
+        <div class="popupchat__content-active">
+          <div class="popupchat__active">
+            <h5>Available</h5>
+            <p>Replies within an hour</p>
+          </div>
+          <div class="popupchat__online">
+            <div>
+              <img src="./images/available_1.png" alt="" />
+            </div>
+            <div>
+              <img src="./images/available_2.png" alt="" />
+            </div>
+            <div>
+              <img src="./images/available_3.png" alt="" />
+            </div>
+            <div>
+              <img src="./images/available_4.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="startchat">
+          <div class="startchat__title">
+            <img src="./images/startchat.png" alt="" />
+            <div>
+              <h5>Bitcamp</h5>
+              <p>Welcome! How can I help you today?</p>
+            </div>
+          </div>
+          <div class="startchat__btn">
+            <button>
+              <p><i class="fas fa-play"></i> Start a new chat</p>
+            </button>
+          </div>
+        </div>
+        <div class="link">
+          <div class="link__icon">
+            <i class="fas fa-link"></i>
+          </div>
+          <div class="link__hover">
+            <p>Chat link copy: bitcamp1:chann...</p>
+          </div>
+        </div>
+      </div>
+      <div class="popupchat__bottom">
+        <p>
+          <i class="far fa-comment-dots"></i> Powered by
+          <span>Channel.io</span>
+        </p>
+      </div>
+    </div>
+    <!-- topheader -->
+    <div class="topheader">
+      <div class="topheader__call">
+        <img src="./images/call_quick.png" alt="" />
+      </div>
+      <div class="topheader__btn">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // -------sub menu-------------
+    // get element event
+    const iconmenu = document.querySelector("#subnav");
+    const popupnav = document.querySelector(".nav__menu");
+    const closemenu = document.querySelector("#closesubmenu");
 
-      //add event "click"
-      iconmenu.addEventListener("click", openModal);
-      closemenu.addEventListener("click", closesub);
+    //add event "click"
+    iconmenu.addEventListener("click", openModal);
+    closemenu.addEventListener("click", closesub);
 
-      // function event
-      // open
-      function openModal() {
-        popupnav.style.display = "block";
+    // function event
+    // open
+    function openModal() {
+      popupnav.style.display = "block";
+    }
+    // close menu
+    function closesub() {
+      popupnav.style.display = "none";
+    }
+
+    //-------message----------
+    const mes = document.querySelector(".mess");
+    const openChat = document.querySelector(".popupchat");
+    const turnoff = document.querySelector("#closeChat");
+
+    mes.addEventListener("click", openMes);
+    turnoff.addEventListener("click", closeChat);
+
+    function openMes() {
+      openChat.style.display = "block";
+    }
+
+    function closeChat() {
+      openChat.style.display = "none";
+    }
+
+    // -----scrollTop-------
+    const btnScrollTop = document.querySelector(".topheader__btn");
+
+    btnScrollTop.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    });
+
+    // scroll header if scroll >30 then change background
+    const headerChange = document.querySelector(".header");
+    const changeColora = document.querySelectorAll(".header__menu-nav li a");
+    const changeImg = document.querySelector(".header__menu-icon img");
+    const changeIcon = document.querySelector(".header__menu-nav-btn i");
+    window.onscroll = function () {
+      myFunction();
+    };
+    function myFunction() {
+      if (
+        document.body.scrollTop > 50 ||
+        document.documentElement.scrollTop > 50
+      ) {
+        headerChange.style.backgroundColor = "#fff";
+        changeImg.style.backgroundColor = "blue";
+        changeIcon.style.color = "black";
+        for (let i = 0; i < changeColora.length; i++) {
+          changeColora[i].style.color = "black";
+        }
+      } else {
+        headerChange.style.backgroundColor = "#151726";
+        changeImg.style.backgroundColor = "";
+        changeIcon.style.color = "white";
+        for (let i = 0; i < changeColora.length; i++) {
+          changeColora[i].style.color = "white";
+        }
       }
-      // close menu
-      function closesub() {
-        popupnav.style.display = "none";
-      }
+    }
 
-      //-------message----------
-      const mes = document.querySelector(".mess");
-      const openChat = document.querySelector(".popupchat");
-      const turnoff = document.querySelector("#closeChat");
 
-      mes.addEventListener("click", openMes);
-      turnoff.addEventListener("click", closeChat);
+    window.addEventListener("DOMContentLoaded", () => {
+      const tabs = document.querySelectorAll('[role="tab"]');
+      const tabList = document.querySelector('[role="tablist"]');
 
-      function openMes() {
-        openChat.style.display = "block";
-      }
-
-      function closeChat() {
-        openChat.style.display = "none";
-      }
-
-      // -----scrollTop-------
-      const btnScrollTop = document.querySelector(".topheader__btn");
-
-      btnScrollTop.addEventListener("click", function () {
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "smooth",
-        });
+      // Add a click event handler to each tab
+      tabs.forEach(tab => {
+        tab.addEventListener("click", changeTabs);
       });
 
-      // scroll header if scroll >30 then change background
-      const headerChange = document.querySelector(".header");
-      const changeColora = document.querySelectorAll(".header__menu-nav li a");
-      const changeImg = document.querySelector(".header__menu-icon img");
-      const changeIcon = document.querySelector(".header__menu-nav-btn i");
-      window.onscroll = function () {
-        myFunction();
-      };
-      function myFunction() {
-        if (
-          document.body.scrollTop > 50 ||
-          document.documentElement.scrollTop > 50
-        ) {
-          headerChange.style.backgroundColor = "#fff";
-          changeImg.style.backgroundColor = "blue";
-          changeIcon.style.color = "black";
-          for (let i = 0; i < changeColora.length; i++) {
-            changeColora[i].style.color = "black";
+      // Enable arrow navigation between tabs in the tab list
+      let tabFocus = 0;
+
+      tabList.addEventListener("keydown", e => {
+        // Move right
+        if (e.keyCode === 39 || e.keyCode === 37) {
+          tabs[tabFocus].setAttribute("tabindex", -1);
+          if (e.keyCode === 39) {
+            tabFocus++;
+            // If we're at the end, go to the start
+            if (tabFocus >= tabs.length) {
+              tabFocus = 0;
+            }
+            // Move left
+          } else if (e.keyCode === 37) {
+            tabFocus--;
+            // If we're at the start, move to the end
+            if (tabFocus < 0) {
+              tabFocus = tabs.length - 1;
+            }
           }
-        } else {
-          headerChange.style.backgroundColor = "#151726";
-          changeImg.style.backgroundColor = "";
-          changeIcon.style.color = "white";
-          for (let i = 0; i < changeColora.length; i++) {
-            changeColora[i].style.color = "white";
-          }
+
+          tabs[tabFocus].setAttribute("tabindex", 0);
+          tabs[tabFocus].focus();
         }
-      }
-    </script>
+      });
+    });
 
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    <script
-      type="text/javascript"
-      src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=08de360f91696ae84c4f89558e22f5e6"
-    ></script>
-    <script>
-      const markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
-      const marker = {
-        position: markerPosition,
-        text: "텍스트를 표시할 수 있어요!",
-      };
+    function changeTabs(e) {
+      const target = e.target;
+      const parent = target.parentNode;
+      const grandparent = parent.parentNode;
 
-      const staticMapContainer = document.getElementById("map"),
-        staticMapOption = {
-          center: new kakao.maps.LatLng(33.450701, 126.570667),
-          level: 3,
-          marker: marker,
-        };
-      const staticMap = new kakao.maps.StaticMap(
-        staticMapContainer,
-        staticMapOption
-      );
-      function setMapType(maptype) {
-        const roadmapControl = document.getElementById("btnRoadmap");
-        const skyviewControl = document.getElementById("btnSkyview");
-        if (maptype === "roadmap") {
-          staticMap.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
-          roadmapControl.className = "selected_btn";
-          skyviewControl.className = "btn";
-        } else {
-          staticMap.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
-          skyviewControl.className = "selected_btn";
-          roadmapControl.className = "btn";
-        }
-      }
+      // Remove all current selected tabs
+      parent
+        .querySelectorAll('[aria-selected="true"]')
+        .forEach(t => t.setAttribute("aria-selected", false));
 
-      function zoomIn() {
-        staticMap.setLevel(staticMap.getLevel() - 1);
-      }
+      // Set this tab as selected
+      target.setAttribute("aria-selected", true);
 
-      function zoomOut() {
-        staticMap.setLevel(staticMap.getLevel() + 1);
-      }
-    </script>
-  </body>
+      // Hide all tab panels
+      grandparent
+        .querySelectorAll('[role="tabpanel"]')
+        .forEach(p => p.setAttribute("hidden", true));
+
+      // Show the selected panel
+      grandparent.parentNode
+        .querySelector(`#${target.getAttribute("aria-controls")}`)
+        .removeAttribute("hidden");
+    }
+
+  </script>
+</body>
+
 </html>

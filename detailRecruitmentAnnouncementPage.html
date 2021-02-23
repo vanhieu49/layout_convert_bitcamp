@@ -455,9 +455,10 @@
       }
       /* END POPUP CHAT MESSAGE */
       /* -------END FOOTER----- */
-        /* ----------------------------------------------- */
+      /* -----------------------------BEGIN MAIN CSS-----------------------------------------*/
         #wapper {padding-top: 75px;}
 
+        /* BOX TITLE */
         #container_title_box {
             position: relative;
         }
@@ -476,13 +477,11 @@
             vertical-align: middle;
 
         }
-        /* ----------------------------------------------- */
+        /* ------------------------- */
         .container_total{
             margin: 40px auto;
             width: 1200px;
         }
-
-        /*  */
         .container_total h1{
             margin: 40px 0 10px 0;
             border-bottom: 3px solid var(--boder-color-33);
@@ -517,7 +516,7 @@
             background-color: var(--bg-color-black);
             color: var(--text-color-white);
         }
-
+        /*  --------------------------------- */
         ._box ._info{
             margin-bottom: 15px;
             padding: 0 0 0 15px;
@@ -559,7 +558,7 @@
         ._info .ul_button li:nth-child(2) a{
             background-color: var(--bg-color-red);
         }
-        /* ------------------------------------------------- */
+        /* ------------------------------------------*/
         ._button{
             position: relative;
             border-bottom: 1px solid var(--boder-color-d3);
@@ -589,9 +588,7 @@
         .ul_src li img{
             width: 100%;
         }
-        /* ------------------------------------------------ */
-        ._enrolment{}
-        /* ----------------- */
+        /* PREV NEXT*/
         .ul_pa li{
             border-top: 1px solid var(--boder-color-d3);
             padding: 13px;
@@ -616,7 +613,7 @@
         .cl_b2{
             color: var(--text-color-b2);
         }
-        /* ------------------------------------------------ */
+        /*----------------- RESPOSIVE------------------------- */
         @media only screen and (min-width: 320px) {
             /* For mobile */
            
@@ -635,6 +632,9 @@
             ._box ._info{
                 margin-bottom: 15px;
                 padding: 15px 0 0 0;
+            }
+            ._box ._info div {
+                grid-template-columns: none;
             }
             .container_total{
                 width: 90%;
@@ -662,6 +662,9 @@
             }
             ._box ._info{
                 padding: 15px 0 0 0;
+            }
+            ._box ._info div {
+                grid-template-columns: 49% 49%;
             }
            
             .content_total .content_result{
@@ -784,9 +787,10 @@
         </div>
       </section>
       <!-- END HEADER -->  
+      <!---------------------------------BEGIN MAIN HTML------------------------------------->
     <div id="wapper">
         <div id="container_title_box">
-            <img src="https://www.bitcamp.co.kr/theme/basic/img/title_02.jpg" alt="" class="full">
+            <img src="https://www.bitcamp.co.kr/theme/basic/img/title_03.jpg" alt="" class="full">
             <p class="font25 bold">Recruitment Announcement</p>
         </div>
         <div id="_total">
@@ -809,8 +813,6 @@
                                 </div>
                                 <ul class="ul_button">
                                     <li><a>Corporate </a></li>
-                                   
-                                    
                                 </ul>
                             </div>
                             
@@ -845,6 +847,7 @@
             </div>
         </div>
     </div>
+    <!---------------------------------END MAIN HTML------------------------------------->
     <footer>
         <div class="footer__content">
           <!-- Title -->

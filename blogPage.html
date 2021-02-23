@@ -458,14 +458,14 @@
       }
       /* END POPUP CHAT MESSAGE */
       /* -------END FOOTER----- */
+      /* -----------------------------BEGIN MAIN CSS-----------------------------------------*/
       #wapper {
         padding-top: 75px;
       }
-
+      /* BOX TITLE */
       #container_title_box {
         position: relative;
       }
-
       #container_title_box p {
         position: absolute;
         top: 50%;
@@ -476,17 +476,15 @@
         text-align: center;
         text-transform: uppercase;
       }
-
       #container_title_box img {
         width: 100%;
         vertical-align: middle;
       }
-      /* ----------------------------------------------- */
+
+      /* NAV FILETER */
       .container_cm {
         margin: 80px auto;
         width: 1200px;
-      }
-      .container_cm.container_nav_filter {
       }
       .container_nav_filter div p {
         padding-bottom: 10px;
@@ -522,7 +520,7 @@
       }
      
 
-      /*  */
+      /* RESULT FILTER */
       .container_cm h1 {
         margin: 40px 0 10px 0;
         border-bottom: 3px solid var(--boder-color-33);
@@ -536,12 +534,6 @@
         row-gap: 50px;
         justify-content: space-between;
       }
-      .content_result .item {
-      }
-      .item .item_box {
-      }
-      .item_box .div_img {
-      }
       .item_box .div_img a {
         display: block;
         position: relative;
@@ -551,8 +543,6 @@
         width: 100%;
         vertical-align: middle;
       }
-    
-
       .item_box .div_info {
         padding: 15px;
         border: 1px solid var(--boder-color-d3);
@@ -596,7 +586,8 @@
         display: block;
         width: fit-content;
       }
-      /*  */
+
+      /*PAGINATION*/
       .pagination {
         display: flex;
         justify-content: center;
@@ -621,7 +612,7 @@
         background-color: var(--bg-color-white);
       }
 
-      /*  */
+      /*----------------- RESPOSIVE------------------------- */
       @media only screen and (min-width: 320px) {
         /* For mobile */
         .container_cm {
@@ -634,8 +625,6 @@
 
       @media only screen and (min-width: 600px) {
         /* For tablets: */
-        .container_cm {
-        }
         .result-filter .content_result {
           grid-template-columns: 48% 48%;
         }
@@ -735,6 +724,7 @@
       </div>
     </section>
     <!-- END HEADER -->
+    <!---------------------------------BEGIN MAIN HTML------------------------------------->
     <div id="wapper">
       <div id="container_title_box">
         <img
@@ -912,6 +902,7 @@
         </div>
       </div>
     </div>
+    <!---------------------------------END MAIN HTML------------------------------------->
     <footer>
       <div class="footer__content">
         <!-- Title -->
