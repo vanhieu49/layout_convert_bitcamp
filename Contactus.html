@@ -8,6 +8,10 @@
       crossorigin="anonymous"
     ></script>
     <title>Bitcamp introduction Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style>
       * {
         margin: 0;
@@ -15,7 +19,6 @@
         box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif;
       }
-
       .bold {
         font-weight: 700;
       }
@@ -143,20 +146,18 @@
         margin-bottom: 10px;
         font-size: 16px;
       }
-      button {
+
+      .btn_submit {
+        display: grid;
+        justify-content: center;
+      }
+      .btn_complete {
         background: #041d79;
         width: 320px;
         height: 50px;
         line-height: 50px;
-        color: #fff;
-        font-size: 20px;
-        border-radius: 0;
-        padding: 0 20px;
-        font-size: 1.167em;
-      }
-      .btn_submit {
-        display: grid;
-        justify-content: center;
+        color: white;
+        cursor: pointer;
       }
       .span {
         border: 1px solid black;
@@ -697,9 +698,42 @@
       }
       /* END POPUP CHAT MESSAGE */
       /* -------END FOOTER----- */
+      /* capthcha */
+      .captcha__content {
+        display: flex;
+        margin-top: 10px;
+      }
+      #mainCaptcha {
+        border: 1px solid black;
+        box-sizing: border-box;
+        padding: 0 10px;
+        line-height: 50px;
+        font-size: 30px;
+        margin-right: 5px;
+      }
+      #refresh {
+        background-color: brown;
+        width: 5%;
+        cursor: pointer;
+      }
+      #txtInput {
+        width: 10%;
+        height: 51px;
+        margin-top: 0;
+        margin-right: 5px;
+      }
+      #checkcap {
+        width: 5%;
+        margin-right: 5px;
+        cursor: pointer;
+      }
+      .captcha__warning {
+        margin-top: 5px;
+      }
+      /* end capthcha */
     </style>
   </head>
-  <body>
+  <body onload="Captcha();">
     <!-- HEADER -->
     <header class="header">
       <div class="header__menu">
@@ -795,24 +829,25 @@
         <div class="content1">
           <div class="title_content1 bold">CONTACT US</div>
           <div class="body_content1">
-            비트캠프 인재들과 함께할 제휴사를 기다리고 있습니다. <br />
-            제휴를 원하는 기업은 제휴문의를 남겨주시면 연락 드리겠습니다.
+            We are looking forward to partnering with Bitcamp talents. <br />
+            If you are a company that wants to be affiliated, please leave an
+            inquiry and we will contact you.
           </div>
           <form class="form">
             <div class="line1">
               <div class="company_name">
-                <label for="com_name">업체명</label><br />
-                <input type="text" placeholder="업체명" required />
+                <label for="com_name">Company name</label><br />
+                <input type="text" placeholder="Company name" required />
                 <div class="com_name_required required"></div>
               </div>
               <div class="pic">
-                <label for="com_name">담당자명</label><br />
-                <input type="text" placeholder="담당자명" />
+                <label for="com_name">Person in charge</label><br />
+                <input type="text" placeholder="Person in charge" />
               </div>
             </div>
             <div class="line2">
               <div class="contacts">
-                <label for="com_name">연락처 </label><br />
+                <label for="com_name">Contact </label><br />
                 <div class="contact_input">
                   <input type="text" placeholder="010" required />
                   <input type="text" placeholder="1234" required />
@@ -823,59 +858,48 @@
                 </div>
               </div>
               <div class="email">
-                <label for="com_name">이메일</label><br />
-                <input type="text" placeholder="이메일" />
+                <label for="com_name">E-mail</label><br />
+                <input type="text" placeholder="E-mail" />
               </div>
             </div>
             <div class="contents">
-              <label for="내용">내용</label>
+              <label for="Contents">Contents</label>
               <br />
               <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="captcha">
+              <div class="captcha__content">
+                <p type="text" id="mainCaptcha"></p>
+                <input type="text" id="txtInput" />
+                <button
+                  id="checkcap"
+                  type="button"
+                  value="Check"
+                  onclick="alert(ValidCaptcha());"
+                >
+                  <i class="fas fa-check-circle"></i>
+                </button>
+                <button class="btn" id="refresh" onclick="Captcha();">
+                  <i class="fas fa-sync-alt"></i>
+                </button>
+              </div>
+              <div class="captcha__warning">
+                <p>
+                  Enter the number of automatic registration prevention numbers
+                  in order.
+                </p>
+              </div>
             </div>
             <div class="write_agree">
               <div class="checkbox">
                 <input type="checkbox" id="check" />
-                <label for="check">개인정보 취급방침에 동의</label>
-                <label class="span" for="checkbox">자세히보기</label>
+                <label for="check">I agree to the privacy policy</label>
+                <label class="span" for="checkbox">See More</label>
                 <input type="checkbox" id="checkbox" hidden />
-                <div class="span_content">
-                  <div class="title_check">
-                    개인정보 취급방침
-                    <label class="close" for="checkbox">
-                      <i class="fas fa-times"></i>
-                    </label>
-                  </div>
-                  <textarea class="content_check">
-                    개인정보 수집 및 처리 방침
-                    
-                    (주)비트캠프는 (이하 '회사'는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다.
-                    회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
-                    
-                    수집하는 개인정보 항목
-                    회사는 회원가입, 상담, 서비스 신청 등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
-                    - 수집항목
-                    회원가입정보 : 이메일, 비밀번호, 닉네임, 휴대폰번호, 주력매체정보, 메신져주소, 회사명, 회사전화번호, 주소, 유선전화번호, 쿠키, 접속 IP 정보, 결제기록
-                    정산시 필요한 정보 : 은행명, 예금주명, 계좌번호, 신분증사본, 통장사본
-                    그 외 회사의 광고주 별 요구하는 기타 입력정보 : 성명, 전화번호, 생년월일, 성별 등
-                    - 개인정보 수집방법
-                    비트캠프 홈페이지
-                    
-                    개인정보의 수집 및 이용목적
-                    회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
-                    - 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산 콘텐츠 제공, 금융거래 본인 인증 및 금융 서비스
-                    - 회원 관리, 회원제 서비스 이용에 따른 본인확인 , 개인 식별 , 불량회원의 부정 이용 방지와 비인가 사용 방지 , 가입 의사 확인 , 불만 및 민원처리 , 고지사항 전달
-                    - 마케팅 및 광고에 활용 이벤트 등 광고성 정보 전달, 접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계
-                    
-                    개인정보의 보유 및 이용기간
-                    원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다.
-                    단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 아래와 같이 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다.
-                  </textarea>
-                </div>
               </div>
             </div>
-
             <div class="btn_submit">
-              <button type="submit">작성완료</button>
+              <button type="submit" class="btn_complete">Completed</button>
             </div>
           </form>
         </div>
@@ -1105,6 +1129,38 @@
             changeColora[i].style.color = "white";
           }
         }
+      }
+
+      // captcha
+      function Captcha() {
+        var alpha = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
+        var i;
+        for (i = 0; i < 5; i++) {
+          var a = alpha[Math.floor(Math.random() * 9)];
+          var b = alpha[Math.floor(Math.random() * 9)];
+          var c = alpha[Math.floor(Math.random() * 9)];
+          var d = alpha[Math.floor(Math.random() * 9)];
+          var e = alpha[Math.floor(Math.random() * 9)];
+          var f = alpha[Math.floor(Math.random() * 9)];
+        }
+        var code = a + " " + b + " " + " " + c + " " + d + " " + e + " " + f;
+        document.getElementById("mainCaptcha").innerHTML = code;
+        document.getElementById("mainCaptcha").value = code;
+      }
+      function ValidCaptcha() {
+        var string1 = removeSpaces(
+          document.getElementById("mainCaptcha").value
+        );
+        var string2 = removeSpaces(document.getElementById("txtInput").value);
+        if (string1 == string2) {
+          return true;
+          string2.value = "";
+        } else {
+          return false;
+        }
+      }
+      function removeSpaces(string) {
+        return string.split(" ").join("");
       }
     </script>
   </body>
