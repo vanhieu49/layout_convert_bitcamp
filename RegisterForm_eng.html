@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
         font-family: Arial, Helvetica, sans-serif;
         text-decoration: none;
       }
-      .wrapper{
+      .wrapper {
         overflow: hidden;
       }
       .bold {
@@ -35,16 +35,16 @@
         margin-top: 150px;
         margin-bottom: 0;
       }
-      
-    i{
-      display: inline-block;
-      vertical-align: baseline;
-      color: #b3b5b8;
-      border: 0;
-      background: transparent;
-      cursor: pointer;
-    }
-    
+
+      i {
+        display: inline-block;
+        vertical-align: baseline;
+        color: #b3b5b8;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+      }
+
       /* HEADER */
       .header {
         background-color: #151726;
@@ -436,14 +436,79 @@
       }
       /* END POPUP CHAT MESSAGE */
       /* -------END FOOTER----- */
-      .confirm{
+      /* Reponsive */
+      @media screen and (max-width: 600px) {
+        .header__menu-nav {
+          display: none;
+        }
+        .header__menu {
+          display: grid;
+          grid-template-columns: 80% 20%;
+        }
+        .mess {
+          display: none;
+        }
+        .topheader {
+          display: none;
+        }
+        .requitment .requitment__list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        .container__curricul .curricul .curricul__list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 20px;
+        }
+        img {
+          width: 10%;
+        }
+        .nav__menu-link {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          width: 94%;
+          margin: 0 auto;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        .header__menu-nav {
+          display: none;
+        }
+        .header__menu {
+          display: grid;
+          grid-template-columns: 80% 20%;
+        }
+        .requitment .requitment__list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        .container__curricul .curricul .curricul__list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 20px;
+        }
+        img {
+          width: 80%;
+        }
+        .nav__menu-link {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          width: 94%;
+          margin: 0 auto;
+        }
+      }
+      /* End Reponsive */
+      .confirm {
         display: grid;
         grid-template-columns: 1fr 1fr;
         text-align: center;
         margin-top: 20px;
         column-gap: 20px;
       }
-      button[type=submit]{
+      button[type="submit"] {
         outline: none;
         border: none;
         float: left;
@@ -454,7 +519,7 @@
         cursor: pointer;
         border-radius: 3px;
       }
-      .confirm a{
+      .confirm a {
         color: black;
         font-size: 13px;
         float: left;
@@ -466,21 +531,21 @@
         display: grid;
         align-content: center;
       }
-      .content h2{
+      .content h2 {
         font-size: 14.4px;
         text-align: left;
         padding: 20px;
         border-bottom: 1px solid #dde7e9;
       }
-      .content{
+      .content {
         border: 1px solid #dde7e9;
         margin-bottom: 20px;
         background-color: #f7f7f7;
       }
-      label{
+      label {
         font-size: 12px;
       }
-      input[type=text]{
+      input[type="text"] {
         width: 100%;
         padding: 5px;
         border: 1px solid #d0d3db;
@@ -492,7 +557,8 @@
         height: 40px;
         box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
       }
-      .info_content1, .info_content2{
+      .info_content1,
+      .info_content2 {
         padding: 20px;
       }
       input:focus {
@@ -500,13 +566,16 @@
         border: 1px solid #558ab7;
         outline: none;
       }
-      .line{
+      .line {
         margin-bottom: 10px;
       }
-      .line1, .line3, .line4, .line5{
+      .line1,
+      .line3,
+      .line4,
+      .line5 {
         position: relative;
       }
-      .line2{
+      .line2 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 15px;
@@ -515,10 +584,12 @@
         content: " *";
         color: red;
       }
-      .line2_left, .line2_right{
+      .line2_left,
+      .line2_right {
         position: relative;
       }
-      .line2_left .required, .line2_right .required{
+      .line2_left .required,
+      .line2_right .required {
         right: 1%;
       }
       .required {
@@ -526,10 +597,10 @@
         top: 45%;
         right: 0.5%;
       }
-      .content3{
+      .content3 {
         height: 100px;
       }
-      .tooltip{
+      .tooltip {
         position: absolute;
         width: auto;
         color: #fff;
@@ -556,13 +627,13 @@
         border-left: 0;
         border-right: 10px solid #000;
       }
-      @media only screen and (min-width: 360px) and (max-width: 1024px){
-        .container{
+      @media only screen and (min-width: 360px) and (max-width: 1024px) {
+        .container {
           width: 90%;
         }
       }
-/* capthcha */
-.captcha__content {
+      /* capthcha */
+      .captcha__content {
         display: flex;
         margin-top: 10px;
       }
@@ -597,92 +668,92 @@
     </style>
   </head>
   <body onload="Captcha();">
-   <!-- HEADER -->
-   <header class="header">
-    <div class="header__menu">
-      <div class="header__menu-icon">
-        <img src="./images/logo.png" alt="" />
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__menu">
+        <div class="header__menu-icon">
+          <img src="./images/logo.png" alt="" />
+        </div>
+        <nav class="header__menu-nav">
+          <ul>
+            <li><a href="">Beat Camp</a></li>
+            <li><a href="">Curriculum</a></li>
+            <li><a href="">Employment and Startup Support Center</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Mentoring</a></li>
+            <li><a href="">CONTACT US</a></li>
+          </ul>
+        </nav>
+        <div class="header__menu-nav-btn">
+          <i class="fas fa-align-justify" id="subnav"></i>
+        </div>
       </div>
-      <nav class="header__menu-nav">
-        <ul>
-          <li><a href="">Beat Camp</a></li>
-          <li><a href="">Curriculum</a></li>
-          <li><a href="">Employment and Startup Support Center</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Mentoring</a></li>
-          <li><a href="">CONTACT US</a></li>
-        </ul>
-      </nav>
-      <div class="header__menu-nav-btn">
-        <i class="fas fa-align-justify" id="subnav"></i>
+    </header>
+    <!-- menu nav when hover -->
+    <section class="nav__menu">
+      <div class="nav__menu-title">
+        <h5>All Menu</h5>
+        <i class="fas fa-times" id="closesubmenu"></i>
       </div>
-    </div>
-  </header>
-  <!-- menu nav when hover -->
-  <section class="nav__menu">
-    <div class="nav__menu-title">
-      <h5>All Menu</h5>
-      <i class="fas fa-times" id="closesubmenu"></i>
-    </div>
-    <hr />
-    <div class="nav__menu-btn">
-      <div class="language">
-        <button>Ko</button>
+      <hr />
+      <div class="nav__menu-btn">
+        <div class="language">
+          <button>Ko</button>
+        </div>
+        <div class="language">
+          <button>En</button>
+        </div>
+        <div class="singup">
+          <button>Sign Up</button>
+        </div>
+        <div class="login">
+          <button>Login</button>
+        </div>
       </div>
-      <div class="language">
-        <button>En</button>
+      <div class="nav__menu-link">
+        <div class="item1">
+          <h5>Beat Camp</h5>
+          <ul>
+            <li><a href="">Bit Camp Introduction</a></li>
+            <li><a href="">Directions</a></li>
+          </ul>
+        </div>
+        <div class="item2">
+          <h5>Curriculum</h5>
+          <ul>
+            <li><a href="">Government funding process</a></li>
+            <li><a href="">Incumbent Course</a></li>
+            <li><a href="">Basic lecture</a></li>
+            <li><a href="">General Course</a></li>
+          </ul>
+        </div>
+        <div class="item3">
+          <h5>Employment and Startup Support Center</h5>
+          <ul>
+            <li><a href="">Employment and Startup Support Center</a></li>
+            <li><a href="">Recruitment Announcement</a></li>
+            <li><a href="">Overseas employment and start-up</a></li>
+          </ul>
+        </div>
+        <div class="item4">
+          <h5>blog</h5>
+          <ul>
+            <li><a href="">blog</a></li>
+          </ul>
+        </div>
+        <div class="item5">
+          <h5>Mentoring</h5>
+          <ul>
+            <li><a href="">Mentoring</a></li>
+            <li><a href="">Find a Mentor</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="singup">
-        <button>Sign Up</button>
+      <div class="contactus">
+        <h5><a href="">CONTACT US</a></h5>
       </div>
-      <div class="login">
-        <button>Login</button>
-      </div>
-    </div>
-    <div class="nav__menu-link">
-      <div class="item1">
-        <h5>Beat Camp</h5>
-        <ul>
-          <li><a href="">Bit Camp Introduction</a></li>
-          <li><a href="">Directions</a></li>
-        </ul>
-      </div>
-      <div class="item2">
-        <h5>Curriculum</h5>
-        <ul>
-          <li><a href="">Government funding process</a></li>
-          <li><a href="">Incumbent Course</a></li>
-          <li><a href="">Basic lecture</a></li>
-          <li><a href="">General Course</a></li>
-        </ul>
-      </div>
-      <div class="item3">
-        <h5>Employment and Startup Support Center</h5>
-        <ul>
-          <li><a href="">Employment and Startup Support Center</a></li>
-          <li><a href="">Recruitment Announcement</a></li>
-          <li><a href="">Overseas employment and start-up</a></li>
-        </ul>
-      </div>
-      <div class="item4">
-        <h5>blog</h5>
-        <ul>
-          <li><a href="">blog</a></li>
-        </ul>
-      </div>
-      <div class="item5">
-        <h5>Mentoring</h5>
-        <ul>
-          <li><a href="">Mentoring</a></li>
-          <li><a href="">Find a Mentor</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="contactus">
-      <h5><a href="">CONTACT US</a></h5>
-    </div>
-  </section>
-  <!-- END HEADER -->
+    </section>
+    <!-- END HEADER -->
     <div class="wrapper">
       <div class="container">
         <form action="">
@@ -691,20 +762,27 @@
             <div class="info_content1">
               <div class="line1 line">
                 <label for="info1">ID</label>
-                <i class="fa fa-question-circle-o" id="tooltip1" aria-hidden="true"></i>
-                <span class="tooltip tooltip1" >Only letters, numbers and _ can be entered. Please enter at least 3 characters.</span>
-                <input type="text" placeholder="ID" required>
+                <i
+                  class="fa fa-question-circle-o"
+                  id="tooltip1"
+                  aria-hidden="true"
+                ></i>
+                <span class="tooltip tooltip1"
+                  >Only letters, numbers and _ can be entered. Please enter at
+                  least 3 characters.</span
+                >
+                <input type="text" placeholder="ID" required />
                 <div class="info1_required required"></div>
               </div>
               <div class="line2 line">
                 <div class="line2_left">
                   <label for="info2">Password</label>
-                  <input type="text" placeholder="Password" required>
+                  <input type="text" placeholder="Password" required />
                   <div class="info1_required required"></div>
                 </div>
                 <div class="line2_right">
                   <label for="info3">Confirm password</label>
-                  <input type="text" placeholder="Confirm password" required>
+                  <input type="text" placeholder="Confirm password" required />
                   <div class="info1_required required"></div>
                 </div>
               </div>
@@ -715,21 +793,28 @@
             <div class="info_content2">
               <div class="line3 line">
                 <label for="info4">Name</label>
-                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Name" required />
                 <div class="info1_required required"></div>
               </div>
               <div class="line4 line">
                 <label for="info5">Nickname</label>
-                <i class="fa fa-question-circle-o"  id="tooltip2" aria-hidden="true"></i>
-                <span class="tooltip tooltip2">Only Korean, English, and numbers can be entered without spaces
-                   (2 Korean characters, 4 English characters or more)<br> If you change your nickname, it cannot be 
-                   changed within the next 60 days.</span>
-                <input type="text" placeholder="Nickname" required>
+                <i
+                  class="fa fa-question-circle-o"
+                  id="tooltip2"
+                  aria-hidden="true"
+                ></i>
+                <span class="tooltip tooltip2"
+                  >Only Korean, English, and numbers can be entered without
+                  spaces (2 Korean characters, 4 English characters or more)<br />
+                  If you change your nickname, it cannot be changed within the
+                  next 60 days.</span
+                >
+                <input type="text" placeholder="Nickname" required />
                 <div class="info1_required required"></div>
               </div>
               <div class="line5 line">
                 <label for="info6">E-mail</label>
-                <input type="text" placeholder="E-mail" required>
+                <input type="text" placeholder="E-mail" required />
                 <div class="info1_required required"></div>
               </div>
             </div>
@@ -752,8 +837,8 @@
             </div>
             <div class="captcha__warning">
               <p>
-                Enter the number of automatic registration prevention numbers
-                in order.
+                Enter the number of automatic registration prevention numbers in
+                order.
               </p>
             </div>
           </div>
@@ -914,25 +999,23 @@
       </div>
     </footer>
     <script>
-
-
       //click show tooltip
-      let i1 = document.querySelector('#tooltip1')
-      let span1 = document.querySelector('.tooltip1')
-      let i2 = document.querySelector('#tooltip2')
-      let span2 = document.querySelector('.tooltip2')
-      i1.onclick = function(){
-        span1.style.display = 'inline'
-      }
-      i1.onmouseleave = function(){
-        span1.style.display = 'none'
-      }
-      i2.onclick = function(){
-        span2.style.display = 'inline'
-      }
-      i2.onmouseleave = function(){
-        span2.style.display = 'none'
-      }
+      let i1 = document.querySelector("#tooltip1");
+      let span1 = document.querySelector(".tooltip1");
+      let i2 = document.querySelector("#tooltip2");
+      let span2 = document.querySelector(".tooltip2");
+      i1.onclick = function () {
+        span1.style.display = "inline";
+      };
+      i1.onmouseleave = function () {
+        span1.style.display = "none";
+      };
+      i2.onclick = function () {
+        span2.style.display = "inline";
+      };
+      i2.onmouseleave = function () {
+        span2.style.display = "none";
+      };
       // -------sub menu-------------
       // get element event
       const iconmenu = document.querySelector("#subnav");

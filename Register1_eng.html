@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
         font-family: Arial, Helvetica, sans-serif;
         text-decoration: none;
       }
-      .wrapper{
+      .wrapper {
         overflow: hidden;
       }
       .bold {
@@ -35,9 +35,7 @@
         margin-top: 150px;
         margin-bottom: 0;
       }
-      
-    
-    
+
       /* HEADER */
       .header {
         background-color: #151726;
@@ -429,7 +427,72 @@
       }
       /* END POPUP CHAT MESSAGE */
       /* -------END FOOTER----- */
-      .content1{
+      /* Reponsive */
+      @media screen and (max-width: 600px) {
+        .header__menu-nav {
+          display: none;
+        }
+        .header__menu {
+          display: grid;
+          grid-template-columns: 80% 20%;
+        }
+        .mess {
+          display: none;
+        }
+        .topheader {
+          display: none;
+        }
+        .requitment .requitment__list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        .container__curricul .curricul .curricul__list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 20px;
+        }
+        img {
+          width: 10%;
+        }
+        .nav__menu-link {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          width: 94%;
+          margin: 0 auto;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        .header__menu-nav {
+          display: none;
+        }
+        .header__menu {
+          display: grid;
+          grid-template-columns: 80% 20%;
+        }
+        .requitment .requitment__list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        .container__curricul .curricul .curricul__list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 20px;
+        }
+        img {
+          width: 80%;
+        }
+        .nav__menu-link {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          width: 94%;
+          margin: 0 auto;
+        }
+      }
+      /* End Reponsive */
+      .content1 {
         position: relative;
         text-align: center;
         color: #fff;
@@ -440,7 +503,7 @@
         margin: 0 0 10px;
         border-radius: 5px;
       }
-      .content_section1{
+      .content_section1 {
         display: block;
         padding: 20px;
         width: 100%;
@@ -450,25 +513,26 @@
         line-height: 1.6em;
         font-size: 12px;
       }
-      section{
+      section {
         border: 1px solid #dde7e9;
         margin-bottom: 20px;
       }
-      .fregister_term, .fregister_private{
+      .fregister_term,
+      .fregister_private {
         position: relative;
       }
-      section h2{
+      section h2 {
         font-size: 14.4px;
         text-align: left;
         padding: 20px;
         border-bottom: 1px solid #dde7e9;
       }
-      #fregister_term input[type=checkbox]{
+      #fregister_term input[type="checkbox"] {
         position: absolute;
         top: 40%;
         right: 2%;
       }
-      #fregister_private input[type=checkbox]{
+      #fregister_private input[type="checkbox"] {
         position: absolute;
         top: 40%;
         right: 2%;
@@ -478,68 +542,77 @@
         border: 1px solid #558ab7;
         outline: none;
       }
-      .table{
+      .table {
         width: 90%;
         margin: 20px auto;
       }
-      .title, .line1, .line2{
+      .title,
+      .line1,
+      .line2 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         text-align: center;
         font-size: 12px;
         border: 1px solid #dde7e9;
       }
-      .line1, .line2{
+      .line1,
+      .line2 {
         text-align: left;
       }
-      .line1{
+      .line1 {
         border-bottom: none;
         border-top: none;
       }
-      .th, .td{
+      .th,
+      .td {
         padding: 10px;
         display: grid;
         align-content: center;
       }
-      .title{
+      .title {
         background-color: #f7f7f9;
         border: 1px solid #d8dbdf;
-
       }
-      .th1, .td1, .td4, .th2, .td2, .td5{
+      .th1,
+      .td1,
+      .td4,
+      .th2,
+      .td2,
+      .td5 {
         border-right: 1px solid #dde7e9;
       }
-      .th1, .th2{
+      .th1,
+      .th2 {
         border-right: 1px solid #d8dbdf;
       }
-      .fregister_chkall{
+      .fregister_chkall {
         border: 1px solid #dde7e9;
         background-color: #f5f7fa;
         padding: 20px;
         text-align: center;
         position: relative;
       }
-      .fregister_chkall input{
+      .fregister_chkall input {
         position: absolute;
         top: 35%;
         right: 2%;
       }
-      label{
+      label {
         font-size: 14.4px;
         text-align: left;
         padding: 20px;
       }
-      label:hover{
+      label:hover {
         color: #2172f8;
       }
-      .confirm{
+      .confirm {
         display: grid;
         grid-template-columns: 1fr 1fr;
         text-align: center;
         margin-top: 20px;
         column-gap: 20px;
       }
-      button[type=submit]{
+      button[type="submit"] {
         outline: none;
         border: none;
         float: left;
@@ -550,7 +623,7 @@
         cursor: pointer;
         border-radius: 3px;
       }
-      .confirm a{
+      .confirm a {
         color: black;
         font-size: 13px;
         float: left;
@@ -562,112 +635,113 @@
         display: grid;
         align-content: center;
       }
-      
-      @media only screen and (min-width: 360px) and (max-width: 1024px){
-        .container{
+
+      @media only screen and (min-width: 360px) and (max-width: 1024px) {
+        .container {
           width: 90%;
         }
       }
     </style>
   </head>
   <body>
-   <!-- HEADER -->
-   <header class="header">
-    <div class="header__menu">
-      <div class="header__menu-icon">
-        <img src="./images/logo.png" alt="" />
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__menu">
+        <div class="header__menu-icon">
+          <img src="./images/logo.png" alt="" />
+        </div>
+        <nav class="header__menu-nav">
+          <ul>
+            <li><a href="">Beat Camp</a></li>
+            <li><a href="">Curriculum</a></li>
+            <li><a href="">Employment and Startup Support Center</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Mentoring</a></li>
+            <li><a href="">CONTACT US</a></li>
+          </ul>
+        </nav>
+        <div class="header__menu-nav-btn">
+          <i class="fas fa-align-justify" id="subnav"></i>
+        </div>
       </div>
-      <nav class="header__menu-nav">
-        <ul>
-          <li><a href="">Beat Camp</a></li>
-          <li><a href="">Curriculum</a></li>
-          <li><a href="">Employment and Startup Support Center</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Mentoring</a></li>
-          <li><a href="">CONTACT US</a></li>
-        </ul>
-      </nav>
-      <div class="header__menu-nav-btn">
-        <i class="fas fa-align-justify" id="subnav"></i>
+    </header>
+    <!-- menu nav when hover -->
+    <section class="nav__menu">
+      <div class="nav__menu-title">
+        <h5>All Menu</h5>
+        <i class="fas fa-times" id="closesubmenu"></i>
       </div>
-    </div>
-  </header>
-  <!-- menu nav when hover -->
-  <section class="nav__menu">
-    <div class="nav__menu-title">
-      <h5>All Menu</h5>
-      <i class="fas fa-times" id="closesubmenu"></i>
-    </div>
-    <hr />
-    <div class="nav__menu-btn">
-      <div class="language">
-        <button>Ko</button>
+      <hr />
+      <div class="nav__menu-btn">
+        <div class="language">
+          <button>Ko</button>
+        </div>
+        <div class="language">
+          <button>En</button>
+        </div>
+        <div class="singup">
+          <button>Sign Up</button>
+        </div>
+        <div class="login">
+          <button>Login</button>
+        </div>
       </div>
-      <div class="language">
-        <button>En</button>
+      <div class="nav__menu-link">
+        <div class="item1">
+          <h5>Beat Camp</h5>
+          <ul>
+            <li><a href="">Bit Camp Introduction</a></li>
+            <li><a href="">Directions</a></li>
+          </ul>
+        </div>
+        <div class="item2">
+          <h5>Curriculum</h5>
+          <ul>
+            <li><a href="">Government funding process</a></li>
+            <li><a href="">Incumbent Course</a></li>
+            <li><a href="">Basic lecture</a></li>
+            <li><a href="">General Course</a></li>
+          </ul>
+        </div>
+        <div class="item3">
+          <h5>Employment and Startup Support Center</h5>
+          <ul>
+            <li><a href="">Employment and Startup Support Center</a></li>
+            <li><a href="">Recruitment Announcement</a></li>
+            <li><a href="">Overseas employment and start-up</a></li>
+          </ul>
+        </div>
+        <div class="item4">
+          <h5>blog</h5>
+          <ul>
+            <li><a href="">blog</a></li>
+          </ul>
+        </div>
+        <div class="item5">
+          <h5>Mentoring</h5>
+          <ul>
+            <li><a href="">Mentoring</a></li>
+            <li><a href="">Find a Mentor</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="singup">
-        <button>Sign Up</button>
+      <div class="contactus">
+        <h5><a href="">CONTACT US</a></h5>
       </div>
-      <div class="login">
-        <button>Login</button>
-      </div>
-    </div>
-    <div class="nav__menu-link">
-      <div class="item1">
-        <h5>Beat Camp</h5>
-        <ul>
-          <li><a href="">Bit Camp Introduction</a></li>
-          <li><a href="">Directions</a></li>
-        </ul>
-      </div>
-      <div class="item2">
-        <h5>Curriculum</h5>
-        <ul>
-          <li><a href="">Government funding process</a></li>
-          <li><a href="">Incumbent Course</a></li>
-          <li><a href="">Basic lecture</a></li>
-          <li><a href="">General Course</a></li>
-        </ul>
-      </div>
-      <div class="item3">
-        <h5>Employment and Startup Support Center</h5>
-        <ul>
-          <li><a href="">Employment and Startup Support Center</a></li>
-          <li><a href="">Recruitment Announcement</a></li>
-          <li><a href="">Overseas employment and start-up</a></li>
-        </ul>
-      </div>
-      <div class="item4">
-        <h5>blog</h5>
-        <ul>
-          <li><a href="">blog</a></li>
-        </ul>
-      </div>
-      <div class="item5">
-        <h5>Mentoring</h5>
-        <ul>
-          <li><a href="">Mentoring</a></li>
-          <li><a href="">Find a Mentor</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="contactus">
-      <h5><a href="">CONTACT US</a></h5>
-    </div>
-  </section>
-  <!-- END HEADER -->
+    </section>
+    <!-- END HEADER -->
     <div class="wrapper">
       <div class="container">
         <form action="">
           <div class="content1 bold">
             <i class="fa fa-check-circle" aria-hidden="true"></i>
-            You must agree to the terms and conditions of membership and the information on the privacy policy to register as a member.
+            You must agree to the terms and conditions of membership and the
+            information on the privacy policy to register as a member.
           </div>
           <section id="fregister_term">
             <div class="fregister_term">
               <h2>Membership Agreement</h2>
-              <input type="checkbox" id="term">
+              <input type="checkbox" id="term" />
             </div>
             <textarea class="content_section1">
               Partner Membership Agreement
@@ -827,13 +901,13 @@
               Article 24 (Jurisdiction)
               The operator and subscriber endeavor to resolve disputes arising from the use of the service, and when a lawsuit is filed, the competent court shall have jurisdiction over the operator's address.
               
-              ο These terms and conditions will be effective from February 09, 2018.</textarea>
-
+              ο These terms and conditions will be effective from February 09, 2018.</textarea
+            >
           </section>
           <section id="fregister_private">
             <div class="fregister_private">
               <h2>Privacy Policy Guide</h2>
-              <input type="checkbox" id="private">
+              <input type="checkbox" id="private" />
             </div>
             <div class="table">
               <div class="title">
@@ -847,25 +921,24 @@
                 <div class="td3 td">Until membership withdrawal</div>
               </div>
               <div class="line2">
-                <div class="td4 td">Notification of customer service use,
-                  user identification for CS response</div>
+                <div class="td4 td">
+                  Notification of customer service use, user identification for
+                  CS response
+                </div>
                 <div class="td5 td">Contact (email, mobile phone number)</div>
                 <div class="td6 td">Until membership withdrawal</div>
               </div>
             </div>
-
           </section>
           <div class="fregister_chkall">
             <label for="check_all">I agree to all terms and conditions</label>
-            <input type="checkbox" id="check_all">
+            <input type="checkbox" id="check_all" />
           </div>
           <div class="confirm">
             <a href="" class="cancel bold">Cancel </a>
             <button type="submit" class="bold submit">Sign Up</button>
           </div>
         </form>
-        
-
       </div>
     </div>
     <footer>
@@ -1018,29 +1091,26 @@
       </div>
     </footer>
     <script>
-
-
       //check all
-        let check_all = document.querySelector('#check_all')
-        let private = document.querySelector('#private')
-        let term = document.querySelector('#term')
-        let submit = document.querySelector('.submit')
-        check_all.onchange = function(){
-          if(check_all.checked){
-            private.checked = true
-            term.checked = true
-          }
-          else{
-            private.checked = false
-            term.checked = false
-          }
+      let check_all = document.querySelector("#check_all");
+      let private = document.querySelector("#private");
+      let term = document.querySelector("#term");
+      let submit = document.querySelector(".submit");
+      check_all.onchange = function () {
+        if (check_all.checked) {
+          private.checked = true;
+          term.checked = true;
+        } else {
+          private.checked = false;
+          term.checked = false;
         }
-        submit.onclick = function(e){
-          if(term.checked ===false || private.checked===false){
-            e.preventDefault();
-            alert('회원가입익관의 내용에 동의하셔야 회원가밉 하실 수 있습니다 ')
-          }
+      };
+      submit.onclick = function (e) {
+        if (term.checked === false || private.checked === false) {
+          e.preventDefault();
+          alert("회원가입익관의 내용에 동의하셔야 회원가밉 하실 수 있습니다 ");
         }
+      };
 
       // -------sub menu-------------
       // get element event
