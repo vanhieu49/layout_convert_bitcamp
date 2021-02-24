@@ -1,70 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="#" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/ce85036718.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/ce85036718.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Detail Recruitment Announcement Page</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        :root {
-            --text-color-black: #333;
-            --text-color-white: #fff;
-            --text-color-da:#da5c5f;
-            --text-color-b2:#b2b2b2;
-            --bg-color-red: #da5c5f;
-            --bg-color-f5: #f5f5f5;
-            --bg-color-white: #fff;
-            --bg-color-black: #333;
-            --bg-color-bt-47:#47b6fe;
-            --boder-color-d3: #d3d3d3;
-            --boder-color-33:#333;
-            --boder-color-ff:#fff;
+      :root {
+        --text-color-black: #333;
+        --text-color-white: #fff;
+        --text-color-da: #da5c5f;
+        --text-color-b2: #b2b2b2;
+        --bg-color-red: #da5c5f;
+        --bg-color-f5: #f5f5f5;
+        --bg-color-white: #fff;
+        --bg-color-black: #333;
+        --bg-color-bt-47: #47b6fe;
+        --boder-color-d3: #d3d3d3;
+        --boder-color-33: #333;
+        --boder-color-ff: #fff;
+      }
 
-        }
+      li,
+      ul {
+        list-style: none;
+      }
+      a {
+        color: var(--text-color-black);
+        text-decoration: none;
+      }
 
-        li,
-        ul {
-            list-style: none;
-        }
-        a {
-            color: var(--text-color-black);
-            text-decoration: none;
-        }
-
-        .pc-layout {
-            margin: 0 auto;
-            width: 1200px;
-        }
-        .font25 {
-            font-size: 25px;
-        }
-        .font20 {
-            font-size: 20px;
-        }
-        .font16{
-            font-size: 16px;
-        }
-        .font13 {
-            font-size: 13px;
-        }
-        .bold {
-            font-weight: 700;
-        }
-        .mr_bt_10{
-            margin-bottom: 10px;
-        }
-        .mr_bt_15{
-            margin-bottom: 15px;
-        }
-        /* HEADER */
+      .pc-layout {
+        margin: 0 auto;
+        width: 1200px;
+      }
+      .font25 {
+        font-size: 25px;
+      }
+      .font20 {
+        font-size: 20px;
+      }
+      .font16 {
+        font-size: 16px;
+      }
+      .font13 {
+        font-size: 13px;
+      }
+      .bold {
+        font-weight: 700;
+      }
+      .mr_bt_10 {
+        margin-bottom: 10px;
+      }
+      .mr_bt_15 {
+        margin-bottom: 15px;
+      }
+      /* HEADER */
       .header {
         background-color: #151726;
         width: 100%;
@@ -455,628 +456,706 @@
       }
       /* END POPUP CHAT MESSAGE */
       /* -------END FOOTER----- */
-      /* -----------------------------BEGIN MAIN CSS-----------------------------------------*/
-        #wapper {padding-top: 75px;}
-
-        /* BOX TITLE */
-        #container_title_box {
-            position: relative;
+      /* Reponsive */
+      @media screen and (max-width: 600px) {
+        .header__menu-nav {
+          display: none;
         }
-        #container_title_box p {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            transform: translateY(-50%);
-            color: var(--text-color-white);
-            font-size: 35px;
-            text-align: center;
-            text-transform: uppercase;
+        .header__menu {
+          display: grid;
+          grid-template-columns: 80% 20%;
+        }
+        .mess {
+          display: none;
+        }
+        .topheader {
+          display: none;
+        }
+        .requitment .requitment__list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        .container__curricul .curricul .curricul__list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 20px;
+        }
+        img {
+          width: 10%;
+        }
+        .nav__menu-link {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          width: 94%;
+          margin: 0 auto;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        .header__menu-nav {
+          display: none;
+        }
+        .header__menu {
+          display: grid;
+          grid-template-columns: 80% 20%;
+        }
+        .requitment .requitment__list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        .container__curricul .curricul .curricul__list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 20px;
+        }
+        img {
+          width: 80%;
+        }
+        .nav__menu-link {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          width: 94%;
+          margin: 0 auto;
+        }
+      }
+      /* End Reponsive */
+      /* -----------------------------BEGIN MAIN CSS-----------------------------------------*/
+      #wapper {
+        padding-top: 75px;
+      }
+
+      /* BOX TITLE */
+      #container_title_box {
+        position: relative;
+      }
+      #container_title_box p {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        color: var(--text-color-white);
+        font-size: 35px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      #container_title_box img {
+        width: 100%;
+        vertical-align: middle;
+      }
+      /* ------------------------- */
+      .container_total {
+        margin: 40px auto;
+        width: 1200px;
+      }
+      .container_total h1 {
+        margin: 40px 0 10px 0;
+        border-bottom: 3px solid var(--boder-color-33);
+        width: fit-content;
+      }
+      .container_total .content_total {
+        margin-bottom: 40px;
+      }
+      .content_total ._box {
+        display: flex;
+      }
+      ._box ._img {
+        flex: 1;
+        text-align: center;
+      }
+      ._box ._img a {
+        display: block;
+        position: relative;
+      }
+      ._box ._img a img {
+        height: auto !important;
+        width: auto;
+        vertical-align: middle;
+        border: 1px solid var(--boder-color-d3);
+      }
+      ._box ._img a .tag_title_center {
+        font-size: 13px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 5px;
+        background-color: var(--bg-color-black);
+        color: var(--text-color-white);
+      }
+      /*  --------------------------------- */
+      ._box ._info {
+        margin-bottom: 15px;
+        padding: 0 0 0 15px;
+        flex: 2;
+      }
+      ._info p {
+        margin-bottom: 15px;
+      }
+      ._info div {
+        margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: 49% 49%;
+      }
+      ._info div p {
+        display: grid;
+        grid-template-columns: 18% 3% 74%;
+      }
+      ._info div p:first-child span:last-child {
+        color: var(--text-color-da);
+      }
+      ._info .ul_button {
+        margin-bottom: 15px;
+      }
+      ._info .ul_button li {
+        display: inline-block;
+        margin-right: 5px;
+      }
+      ._info .ul_button li a {
+        width: fit-content;
+        height: 100%;
+        padding: 10px;
+        border-radius: 3px;
+        display: block;
+        color: var(--text-color-white);
+      }
+      ._info .ul_button li:nth-child(1) a {
+        background-color: var(--bg-color-bt-47);
+      }
+      ._info .ul_button li:nth-child(2) a {
+        background-color: var(--bg-color-red);
+      }
+      /* ------------------------------------------*/
+      ._button {
+        position: relative;
+        border-bottom: 1px solid var(--boder-color-d3);
+      }
+      ._button .mr {
+        margin: 10px;
+      }
+      ._button .label_button {
+        display: grid;
+        justify-items: right;
+      }
+      ._button .label_button a {
+        width: fit-content;
+        height: 100%;
+        padding: 10px;
+        border-radius: 3px;
+        border: 1px solid var(--boder-color-d3);
+        display: block;
+      }
+
+      /* ------------------------------------------------ */
+      .ul_src {
+        margin: 10px 0;
+        display: grid;
+        justify-content: center;
+      }
+      .ul_src li img {
+        width: 100%;
+      }
+      /* PREV NEXT*/
+      .ul_pa li {
+        border-top: 1px solid var(--boder-color-d3);
+        padding: 13px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .ul_pa li:hover {
+        background-color: var(--bg-color-f5);
+      }
+      .ul_pa li span {
+        flex: 1;
+      }
+      .ul_pa li span:last-child {
+        text-align: end;
+      }
+      .ul_pa li a {
+        flex: 2;
+      }
+      .ul_pa li.li_next {
+        border-bottom: 1px solid var(--boder-color-d3);
+      }
+      .cl_b2 {
+        color: var(--text-color-b2);
+      }
+      /*----------------- RESPOSIVE------------------------- */
+      @media only screen and (min-width: 320px) {
+        /* For mobile */
+
+        ._box ._img a img {
+          height: auto !important;
+          width: 100%;
+          vertical-align: middle;
         }
         #container_title_box img {
-            width: 100%;
-            vertical-align: middle;
+          height: 200px;
+        }
 
+        .content_total ._box {
+          display: block;
         }
-        /* ------------------------- */
-        .container_total{
-            margin: 40px auto;
-            width: 1200px;
+        ._box ._info {
+          margin-bottom: 15px;
+          padding: 15px 0 0 0;
         }
-        .container_total h1{
-            margin: 40px 0 10px 0;
-            border-bottom: 3px solid var(--boder-color-33);
-            width: fit-content;
+        ._box ._info div {
+          grid-template-columns: none;
         }
-        .container_total .content_total{
-            margin-bottom: 40px;
+        .container_total {
+          width: 90%;
         }
-        .content_total ._box{
-            display: flex;
-        }
-        ._box ._img{
-            flex: 1;
-            text-align: center;
-        }
-        ._box ._img a{
-            display: block;
-            position: relative;
-        }
-        ._box ._img a img{
-            height: auto !important;
-            width: auto;
-            vertical-align: middle;
-            border: 1px solid var(--boder-color-d3);
-        }
-        ._box ._img a .tag_title_center {
-            font-size: 13px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            padding: 5px;
-            background-color: var(--bg-color-black);
-            color: var(--text-color-white);
-        }
-        /*  --------------------------------- */
-        ._box ._info{
-            margin-bottom: 15px;
-            padding: 0 0 0 15px;
-            flex: 2;
-        }
-        ._info p{
-            margin-bottom: 15px;
-        }
-        ._info div{
-            margin-bottom: 15px;
-            display: grid;
-            grid-template-columns: 49% 49%;
-        }
-        ._info div p{
-            display: grid;
-            grid-template-columns: 18% 3% 74%;
-        }
-        ._info div p:first-child span:last-child{
-            color: var(--text-color-da);
-        }
-        ._info .ul_button{
-            margin-bottom: 15px;
-        }
-        ._info .ul_button li{
-            display: inline-block;
-            margin-right: 5px;
-        }
-        ._info .ul_button li a{
-            width: fit-content;
-            height: 100%;
-            padding: 10px;
-            border-radius: 3px;
-            display: block;
-            color: var(--text-color-white);
-        }
-        ._info .ul_button li:nth-child(1) a{
-            background-color: var(--bg-color-bt-47);
-        }
-        ._info .ul_button li:nth-child(2) a{
-            background-color: var(--bg-color-red);
-        }
-        /* ------------------------------------------*/
-        ._button{
-            position: relative;
-            border-bottom: 1px solid var(--boder-color-d3);
-        }
-        ._button .mr{
-            margin: 10px;
-        }
-        ._button .label_button{
-            display: grid;
-            justify-items: right;
-        }
-        ._button .label_button a{
-            width: fit-content;
-            height: 100%;
-            padding: 10px;
-            border-radius: 3px;
-            border: 1px solid var(--boder-color-d3);
-            display: block;
-        }
-   
-        /* ------------------------------------------------ */
-        .ul_src{
-            margin: 10px 0;
-            display: grid;
-            justify-content: center
-        }
-        .ul_src li img{
-            width: 100%;
-        }
-        /* PREV NEXT*/
-        .ul_pa li{
-            border-top: 1px solid var(--boder-color-d3);
-            padding: 13px;
-            display: flex;
-            justify-content: space-between;
-        }
-        .ul_pa li:hover{
-            background-color: var(--bg-color-f5);
-        }
-        .ul_pa li span{
-            flex: 1;
-        }
-        .ul_pa li span:last-child{
-            text-align: end;
-        }
-        .ul_pa li a{
-            flex: 2;
-        }
-        .ul_pa li.li_next{
-            border-bottom: 1px solid var(--boder-color-d3);
-        }
-        .cl_b2{
-            color: var(--text-color-b2);
-        }
-        /*----------------- RESPOSIVE------------------------- */
-        @media only screen and (min-width: 320px) {
-            /* For mobile */
-           
-            ._box ._img a img {
-                height: auto !important;
-                width: 100%;
-                vertical-align: middle;
-            }
-            #container_title_box img{
-                height: 200px;
-            }
 
-            .content_total ._box {
-                display: block;
-            }
-            ._box ._info{
-                margin-bottom: 15px;
-                padding: 15px 0 0 0;
-            }
-            ._box ._info div {
-                grid-template-columns: none;
-            }
-            .container_total{
-                width: 90%;
-            }
-            
-            
-            .content_total .content_result{
-                grid-template-columns: 100%;
-            }
+        .content_total .content_result {
+          grid-template-columns: 100%;
         }
-       
-        @media only screen and (min-width: 600px) {
-            /* For tablets: */
-            ._box ._img a img {
-                height: auto !important;
-                width: auto;
-                vertical-align: middle;
-            }
-            .group_form_5 .container_input{
-                width: auto;
-            }
+      }
 
-            .content_total ._box {
-                display: block;
-            }
-            ._box ._info{
-                padding: 15px 0 0 0;
-            }
-            ._box ._info div {
-                grid-template-columns: 49% 49%;
-            }
-           
-            .content_total .content_result{
-                grid-template-columns: 48% 48%;
-            }
-       
+      @media only screen and (min-width: 600px) {
+        /* For tablets: */
+        ._box ._img a img {
+          height: auto !important;
+          width: auto;
+          vertical-align: middle;
         }
-        @media only screen and (min-width: 1200px) {
-            /* For desktop: */
-            ._box ._img a img {
-                height: auto !important;
-                width: auto;
-                vertical-align: middle;
-            }
+        .group_form_5 .container_input {
+          width: auto;
+        }
 
-            .container_total{
-                width: 1200px;
-            }
-            .content_total ._box {
-                display: flex;
-            }
-            ._box ._info{
-                margin-bottom: 15px;
-                padding:  0 0 0 15px;
-            }
-            .item ._box{
-                display: flex;
-                justify-content: space-between;
-            }
-            .content_total .content_result{
-                grid-template-columns: 22% 22% 22% 22%;
-            }
+        .content_total ._box {
+          display: block;
         }
+        ._box ._info {
+          padding: 15px 0 0 0;
+        }
+        ._box ._info div {
+          grid-template-columns: 49% 49%;
+        }
+
+        .content_total .content_result {
+          grid-template-columns: 48% 48%;
+        }
+      }
+      @media only screen and (min-width: 1200px) {
+        /* For desktop: */
+        ._box ._img a img {
+          height: auto !important;
+          width: auto;
+          vertical-align: middle;
+        }
+
+        .container_total {
+          width: 1200px;
+        }
+        .content_total ._box {
+          display: flex;
+        }
+        ._box ._info {
+          margin-bottom: 15px;
+          padding: 0 0 0 15px;
+        }
+        .item ._box {
+          display: flex;
+          justify-content: space-between;
+        }
+        .content_total .content_result {
+          grid-template-columns: 22% 22% 22% 22%;
+        }
+      }
     </style>
-</head>
-<body>
-     <!-- HEADER -->
-     <header class="header">
-        <div class="header__menu">
-          <div class="header__menu-icon">
-            <img src="./images/logo.png" alt="" />
-          </div>
-          <nav class="header__menu-nav">
-            <ul>
-              <li><a href="">Beat Camp</a></li>
-              <li><a href="">Curriculum</a></li>
-              <li><a href="">Employment and Startup Support Center</a></li>
-              <li><a href="">Blog</a></li>
-              <li><a href="">Mentoring</a></li>
-              <li><a href="">CONTACT US</a></li>
-            </ul>
-          </nav>
-          <div class="header__menu-nav-btn">
-            <i class="fas fa-align-justify" id="subnav"></i>
-          </div>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__menu">
+        <div class="header__menu-icon">
+          <img src="./images/logo.png" alt="" />
         </div>
-      </header>
-      <!-- menu nav when hover -->
-      <section class="nav__menu">
-        <div class="nav__menu-title">
-          <h5>All Menu</h5>
-          <i class="fas fa-times" id="closesubmenu"></i>
+        <nav class="header__menu-nav">
+          <ul>
+            <li><a href="">Beat Camp</a></li>
+            <li><a href="">Curriculum</a></li>
+            <li><a href="">Employment and Startup Support Center</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Mentoring</a></li>
+            <li><a href="">CONTACT US</a></li>
+          </ul>
+        </nav>
+        <div class="header__menu-nav-btn">
+          <i class="fas fa-align-justify" id="subnav"></i>
         </div>
-        <hr />
-        <div class="nav__menu-btn">
-          <div class="language">
-            <button>Ko</button>
-          </div>
-          <div class="language">
-            <button>En</button>
-          </div>
-          <div class="singup">
-            <button>Sign Up</button>
-          </div>
-          <div class="login">
-            <button>Login</button>
-          </div>
+      </div>
+    </header>
+    <!-- menu nav when hover -->
+    <section class="nav__menu">
+      <div class="nav__menu-title">
+        <h5>All Menu</h5>
+        <i class="fas fa-times" id="closesubmenu"></i>
+      </div>
+      <hr />
+      <div class="nav__menu-btn">
+        <div class="language">
+          <button>Ko</button>
         </div>
-        <div class="nav__menu-link">
-          <div class="item1">
-            <h5>Beat Camp</h5>
-            <ul>
-              <li><a href="">Bit Camp Introduction</a></li>
-              <li><a href="">Directions</a></li>
-            </ul>
-          </div>
-          <div class="item2">
-            <h5>Curriculum</h5>
-            <ul>
-              <li><a href="">Government funding process</a></li>
-              <li><a href="">Incumbent Course</a></li>
-              <li><a href="">Basic lecture</a></li>
-              <li><a href="">General Course</a></li>
-            </ul>
-          </div>
-          <div class="item3">
-            <h5>Employment and Startup Support Center</h5>
-            <ul>
-              <li><a href="">Employment and Startup Support Center</a></li>
-              <li><a href="">Recruitment Announcement</a></li>
-              <li><a href="">Overseas employment and start-up</a></li>
-            </ul>
-          </div>
-          <div class="item4">
-            <h5>blog</h5>
-            <ul>
-              <li><a href="">blog</a></li>
-            </ul>
-          </div>
-          <div class="item5">
-            <h5>Mentoring</h5>
-            <ul>
-              <li><a href="">Mentoring</a></li>
-              <li><a href="">Find a Mentor</a></li>
-            </ul>
-          </div>
+        <div class="language">
+          <button>En</button>
         </div>
-        <div class="contactus">
-          <h5><a href="">CONTACT US</a></h5>
+        <div class="singup">
+          <button>Sign Up</button>
         </div>
-      </section>
-      <!-- END HEADER -->  
-      <!---------------------------------BEGIN MAIN HTML------------------------------------->
+        <div class="login">
+          <button>Login</button>
+        </div>
+      </div>
+      <div class="nav__menu-link">
+        <div class="item1">
+          <h5>Beat Camp</h5>
+          <ul>
+            <li><a href="">Bit Camp Introduction</a></li>
+            <li><a href="">Directions</a></li>
+          </ul>
+        </div>
+        <div class="item2">
+          <h5>Curriculum</h5>
+          <ul>
+            <li><a href="">Government funding process</a></li>
+            <li><a href="">Incumbent Course</a></li>
+            <li><a href="">Basic lecture</a></li>
+            <li><a href="">General Course</a></li>
+          </ul>
+        </div>
+        <div class="item3">
+          <h5>Employment and Startup Support Center</h5>
+          <ul>
+            <li><a href="">Employment and Startup Support Center</a></li>
+            <li><a href="">Recruitment Announcement</a></li>
+            <li><a href="">Overseas employment and start-up</a></li>
+          </ul>
+        </div>
+        <div class="item4">
+          <h5>blog</h5>
+          <ul>
+            <li><a href="">blog</a></li>
+          </ul>
+        </div>
+        <div class="item5">
+          <h5>Mentoring</h5>
+          <ul>
+            <li><a href="">Mentoring</a></li>
+            <li><a href="">Find a Mentor</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contactus">
+        <h5><a href="">CONTACT US</a></h5>
+      </div>
+    </section>
+    <!-- END HEADER -->
+    <!---------------------------------BEGIN MAIN HTML------------------------------------->
     <div id="wapper">
-        <div id="container_title_box">
-            <img src="https://www.bitcamp.co.kr/theme/basic/img/title_03.jpg" alt="" class="full">
-            <p class="font25 bold">Recruitment Announcement</p>
-        </div>
-        <div id="_total">
-            <div class="container_total">
-                <div class="content_total">
-                    <div class="_box">
-                            <div class="_img">
-                                <a>
-                                    <img src="https://www.bitcamp.co.kr/data/file/job/1794243636_bj1MdIYq_894ac2e11841bb7ddd730d242290a4b75cee4b35.jpg" alt="" title="">
-                                </a>
-                            </div>
-                            <div class="_info">
-                                <p class="info_title font20 bold">Sharetreats Co., Ltd.</p>
-                                <div>
-                                    <p><span>Posted on</span> | <span>2021-02-18</span></p>
-                                    <p><span>Deadline</span> | <span>2021-02-26</span></p>
-                                    <p><span>Position</span> | <span>Payment service developer (new, experienced)</span></p>
-                                    <p><span>Views</span> | <span>36 times</span></p>
-                                    <p><span>Author</span> | <span>Employment Support Office 1</span></p>
-                                </div>
-                                <ul class="ul_button">
-                                    <li><a>Corporate </a></li>
-                                </ul>
-                            </div>
-                            
-                    </div>
-                    <div class="_button">
-                        <div class="mr label_button">
-                            <a>Education</a>
-                        </div>
-                        
-                    </div>
-                    <ul class="ul_src">
-                        <li>
-                            <img src="https://www.bitcamp.co.kr/data/editor/2102/20210218202527_f760b0801fbdfe1995f982b75bb98d0c_x0bv.png">
-                        </li>
-                       
-                    </ul>
-                    <div class="_enrolment">
-                        <ul class="ul_pa">
-                            <li class="li_pre font13">
-                                <span class="cl_b2"><i class="fas fa-chevron-up"></i> Previous</span>
-                                <a>Sharetreats Co., Ltd.</a>
-                                <span class="cl_b2">21.01.03</span>
-                            </li>
-                            <li class="li_next font13">
-                                <span class="cl_b2"><i class="fas fa-chevron-down"></i> Next</span>
-                                <a>Cyber ​​System Co., Ltd.</a>
-                                <span class="cl_b2">21.01.03</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div> 
+      <div id="container_title_box">
+        <img
+          src="https://www.bitcamp.co.kr/theme/basic/img/title_03.jpg"
+          alt=""
+          class="full"
+        />
+        <p class="font25 bold">Recruitment Announcement</p>
+      </div>
+      <div id="_total">
+        <div class="container_total">
+          <div class="content_total">
+            <div class="_box">
+              <div class="_img">
+                <a>
+                  <img
+                    src="https://www.bitcamp.co.kr/data/file/job/1794243636_bj1MdIYq_894ac2e11841bb7ddd730d242290a4b75cee4b35.jpg"
+                    alt=""
+                    title=""
+                  />
+                </a>
+              </div>
+              <div class="_info">
+                <p class="info_title font20 bold">Sharetreats Co., Ltd.</p>
+                <div>
+                  <p><span>Posted on</span> | <span>2021-02-18</span></p>
+                  <p><span>Deadline</span> | <span>2021-02-26</span></p>
+                  <p>
+                    <span>Position</span> |
+                    <span>Payment service developer (new, experienced)</span>
+                  </p>
+                  <p><span>Views</span> | <span>36 times</span></p>
+                  <p>
+                    <span>Author</span> |
+                    <span>Employment Support Office 1</span>
+                  </p>
+                </div>
+                <ul class="ul_button">
+                  <li><a>Corporate </a></li>
+                </ul>
+              </div>
             </div>
+            <div class="_button">
+              <div class="mr label_button">
+                <a>Education</a>
+              </div>
+            </div>
+            <ul class="ul_src">
+              <li>
+                <img
+                  src="https://www.bitcamp.co.kr/data/editor/2102/20210218202527_f760b0801fbdfe1995f982b75bb98d0c_x0bv.png"
+                />
+              </li>
+            </ul>
+            <div class="_enrolment">
+              <ul class="ul_pa">
+                <li class="li_pre font13">
+                  <span class="cl_b2"
+                    ><i class="fas fa-chevron-up"></i> Previous</span
+                  >
+                  <a>Sharetreats Co., Ltd.</a>
+                  <span class="cl_b2">21.01.03</span>
+                </li>
+                <li class="li_next font13">
+                  <span class="cl_b2"
+                    ><i class="fas fa-chevron-down"></i> Next</span
+                  >
+                  <a>Cyber ​​System Co., Ltd.</a>
+                  <span class="cl_b2">21.01.03</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!---------------------------------END MAIN HTML------------------------------------->
     <footer>
-        <div class="footer__content">
-          <!-- Title -->
-          <div class="footer__content-title">
-            <h5>Bitcamp representative inquiry</h5>
-            <h5>080-861-0909</h5>
+      <div class="footer__content">
+        <!-- Title -->
+        <div class="footer__content-title">
+          <h5>Bitcamp representative inquiry</h5>
+          <h5>080-861-0909</h5>
+        </div>
+        <!-- Infor -->
+        <div class="footer__content-infor">
+          <div class="infor__left">
+            <h5>
+              * For administrative work of existing students, please contact the
+              relevant center.
+            </h5>
+            <ul>
+              <li>Seocho Main Garden</li>
+              <li>02. 3486. 9600</li>
+              <li>Sinchon Center</li>
+              <li>02. 707. 1480</li>
+            </ul>
+            <ul>
+              <li>Gangnam Center</li>
+              <li>02. 3453. 5404</li>
+              <li>Jongno Center</li>
+              <li>02. 722. 1481</li>
+            </ul>
+            <ul>
+              <li>weekday</li>
+              <li>AM 09:00-PM 18:30</li>
+              <li>Saturdays, Sundays, and holidays</li>
+              <li>AM 09:00-PM 18:00</li>
+            </ul>
           </div>
-          <!-- Infor -->
-          <div class="footer__content-infor">
-            <div class="infor__left">
-              <h5>
-                * For administrative work of existing students, please contact the
-                relevant center.
-              </h5>
-              <ul>
-                <li>Seocho Main Garden</li>
-                <li>02. 3486. 9600</li>
-                <li>Sinchon Center</li>
-                <li>02. 707. 1480</li>
-              </ul>
-              <ul>
-                <li>Gangnam Center</li>
-                <li>02. 3453. 5404</li>
-                <li>Jongno Center</li>
-                <li>02. 722. 1481</li>
-              </ul>
-              <ul>
-                <li>weekday</li>
-                <li>AM 09:00-PM 18:30</li>
-                <li>Saturdays, Sundays, and holidays</li>
-                <li>AM 09:00-PM 18:00</li>
-              </ul>
+          <div class="infor__right">
+            <div class="infor__right-icon1">
+              <img src="./images/ft_icon1.png" alt="icon 1" />
             </div>
-            <div class="infor__right">
-              <div class="infor__right-icon1">
-                <img src="./images/ft_icon1.png" alt="icon 1" />
-              </div>
-              <div class="infor__right-icon2">
-                <img src="./images/ft_icon2.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <hr class="hrfooter" />
-          <div class="footer__content-company">
-            <div class="footer__left">
-              <p>
-                Bit Camp ｜ 459 Gangnam-daero, Seocho-gu, Seoul (Seocho-dong,
-                Baekam Building) ｜ Business Registration Number: 214-85-24928
-              </p>
-              <p>
-                Bit Computer Co., Ltd. Seo Cho Bonwon CEO: Cho Hyun-jung ｜
-                Inquiries : 02-3486-9600 ｜ Fax: 02-6007-1245
-              </p>
-              <p>
-                Mail-order business report number: Seocho-00098 ｜ Personal
-                information protection manager: Choi Jong- jin
-              </p>
-            </div>
-            <div class="footer__right">
-              <img src="./images/logo.png" alt="" />
-            </div>
-          </div>
-          <div class="footer__content-btn">
-            <div class="footer__buton-left">
-              <button>Privacy Policy</button>
-              <button>Terms of Use</button>
-              <button>Directions</button>
-            </div>
-            <div class="footer__copyright">
-              <p>Copyright (c) Bitcamp All rights reserved.</p>
+            <div class="infor__right-icon2">
+              <img src="./images/ft_icon2.png" alt="" />
             </div>
           </div>
         </div>
-        <!-- message chatbox -->
-        <div class="mess">
-          <i class="fas fa-comment-dots"></i>
-        </div>
-        <!-- popup chat message -->
-        <div class="popupchat">
-          <div class="popupchat__content">
-            <div class="popupchat__content-title">
-              <div>
-                <h5>Beat camp</h5>
-              </div>
-              <div>
-                <i class="fas fa-cog"></i>
-                <i class="fas fa-times" id="closeChat"></i>
-              </div>
-            </div>
-            <div class="popupchat__content-active">
-              <div class="popupchat__active">
-                <h5>Available</h5>
-                <p>Replies within an hour</p>
-              </div>
-              <div class="popupchat__online">
-                <div>
-                  <img src="./images/available_1.png" alt="" />
-                </div>
-                <div>
-                  <img src="./images/available_2.png" alt="" />
-                </div>
-                <div>
-                  <img src="./images/available_3.png" alt="" />
-                </div>
-                <div>
-                  <img src="./images/available_4.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="startchat">
-              <div class="startchat__title">
-                <img src="./images/startchat.png" alt="" />
-                <div>
-                  <h5>Bitcamp</h5>
-                  <p>Welcome! How can I help you today?</p>
-                </div>
-              </div>
-              <div class="startchat__btn">
-                <button>
-                  <p><i class="fas fa-play"></i> Start a new chat</p>
-                </button>
-              </div>
-            </div>
-            <div class="link">
-              <div class="link__icon">
-                <i class="fas fa-link"></i>
-              </div>
-              <div class="link__hover">
-                <p>Chat link copy: bitcamp1:chann...</p>
-              </div>
-            </div>
-          </div>
-          <div class="popupchat__bottom">
+        <hr class="hrfooter" />
+        <div class="footer__content-company">
+          <div class="footer__left">
             <p>
-              <i class="far fa-comment-dots"></i> Powered by
-              <span>Channel.io</span>
+              Bit Camp ｜ 459 Gangnam-daero, Seocho-gu, Seoul (Seocho-dong,
+              Baekam Building) ｜ Business Registration Number: 214-85-24928
+            </p>
+            <p>
+              Bit Computer Co., Ltd. Seo Cho Bonwon CEO: Cho Hyun-jung ｜
+              Inquiries : 02-3486-9600 ｜ Fax: 02-6007-1245
+            </p>
+            <p>
+              Mail-order business report number: Seocho-00098 ｜ Personal
+              information protection manager: Choi Jong- jin
             </p>
           </div>
-        </div>
-        <!-- topheader -->
-        <div class="topheader">
-          <div class="topheader__call">
-            <img src="./images/call_quick.png" alt="" />
-          </div>
-          <div class="topheader__btn">
-            <i class="fas fa-arrow-up"></i>
+          <div class="footer__right">
+            <img src="./images/logo.png" alt="" />
           </div>
         </div>
-      </footer>
-      <script>
-        // -------sub menu-------------
-        // get element event
-        const iconmenu = document.querySelector("#subnav");
-        const popupnav = document.querySelector(".nav__menu");
-        const closemenu = document.querySelector("#closesubmenu");
-  
-        //add event "click"
-        iconmenu.addEventListener("click", openModal);
-        closemenu.addEventListener("click", closesub);
-  
-        // function event
-        // open
-        function openModal() {
-          popupnav.style.display = "block";
-        }
-        // close menu
-        function closesub() {
-          popupnav.style.display = "none";
-        }
-  
-        //-------message----------
-        const mes = document.querySelector(".mess");
-        const openChat = document.querySelector(".popupchat");
-        const turnoff = document.querySelector("#closeChat");
-  
-        mes.addEventListener("click", openMes);
-        turnoff.addEventListener("click", closeChat);
-  
-        function openMes() {
-          openChat.style.display = "block";
-        }
-  
-        function closeChat() {
-          openChat.style.display = "none";
-        }
-  
-        // -----scrollTop-------
-        const btnScrollTop = document.querySelector(".topheader__btn");
-  
-        btnScrollTop.addEventListener("click", function () {
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-          });
+        <div class="footer__content-btn">
+          <div class="footer__buton-left">
+            <button>Privacy Policy</button>
+            <button>Terms of Use</button>
+            <button>Directions</button>
+          </div>
+          <div class="footer__copyright">
+            <p>Copyright (c) Bitcamp All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+      <!-- message chatbox -->
+      <div class="mess">
+        <i class="fas fa-comment-dots"></i>
+      </div>
+      <!-- popup chat message -->
+      <div class="popupchat">
+        <div class="popupchat__content">
+          <div class="popupchat__content-title">
+            <div>
+              <h5>Beat camp</h5>
+            </div>
+            <div>
+              <i class="fas fa-cog"></i>
+              <i class="fas fa-times" id="closeChat"></i>
+            </div>
+          </div>
+          <div class="popupchat__content-active">
+            <div class="popupchat__active">
+              <h5>Available</h5>
+              <p>Replies within an hour</p>
+            </div>
+            <div class="popupchat__online">
+              <div>
+                <img src="./images/available_1.png" alt="" />
+              </div>
+              <div>
+                <img src="./images/available_2.png" alt="" />
+              </div>
+              <div>
+                <img src="./images/available_3.png" alt="" />
+              </div>
+              <div>
+                <img src="./images/available_4.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="startchat">
+            <div class="startchat__title">
+              <img src="./images/startchat.png" alt="" />
+              <div>
+                <h5>Bitcamp</h5>
+                <p>Welcome! How can I help you today?</p>
+              </div>
+            </div>
+            <div class="startchat__btn">
+              <button>
+                <p><i class="fas fa-play"></i> Start a new chat</p>
+              </button>
+            </div>
+          </div>
+          <div class="link">
+            <div class="link__icon">
+              <i class="fas fa-link"></i>
+            </div>
+            <div class="link__hover">
+              <p>Chat link copy: bitcamp1:chann...</p>
+            </div>
+          </div>
+        </div>
+        <div class="popupchat__bottom">
+          <p>
+            <i class="far fa-comment-dots"></i> Powered by
+            <span>Channel.io</span>
+          </p>
+        </div>
+      </div>
+      <!-- topheader -->
+      <div class="topheader">
+        <div class="topheader__call">
+          <img src="./images/call_quick.png" alt="" />
+        </div>
+        <div class="topheader__btn">
+          <i class="fas fa-arrow-up"></i>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // -------sub menu-------------
+      // get element event
+      const iconmenu = document.querySelector("#subnav");
+      const popupnav = document.querySelector(".nav__menu");
+      const closemenu = document.querySelector("#closesubmenu");
+
+      //add event "click"
+      iconmenu.addEventListener("click", openModal);
+      closemenu.addEventListener("click", closesub);
+
+      // function event
+      // open
+      function openModal() {
+        popupnav.style.display = "block";
+      }
+      // close menu
+      function closesub() {
+        popupnav.style.display = "none";
+      }
+
+      //-------message----------
+      const mes = document.querySelector(".mess");
+      const openChat = document.querySelector(".popupchat");
+      const turnoff = document.querySelector("#closeChat");
+
+      mes.addEventListener("click", openMes);
+      turnoff.addEventListener("click", closeChat);
+
+      function openMes() {
+        openChat.style.display = "block";
+      }
+
+      function closeChat() {
+        openChat.style.display = "none";
+      }
+
+      // -----scrollTop-------
+      const btnScrollTop = document.querySelector(".topheader__btn");
+
+      btnScrollTop.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
         });
-  
-        // scroll header if scroll >30 then change background
-        const headerChange = document.querySelector(".header");
-        const changeColora = document.querySelectorAll(".header__menu-nav li a");
-        const changeImg = document.querySelector(".header__menu-icon img");
-        const changeIcon = document.querySelector(".header__menu-nav-btn i");
-        window.onscroll = function () {
-          myFunction();
-        };
-        function myFunction() {
-          if (
-            document.body.scrollTop > 50 ||
-            document.documentElement.scrollTop > 50
-          ) {
-            headerChange.style.backgroundColor = "#fff";
-            changeImg.style.backgroundColor = "blue";
-            changeIcon.style.color = "black";
-            for (let i = 0; i < changeColora.length; i++) {
-              changeColora[i].style.color = "black";
-            }
-          } else {
-            headerChange.style.backgroundColor = "#151726";
-            changeImg.style.backgroundColor = "";
-            changeIcon.style.color = "white";
-            for (let i = 0; i < changeColora.length; i++) {
-              changeColora[i].style.color = "white";
-            }
+      });
+
+      // scroll header if scroll >30 then change background
+      const headerChange = document.querySelector(".header");
+      const changeColora = document.querySelectorAll(".header__menu-nav li a");
+      const changeImg = document.querySelector(".header__menu-icon img");
+      const changeIcon = document.querySelector(".header__menu-nav-btn i");
+      window.onscroll = function () {
+        myFunction();
+      };
+      function myFunction() {
+        if (
+          document.body.scrollTop > 50 ||
+          document.documentElement.scrollTop > 50
+        ) {
+          headerChange.style.backgroundColor = "#fff";
+          changeImg.style.backgroundColor = "blue";
+          changeIcon.style.color = "black";
+          for (let i = 0; i < changeColora.length; i++) {
+            changeColora[i].style.color = "black";
+          }
+        } else {
+          headerChange.style.backgroundColor = "#151726";
+          changeImg.style.backgroundColor = "";
+          changeIcon.style.color = "white";
+          for (let i = 0; i < changeColora.length; i++) {
+            changeColora[i].style.color = "white";
           }
         }
-      </script>
-</body>
-<script>
-
-</script>
-
+      }
+    </script>
+  </body>
+  <script></script>
 </html>

@@ -609,6 +609,74 @@
        color: #fff;
      }
      /* END POPUP CHAT MESSAGE */
+
+     /* Reponsive */
+     @media screen and (max-width: 600px){       
+       .header__menu-nav{
+         display: none;
+       }
+       .header__menu{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        
+       }
+       .mess{
+         display: none;
+       }
+       .topheader{
+         display: none;
+       }
+       .requitment .requitment__list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+      }
+      .container__curricul .curricul .curricul__list{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px;
+      }
+      img{
+        width: 10%;
+      }
+      .nav__menu-link{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        width: 94%;
+        margin: 0 auto;       
+      }
+     }
+    
+     @media screen and (max-width: 900px){     
+       .header__menu-nav{
+        display: none;
+       }
+       .header__menu{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        
+       }
+       .requitment .requitment__list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+      }
+      .container__curricul .curricul .curricul__list{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px;
+      }
+      img{
+        width: 80%;
+      }
+      .nav__menu-link{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        width: 94%;
+        margin: 0 auto;       
+      }
+     }    
+     /* End Reponsive */
     </style>
   </head>
   <body>
@@ -900,7 +968,7 @@
       <!-- RECRUITMENT -->
       <div class="container__curricul">
         <div class="container__curricul-title">
-          <p>Curriculum being recruited</p>
+          <p>Recruitment Announcement</p>
           <button>See More +</button>
         </div>
       <div class="requitment">
@@ -1337,6 +1405,7 @@
       if (document.body.scrollTop > 50 || 
       document.documentElement.scrollTop > 50) {
         headerChange.style.backgroundColor = '#fff';
+        headerChange.style.borderBottom = "2px solid black"
         changeImg.style.backgroundColor = 'blue';   
         changeIcon.style.color = 'black';  
         for(let i = 0; i < changeColora.length;i++){

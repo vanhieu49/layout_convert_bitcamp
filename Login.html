@@ -15,7 +15,7 @@
         box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif;
       }
-      .wrapper{
+      .wrapper {
         overflow: hidden;
       }
       .bold {
@@ -39,7 +39,8 @@
         outline: none;
       }
 
-      input[type=text], input[type=password] {
+      input[type="text"],
+      input[type="password"] {
         width: 100%;
         border: 1px solid #ccc;
         background: #fff;
@@ -64,84 +65,85 @@
         top: 20%;
       }
 
-    .box{
-      border: 1px solid #dde7e9;
-      background: #fff;
-      width: 360px;
-      height: 312px;
-    }
-    .box_cate{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      justify-items: center;
-    }
-    .box_cate a{
-      padding: 15px;
-      width: 100%;
-      text-align: center;
-    }
-    .login{
-      background-color: #f7f7f7;
-      cursor: pointer;
-    }
-    .signin, .login{
-      font-size: 12px;
-    }
-    form{
-      width: 90%;
-      margin: 0 auto;
-      position: relative;
-      padding: 15px;
-    }
-    button[type=submit]{
-      width: 100%;
-      background: #333;
-      height: 45px;
-      font-weight: bold;
-      font-size: 15px;
-      margin: 0 0 15px;
-      color: #fff;
-      
-    }
-    .lostPw{
-      position: absolute;
-      right: 15px;
-      background-color: #fff;
-      border: 1px solid #dde7e9;
-      font-size: 12px;
-      padding: 5px;
-      cursor: pointer;
-    }
-    .username{
-      margin-bottom: 10px;
-      height: 50px;
-      position: relative;
-    }
-    .password{
-      margin-bottom: 10px;
-      position: relative;
-    }
-    .userName_required, .passWord_required{
-      position: absolute;
-      top: 45%;
-      left: 97%;
-    }
-    .passWord_required{
-      top: 26%;
-    }
-    label{
-      font-size: 12px;
-    }
-    @media only screen and (max-width: 360px){
-      .container {
-        max-width: 324px;
-        margin: 80px auto;
+      .box {
+        border: 1px solid #dde7e9;
+        background: #fff;
+        width: 360px;
+        height: 312px;
       }
-      .box{
-        width: 324px;
+      .box_cate {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
       }
-    }
-    
+      .box_cate a {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+      }
+      .login {
+        background-color: #f7f7f7;
+        cursor: pointer;
+      }
+      .signin,
+      .login {
+        font-size: 12px;
+      }
+      form {
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        padding: 15px;
+      }
+      button[type="submit"] {
+        width: 100%;
+        background: #333;
+        height: 45px;
+        font-weight: bold;
+        font-size: 15px;
+        margin: 0 0 15px;
+        color: #fff;
+      }
+      .lostPw {
+        position: absolute;
+        right: 15px;
+        background-color: #fff;
+        border: 1px solid #dde7e9;
+        font-size: 12px;
+        padding: 5px;
+        cursor: pointer;
+      }
+      .username {
+        margin-bottom: 10px;
+        height: 50px;
+        position: relative;
+      }
+      .password {
+        margin-bottom: 10px;
+        position: relative;
+      }
+      .userName_required,
+      .passWord_required {
+        position: absolute;
+        top: 45%;
+        left: 97%;
+      }
+      .passWord_required {
+        top: 26%;
+      }
+      label {
+        font-size: 12px;
+      }
+      @media only screen and (max-width: 360px) {
+        .container {
+          max-width: 324px;
+          margin: 80px auto;
+        }
+        .box {
+          width: 324px;
+        }
+      }
+
       /* HEADER */
       .header {
         background-color: #151726;
@@ -532,96 +534,160 @@
         color: #fff;
       }
       /* END POPUP CHAT MESSAGE */
-      /* -------END FOOTER----- */
+      /* -------END FOOTER----- */ /* Reponsive */
+      @media screen and (max-width: 600px) {
+        .header__menu-nav {
+          display: none;
+        }
+        .header__menu {
+          display: grid;
+          grid-template-columns: 80% 20%;
+        }
+        .mess {
+          display: none;
+        }
+        .topheader {
+          display: none;
+        }
+        .requitment .requitment__list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        .container__curricul .curricul .curricul__list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 20px;
+        }
+        img {
+          width: 10%;
+        }
+        .nav__menu-link {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          width: 94%;
+          margin: 0 auto;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        .header__menu-nav {
+          display: none;
+        }
+        .header__menu {
+          display: grid;
+          grid-template-columns: 80% 20%;
+        }
+        .requitment .requitment__list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        .container__curricul .curricul .curricul__list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 20px;
+        }
+        img {
+          width: 80%;
+        }
+        .nav__menu-link {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          width: 94%;
+          margin: 0 auto;
+        }
+      }
+      /* End Reponsive */
     </style>
   </head>
   <body>
-   <!-- HEADER -->
-   <header class="header">
-    <div class="header__menu">
-      <div class="header__menu-icon">
-        <img src="./images/logo.png" alt="" />
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__menu">
+        <div class="header__menu-icon">
+          <img src="./images/logo.png" alt="" />
+        </div>
+        <nav class="header__menu-nav">
+          <ul>
+            <li><a href="">Beat Camp</a></li>
+            <li><a href="">Curriculum</a></li>
+            <li><a href="">Employment and Startup Support Center</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Mentoring</a></li>
+            <li><a href="">CONTACT US</a></li>
+          </ul>
+        </nav>
+        <div class="header__menu-nav-btn">
+          <i class="fas fa-align-justify" id="subnav"></i>
+        </div>
       </div>
-      <nav class="header__menu-nav">
-        <ul>
-          <li><a href="">Beat Camp</a></li>
-          <li><a href="">Curriculum</a></li>
-          <li><a href="">Employment and Startup Support Center</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Mentoring</a></li>
-          <li><a href="">CONTACT US</a></li>
-        </ul>
-      </nav>
-      <div class="header__menu-nav-btn">
-        <i class="fas fa-align-justify" id="subnav"></i>
+    </header>
+    <!-- menu nav when hover -->
+    <section class="nav__menu">
+      <div class="nav__menu-title">
+        <h5>All Menu</h5>
+        <i class="fas fa-times" id="closesubmenu"></i>
       </div>
-    </div>
-  </header>
-  <!-- menu nav when hover -->
-  <section class="nav__menu">
-    <div class="nav__menu-title">
-      <h5>All Menu</h5>
-      <i class="fas fa-times" id="closesubmenu"></i>
-    </div>
-    <hr />
-    <div class="nav__menu-btn">
-      <div class="language">
-        <button>Ko</button>
+      <hr />
+      <div class="nav__menu-btn">
+        <div class="language">
+          <button>Ko</button>
+        </div>
+        <div class="language">
+          <button>En</button>
+        </div>
+        <div class="singup">
+          <button>Sign Up</button>
+        </div>
+        <div class="login">
+          <button>Login</button>
+        </div>
       </div>
-      <div class="language">
-        <button>En</button>
+      <div class="nav__menu-link">
+        <div class="item1">
+          <h5>Beat Camp</h5>
+          <ul>
+            <li><a href="">Bit Camp Introduction</a></li>
+            <li><a href="">Directions</a></li>
+          </ul>
+        </div>
+        <div class="item2">
+          <h5>Curriculum</h5>
+          <ul>
+            <li><a href="">Government funding process</a></li>
+            <li><a href="">Incumbent Course</a></li>
+            <li><a href="">Basic lecture</a></li>
+            <li><a href="">General Course</a></li>
+          </ul>
+        </div>
+        <div class="item3">
+          <h5>Employment and Startup Support Center</h5>
+          <ul>
+            <li><a href="">Employment and Startup Support Center</a></li>
+            <li><a href="">Recruitment Announcement</a></li>
+            <li><a href="">Overseas employment and start-up</a></li>
+          </ul>
+        </div>
+        <div class="item4">
+          <h5>blog</h5>
+          <ul>
+            <li><a href="">blog</a></li>
+          </ul>
+        </div>
+        <div class="item5">
+          <h5>Mentoring</h5>
+          <ul>
+            <li><a href="">Mentoring</a></li>
+            <li><a href="">Find a Mentor</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="singup">
-        <button>Sign Up</button>
+      <div class="contactus">
+        <h5><a href="">CONTACT US</a></h5>
       </div>
-      <div class="login">
-        <button>Login</button>
-      </div>
-    </div>
-    <div class="nav__menu-link">
-      <div class="item1">
-        <h5>Beat Camp</h5>
-        <ul>
-          <li><a href="">Bit Camp Introduction</a></li>
-          <li><a href="">Directions</a></li>
-        </ul>
-      </div>
-      <div class="item2">
-        <h5>Curriculum</h5>
-        <ul>
-          <li><a href="">Government funding process</a></li>
-          <li><a href="">Incumbent Course</a></li>
-          <li><a href="">Basic lecture</a></li>
-          <li><a href="">General Course</a></li>
-        </ul>
-      </div>
-      <div class="item3">
-        <h5>Employment and Startup Support Center</h5>
-        <ul>
-          <li><a href="">Employment and Startup Support Center</a></li>
-          <li><a href="">Recruitment Announcement</a></li>
-          <li><a href="">Overseas employment and start-up</a></li>
-        </ul>
-      </div>
-      <div class="item4">
-        <h5>blog</h5>
-        <ul>
-          <li><a href="">blog</a></li>
-        </ul>
-      </div>
-      <div class="item5">
-        <h5>Mentoring</h5>
-        <ul>
-          <li><a href="">Mentoring</a></li>
-          <li><a href="">Find a Mentor</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="contactus">
-      <h5><a href="">CONTACT US</a></h5>
-    </div>
-  </section>
-  <!-- END HEADER -->
+    </section>
+    <!-- END HEADER -->
     <div class="wrapper">
       <div class="container">
         <div class="box">
@@ -631,19 +697,28 @@
           </div>
           <form action="">
             <div class="username">
-              <input type="text" class="userName required" required placeholder="아이디">
+              <input
+                type="text"
+                class="userName required"
+                required
+                placeholder="아이디"
+              />
               <div class="required userName_required"></div>
             </div>
             <div class="password">
-              <input type="password" class="passWord" class="required" required placeholder="비밀번호">
+              <input
+                type="password"
+                class="passWord"
+                class="required"
+                required
+                placeholder="비밀번호"
+              />
               <div class="required passWord_required"></div>
             </div>
             <button type="submit">로그인</button>
-            <input type="checkbox" id="autoLogin">
+            <input type="checkbox" id="autoLogin" />
             <label for="autoLogin"> 자동로그인</label>
-            <span class="lostPw">
-              정보찾기
-            </span>
+            <span class="lostPw"> 정보찾기 </span>
           </form>
         </div>
       </div>
@@ -799,12 +874,14 @@
     </footer>
     <script>
       //click check box
-      let checkbox = document.querySelector('#autoLogin')
-      checkbox.onchange = function(){
-        if(checkbox.checked){
-          alert('자동로그인을 사용하시면 다음부터 회원아이디와 비 일번호를 입력하실 필요가 없습 -- 다. \n \n 공공장소에서는 개읜정브가 유줄될 수 있으니 사용을 자제하여 주십시 오  \n \n 자동로그인을 사용하시겠습 니까？ ')
+      let checkbox = document.querySelector("#autoLogin");
+      checkbox.onchange = function () {
+        if (checkbox.checked) {
+          alert(
+            "자동로그인을 사용하시면 다음부터 회원아이디와 비 일번호를 입력하실 필요가 없습 -- 다. \n \n 공공장소에서는 개읜정브가 유줄될 수 있으니 사용을 자제하여 주십시 오  \n \n 자동로그인을 사용하시겠습 니까？ "
+          );
         }
-      }
+      };
       // -------sub menu-------------
       // get element event
       const iconmenu = document.querySelector("#subnav");

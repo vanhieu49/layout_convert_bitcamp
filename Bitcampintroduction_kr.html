@@ -567,12 +567,12 @@
       .content8_right img {
         width: 100%;
       }
-      @media only screen and (max-width: 1024px) and (min-width: 360px){
+      @media only screen and (max-width: 1024px) and (min-width: 360px) {
         .container {
           width: 90%;
           margin: 0 auto;
         }
-        .logo-content span{
+        .logo-content span {
           font-size: 18px;
         }
         .title img {
@@ -633,9 +633,9 @@
         .content7-text {
           font-size: 20px;
         }
-      }   
-      
-      @media only screen and (max-width: 600px) and (min-width: 360px){
+      }
+
+      @media only screen and (max-width: 600px) and (min-width: 360px) {
         .content1 {
           padding-top: 60px;
         }
@@ -669,7 +669,7 @@
         .content6 {
           grid-template-columns: 1fr;
         }
-        
+
         .right-content4 {
           margin-top: 20px;
         }
@@ -733,6 +733,71 @@
           padding-bottom: 80px;
         }
       }
+      /* Reponsive */
+      @media screen and (max-width: 600px) {
+        .header__menu-nav {
+          display: none;
+        }
+        .header__menu {
+          display: grid;
+          grid-template-columns: 80% 20%;
+        }
+        .mess {
+          display: none;
+        }
+        .topheader {
+          display: none;
+        }
+        .requitment .requitment__list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        .container__curricul .curricul .curricul__list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 20px;
+        }
+        img {
+          width: 10%;
+        }
+        .nav__menu-link {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          width: 94%;
+          margin: 0 auto;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        .header__menu-nav {
+          display: none;
+        }
+        .header__menu {
+          display: grid;
+          grid-template-columns: 80% 20%;
+        }
+        .requitment .requitment__list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        .container__curricul .curricul .curricul__list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 20px;
+        }
+        img {
+          width: 80%;
+        }
+        .nav__menu-link {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          width: 94%;
+          margin: 0 auto;
+        }
+      }
+      /* End Reponsive */
     </style>
   </head>
   <body>
@@ -740,7 +805,7 @@
     <header class="header">
       <div class="header__menu">
         <div class="header__menu-icon">
-          <img src="./images/logo.png" alt=""/>
+          <img src="./images/logo.png" alt="" />
         </div>
         <nav class="header__menu-nav">
           <ul>
@@ -844,22 +909,31 @@
           </div>
           <div class="text_content2">
             <div class="line line1">
-              This educational institution was founded in 1983 as the first venture company, leading the digital era.
+              This educational institution was founded in 1983 as the first
+              venture company, leading the digital era.
             </div>
             <div class="line line2">
-              Established by Bit Computer Co. , Ltd. for the purpose of [the more technology is shared, the larger] [to cultivate excellent human resources and give back to society] .
+              Established by Bit Computer Co. , Ltd. for the purpose of [the
+              more technology is shared, the larger] [to cultivate excellent
+              human resources and give back to society] .
             </div>
             <div class="line line3">
-              Therefore, the head of the agency understands and empathizes with the direction of government policy as the best IT expert in Korea.
+              Therefore, the head of the agency understands and empathizes with
+              the direction of government policy as the best IT expert in Korea.
             </div>
             <div class="line line4">
-              We operate high-quality training courses to cultivate human resources that industries need.
+              We operate high-quality training courses to cultivate human
+              resources that industries need.
             </div>
             <div class="line line5">
-              In addition, for the purpose of sound development and promotion of the domestic software industry, such as the activities of the chairman of the Korea Software Industry Association.
+              In addition, for the purpose of sound development and promotion of
+              the domestic software industry, such as the activities of the
+              chairman of the Korea Software Industry Association.
             </div>
             <div class="line line6 bold">
-              We are engaged in various activities to raise awareness of the software industry and to improve the software industry policy and system.
+              We are engaged in various activities to raise awareness of the
+              software industry and to improve the software industry policy and
+              system.
             </div>
           </div>
         </div>
@@ -877,22 +951,45 @@
           </div>
           <div class="right-content4">
             <ul>
-              <li>Produced beet graduates with tradition and history since 1990</li>
               <li>
-                Ministry of Science and ICT [Innovative Growth Youth Talent Training Project] 3 years
+                Produced beet graduates with tradition and history since 1990
               </li>
               <li>
-                Ministry of Science and Technology Information and Communication SW Professional Training Institute (Java, embedded, big data, AI, autonomous driving, etc.)
+                Ministry of Science and ICT [Innovative Growth Youth Talent
+                Training Project] 3 years
+              </li>
+              <li>
+                Ministry of Science and Technology Information and Communication
+                SW Professional Training Institute (Java, embedded, big data,
+                AI, autonomous driving, etc.)
               </li>
               <li>2018~Present Seoul New Deal Job Policy Project</li>
-              <li>Ministry of Employment and Labor is operating national training for strategic industrial occupations</li>
+              <li>
+                Ministry of Employment and Labor is operating national training
+                for strategic industrial occupations
+              </li>
               <li>Domestic and overseas employment support</li>
-              <li>Selected as an excellent training institution for certification evaluation by the Ministry of Employment and Labor in 2019</li>
-              <li>Ministry of Employment and Labor 3-year certification body</li>
-              <li>Ministry of Employment and Labor Completion A grade institution</li>
-              <li>Selected as an excellent course for strengthening SW core competencies by the Ministry of Knowledge Economy</li>
-              <li>Unemployment Countermeasure Promotion Achievement Award (Prime Minister Award)</li>
-              <li>Group study and project-oriented practical training course</li>
+              <li>
+                Selected as an excellent training institution for certification
+                evaluation by the Ministry of Employment and Labor in 2019
+              </li>
+              <li>
+                Ministry of Employment and Labor 3-year certification body
+              </li>
+              <li>
+                Ministry of Employment and Labor Completion A grade institution
+              </li>
+              <li>
+                Selected as an excellent course for strengthening SW core
+                competencies by the Ministry of Knowledge Economy
+              </li>
+              <li>
+                Unemployment Countermeasure Promotion Achievement Award (Prime
+                Minister Award)
+              </li>
+              <li>
+                Group study and project-oriented practical training course
+              </li>
             </ul>
           </div>
         </div>
@@ -909,10 +1006,16 @@
               <img src="./img-cong/company3.png" alt="" />
             </div>
             <div class="content6_p1 coral bold">01</div>
-            <div class="content6_p2 coral bold">Nurturing customized professionals</div>
+            <div class="content6_p2 coral bold">
+              Nurturing customized professionals
+            </div>
             <div class="content6_p3">
-              <div class="content6_p3_top">Relieve manpower in industrial sites and</div>
-              <div class="content6_p3_bot">Strengthening corporate competitiveness</div>
+              <div class="content6_p3_top">
+                Relieve manpower in industrial sites and
+              </div>
+              <div class="content6_p3_bot">
+                Strengthening corporate competitiveness
+              </div>
             </div>
           </div>
           <div class="content6_2">
@@ -920,10 +1023,16 @@
               <img src="./img-cong/company4.png" alt="" />
             </div>
             <div class="content6_p1 coral bold">02</div>
-            <div class="content6_p2 coral bold">Convergence-type professional manpower training</div>
+            <div class="content6_p2 coral bold">
+              Convergence-type professional manpower training
+            </div>
             <div class="content6_p3">
-              <div class="content6_p3_top">Other industries in the field of artificial intelligence</div>
-              <div class="content6_p3_bot">Strengthening industrial competitiveness through convergence</div>
+              <div class="content6_p3_top">
+                Other industries in the field of artificial intelligence
+              </div>
+              <div class="content6_p3_bot">
+                Strengthening industrial competitiveness through convergence
+              </div>
             </div>
           </div>
           <div class="content6_3">
@@ -931,10 +1040,16 @@
               <img src="./img-cong/company5.png" alt="" />
             </div>
             <div class="content6_p1 coral bold">03</div>
-            <div class="content6_p2 coral bold">Nurturing leader-level professionals</div>
+            <div class="content6_p2 coral bold">
+              Nurturing leader-level professionals
+            </div>
             <div class="content6_p3">
-              <div class="content6_p3_top">Overseas market in artificial intelligence</div>
-              <div class="content6_p3_bot">Strengthening national competitiveness through advancement, etc.</div>
+              <div class="content6_p3_top">
+                Overseas market in artificial intelligence
+              </div>
+              <div class="content6_p3_bot">
+                Strengthening national competitiveness through advancement, etc.
+              </div>
             </div>
           </div>
         </div>
@@ -951,10 +1066,15 @@
               <img src="./img-cong/company_mark.jpg" alt="" />
             </div>
             <div class="content_left_p2">
-              <span class="">The more you share your skills, the bigger it gets.</span>
+              <span class=""
+                >The more you share your skills, the bigger it gets.</span
+              >
             </div>
             <div class="content_left_p3">
-              <span class="">We cultivate excellent human resources and give back to society .</span> 
+              <span class=""
+                >We cultivate excellent human resources and give back to society
+                .</span
+              >
             </div>
             <div class="content_left_p4">
               <img src="./img-cong/company_font.jpg" alt="" />

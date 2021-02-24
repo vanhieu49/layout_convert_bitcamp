@@ -21,7 +21,7 @@
         --text-color-black: #333;
         --text-color-white: #fff;
         --text-color-da: #da5c5f;
-        --text-color-ac:#acacac;
+        --text-color-ac: #acacac;
         --bg-color-red: #da5c5f;
         --bg-color-f5: #f5f5f5;
         --bg-color-white: #fff;
@@ -59,10 +59,10 @@
       .bold {
         font-weight: 700;
       }
-      .mr_bt_10{
+      .mr_bt_10 {
         margin-bottom: 10px;
       }
-      .mr_bt_15{
+      .mr_bt_15 {
         margin-bottom: 15px;
       }
 
@@ -458,6 +458,71 @@
       }
       /* END POPUP CHAT MESSAGE */
       /* -------END FOOTER----- */
+      /* Reponsive */
+      @media screen and (max-width: 600px) {
+        .header__menu-nav {
+          display: none;
+        }
+        .header__menu {
+          display: grid;
+          grid-template-columns: 80% 20%;
+        }
+        .mess {
+          display: none;
+        }
+        .topheader {
+          display: none;
+        }
+        .requitment .requitment__list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        .container__curricul .curricul .curricul__list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 20px;
+        }
+        img {
+          width: 10%;
+        }
+        .nav__menu-link {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          width: 94%;
+          margin: 0 auto;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        .header__menu-nav {
+          display: none;
+        }
+        .header__menu {
+          display: grid;
+          grid-template-columns: 80% 20%;
+        }
+        .requitment .requitment__list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        .container__curricul .curricul .curricul__list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 20px;
+        }
+        img {
+          width: 80%;
+        }
+        .nav__menu-link {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          width: 94%;
+          margin: 0 auto;
+        }
+      }
+      /* End Reponsive */
       /* -----------------------------BEGIN MAIN CSS-----------------------------------------*/
       #wapper {
         padding-top: 75px;
@@ -518,7 +583,6 @@
         width: 80%;
         color: var(--text-color-black);
       }
-     
 
       /* RESULT FILTER */
       .container_cm h1 {
@@ -557,26 +621,26 @@
         margin-bottom: 0.8rem;
         word-break: keep-all;
       }
-       .div_info .info_disc p{
-           color: var(--text-color-ac);
-       }
-       .div_info .info_disc p:first-child{
-            height: 54px;
-            overflow: hidden;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis;
-            white-space: normal;
-            margin-bottom: 0.8rem;
-            word-break: keep-all;
-            display: -webkit-box !important;
-       }
-       .div_info .info_disc p:nth-child(2) span{
-           margin-left: 2px;
-       }
-       .div_info .info_disc p:nth-child(2) span:first-child{
-           color: var(--text-color-black);
-       }
+      .div_info .info_disc p {
+        color: var(--text-color-ac);
+      }
+      .div_info .info_disc p:first-child {
+        height: 54px;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        white-space: normal;
+        margin-bottom: 0.8rem;
+        word-break: keep-all;
+        display: -webkit-box !important;
+      }
+      .div_info .info_disc p:nth-child(2) span {
+        margin-left: 2px;
+      }
+      .div_info .info_disc p:nth-child(2) span:first-child {
+        color: var(--text-color-black);
+      }
 
       .div_info .Rm {
         padding: 10px;
@@ -766,21 +830,22 @@
                   </div>
                   <div class="div_info">
                     <p class="info_title font16 bold">
-                      <a 
+                      <a
                         title="[Notice] Basic Lecture (Java Lecture/Python Lecture/Data Structure Algorithm Lecture)"
-                        >[Notice] Basic Lecture (Java Lecture/Python Lecture/Data Structure Algorithm Lecture)</a
+                        >[Notice] Basic Lecture (Java Lecture/Python
+                        Lecture/Data Structure Algorithm Lecture)</a
                       >
                     </p>
                     <div class="info_disc font13">
-                      <p class="mr_bt_10">Regular special lectures for beginners Hello. Beginning in 2021, a proposal for regular special lectures for beginners..</p>
+                      <p class="mr_bt_10">
+                        Regular special lectures for beginners Hello. Beginning
+                        in 2021, a proposal for regular special lectures for
+                        beginners..
+                      </p>
                       <p>
                         <span>Master</span>
-                        <span>
-                            <i class="far fa-clock"></i>12-15
-                        </span>
-                        <span>
-                            <i class="far fa-eye"></i>832
-                        </span>
+                        <span> <i class="far fa-clock"></i>12-15 </span>
+                        <span> <i class="far fa-eye"></i>832 </span>
                       </p>
                     </div>
                     <a class="Rm font13">Read more +</a>
@@ -800,21 +865,22 @@
                   </div>
                   <div class="div_info">
                     <p class="info_title font16 bold">
-                      <a 
+                      <a
                         title="[Notice] Basic Lecture (Java Lecture/Python Lecture/Data Structure Algorithm Lecture)"
-                        >[Notice] Basic Lecture (Java Lecture/Python Lecture/Data Structure Algorithm Lecture)</a
+                        >[Notice] Basic Lecture (Java Lecture/Python
+                        Lecture/Data Structure Algorithm Lecture)</a
                       >
                     </p>
                     <div class="info_disc font13">
-                      <p class="mr_bt_10">Regular special lectures for beginners Hello. Beginning in 2021, a proposal for regular special lectures for beginners..</p>
+                      <p class="mr_bt_10">
+                        Regular special lectures for beginners Hello. Beginning
+                        in 2021, a proposal for regular special lectures for
+                        beginners..
+                      </p>
                       <p>
                         <span>Master</span>
-                        <span>
-                            <i class="far fa-clock"></i>12-15
-                        </span>
-                        <span>
-                            <i class="far fa-eye"></i>832
-                        </span>
+                        <span> <i class="far fa-clock"></i>12-15 </span>
+                        <span> <i class="far fa-eye"></i>832 </span>
                       </p>
                     </div>
                     <a class="Rm font13">Read more +</a>
@@ -834,21 +900,22 @@
                   </div>
                   <div class="div_info">
                     <p class="info_title font16 bold">
-                      <a 
+                      <a
                         title="[Notice] Basic Lecture (Java Lecture/Python Lecture/Data Structure Algorithm Lecture)"
-                        >[Notice] Basic Lecture (Java Lecture/Python Lecture/Data Structure Algorithm Lecture)</a
+                        >[Notice] Basic Lecture (Java Lecture/Python
+                        Lecture/Data Structure Algorithm Lecture)</a
                       >
                     </p>
                     <div class="info_disc font13">
-                      <p class="mr_bt_10">Regular special lectures for beginners Hello. Beginning in 2021, a proposal for regular special lectures for beginners..</p>
+                      <p class="mr_bt_10">
+                        Regular special lectures for beginners Hello. Beginning
+                        in 2021, a proposal for regular special lectures for
+                        beginners..
+                      </p>
                       <p>
                         <span>Master</span>
-                        <span>
-                            <i class="far fa-clock"></i>12-15
-                        </span>
-                        <span>
-                            <i class="far fa-eye"></i>832
-                        </span>
+                        <span> <i class="far fa-clock"></i>12-15 </span>
+                        <span> <i class="far fa-eye"></i>832 </span>
                       </p>
                     </div>
                     <a class="Rm font13">Read more +</a>
@@ -868,28 +935,28 @@
                   </div>
                   <div class="div_info">
                     <p class="info_title font16 bold">
-                      <a 
+                      <a
                         title="[Notice] Basic Lecture (Java Lecture/Python Lecture/Data Structure Algorithm Lecture)"
-                        >[Notice] Basic Lecture (Java Lecture/Python Lecture/Data Structure Algorithm Lecture)</a
+                        >[Notice] Basic Lecture (Java Lecture/Python
+                        Lecture/Data Structure Algorithm Lecture)</a
                       >
                     </p>
                     <div class="info_disc font13">
-                      <p class="mr_bt_10">Regular special lectures for beginners Hello. Beginning in 2021, a proposal for regular special lectures for beginners..</p>
+                      <p class="mr_bt_10">
+                        Regular special lectures for beginners Hello. Beginning
+                        in 2021, a proposal for regular special lectures for
+                        beginners..
+                      </p>
                       <p>
                         <span>Master</span>
-                        <span>
-                            <i class="far fa-clock"></i>12-15
-                        </span>
-                        <span>
-                            <i class="far fa-eye"></i>832
-                        </span>
+                        <span> <i class="far fa-clock"></i>12-15 </span>
+                        <span> <i class="far fa-eye"></i>832 </span>
                       </p>
                     </div>
                     <a class="Rm font13">Read more +</a>
                   </div>
                 </div>
               </li>
-           
             </ul>
           </div>
           <div class="pagination">
