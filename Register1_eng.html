@@ -1,0 +1,1122 @@
+  <!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ce85036718.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Register1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+      }
+      .wrapper{
+        overflow: hidden;
+      }
+      .bold {
+        font-weight: 700;
+      }
+      .purple {
+        color: #7b49b9;
+      }
+      .coral {
+        color: #da5c5f;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 150px;
+        margin-bottom: 0;
+      }
+      
+    
+    
+      /* HEADER */
+      .header {
+        background-color: #151726;
+        width: 100%;
+        color: white;
+        height: 75px;
+        line-height: 75px;
+        box-shadow: 0 1px white;
+        z-index: 9999;
+        border-bottom: -2px solid rgb(243, 237, 237);
+        position: fixed;
+      }
+      .header .header__menu .header__menu-icon {
+        margin-top: 10px;
+      }
+      .header .header__menu {
+        width: 96%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+      }
+      .header__menu .header__menu-nav ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+      }
+      .header__menu-nav li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+      .header .header__menu .header__menu-nav-btn {
+        text-align: right;
+        cursor: pointer;
+      }
+      .header__menu-nav-btn:hover + .nav__menu {
+        display: block;
+      }
+      /* END HEADER */
+      /* nav menu show/hidden when click icon */
+      .nav__menu {
+        display: none;
+        width: 100%;
+        background-color: rgb(234, 238, 225);
+        position: fixed;
+        top: 12%;
+        z-index: 999999;
+        border: 1px solid black;
+      }
+      .nav__menu-title {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+      .nav__menu hr {
+        width: 95%;
+      }
+      .nav__menu-btn {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 10px;
+        text-align: center;
+        grid-gap: 5px;
+        box-sizing: border-box;
+      }
+      .nav__menu-btn button {
+        width: 100%;
+        padding: 10px 15px;
+        cursor: pointer;
+        border: 1px solid black;
+        outline: none;
+      }
+      .nav__menu-link {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 94%;
+        margin: 0 auto;
+      }
+      .nav__menu-link > div {
+        border-right: 1px solid rgb(202, 196, 196);
+        padding: 15px;
+      }
+      .nav__menu-link > div:last-child {
+        border: none;
+      }
+      .nav__menu-link > div ul {
+        list-style-type: none;
+        margin-top: 12px;
+      }
+      .nav__menu-link > div h5 {
+        cursor: pointer;
+      }
+      .nav__menu-link > div a {
+        text-decoration: none;
+        color: #555;
+        font-size: 12px;
+        line-height: 30px;
+        cursor: pointer;
+      }
+      #closesubmenu {
+        cursor: pointer;
+      }
+      .contactus {
+        padding: 20px;
+        margin-bottom: 50px;
+      }
+      .contactus h5 {
+        text-align: center;
+      }
+      .contactus a {
+        text-decoration: none;
+        color: #555;
+      }
+      /* END nav menu show/hidden when click icon */
+      /* FOOTER */
+      footer {
+        margin-top: 120px;
+        background-color: #151726;
+        margin-bottom: -25px;
+      }
+      .footer__content {
+        width: 95%;
+        margin: 20px auto;
+        box-sizing: border-box;
+        color: white;
+        padding: 50px 0;
+      }
+      .footer__content-title {
+        line-height: 30px;
+        margin-bottom: 30px;
+      }
+      .footer__content-title h5 {
+        font-size: 20px;
+      }
+      .footer__content-infor {
+        display: grid;
+        grid-template-columns: 60% 40%;
+      }
+      .infor__left ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 20px 0;
+      }
+      .infor__right {
+        display: flex;
+        justify-content: space-around;
+        justify-content: flex-end;
+        margin-top: 20px;
+      }
+      .infor__right img {
+        width: 90%;
+      }
+      .hrfooter {
+        margin: 20px 0;
+      }
+      .footer__content-company {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 87% 13%;
+        margin-top: 40px;
+        justify-content: space-between;
+      }
+      .footer__content-company .footer__right img {
+        margin-left: 18px;
+      }
+      .footer__content-btn {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-bottom: 100px;
+      }
+      .footer__buton-left button {
+        padding: 10px 20px;
+        outline: none;
+        border-radius: 5px;
+        background-color: #000;
+        color: white;
+        border: 1px solid #000;
+      }
+      /* POPUP MESSAGE CHAT */
+      .mess {
+        position: fixed;
+        bottom: 23px;
+        left: 20px;
+      }
+      .mess i {
+        padding: 10px;
+        background-color: #125177;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      /* END POPUP MESSAGE CHAT */
+      /* BUTTON TOP HEADER SCROLL */
+      .topheader {
+        position: fixed;
+        bottom: 80px;
+        right: 5px;
+      }
+      .topheader__call img {
+        width: 80%;
+        cursor: pointer;
+      }
+      .topheader__btn {
+        position: absolute;
+        right: 25px;
+        padding: 13px 17px;
+        background-color: rgba(117, 112, 112, 0.3);
+        text-align: center;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all ease-in-out 0.2s;
+        border: 2px solid black;
+      }
+      .topheader__btn:hover {
+        background-color: #3059c7;
+        color: white;
+        border: none;
+      }
+      /* POPUP CHAT MESSAGE */
+      .popupchat {
+        display: none;
+        position: fixed;
+        top: 12%;
+        left: 1%;
+        width: 30%;
+        border-radius: 25px 25px 0 0;
+        background-color: #135278; /* For browsers that do not support gradients */
+        background-image: linear-gradient(#135278, #f6f6f7);
+        box-sizing: border-box;
+      }
+      .popupchat__content {
+        width: 98%;
+        margin: 10px auto;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      #closeChat {
+        cursor: pointer;
+      }
+      .popupchat__content-title {
+        display: flex;
+        justify-content: space-between;
+      }
+      .popupchat__content-title > div i {
+        color: #fff;
+      }
+      .popupchat__content-title > div i:first-child {
+        margin-right: 20px;
+      }
+      .popupchat__content-active {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+      }
+      .popupchat__active h5::before {
+        content: "";
+        position: absolute;
+        top: 80px;
+        left: 75px;
+        background-color: rgb(14, 226, 96);
+        height: 9px;
+        width: 9px;
+        border-radius: 50%;
+        border: 1px solid rgb(223, 220, 220);
+      }
+      .popupchat__online {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        box-sizing: border-box;
+        grid-gap: 1px;
+      }
+      .popupchat__online > div img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }
+      .startchat {
+        width: 100%;
+        height: 80%;
+        background-color: #fff;
+        border-radius: 10px;
+        z-index: 999999;
+        box-shadow: -1px 2px rgb(248, 239, 239);
+        padding: 15px 0;
+      }
+      .startchat__title {
+        display: flex;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        transition: all ease-in-out 0.3s;
+        margin-left: -2px;
+      }
+      .startchat__title:hover {
+        background-color: rgb(226, 225, 225);
+        cursor: pointer;
+      }
+      .startchat__title > div p {
+        font-size: 12px;
+        color: rgb(115, 115, 116);
+        letter-spacing: 1px;
+      }
+      .startchat__title img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .startchat__title h5 {
+        line-height: 25px;
+      }
+      .startchat__btn {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      .startchat__btn button {
+        padding: 10px 20px;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        background-color: #125177;
+        cursor: pointer;
+      }
+      .link .link__icon {
+        background-color: rgb(195, 197, 202);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 15px;
+        margin: 30px auto;
+        transition: all ease-in-out 0.3s;
+        cursor: pointer;
+      }
+      .link__icon i {
+        line-height: 45px;
+        font-size: 14px;
+        color: rgb(114, 116, 119);
+      }
+      .link__hover {
+        display: none;
+        text-align: center;
+        padding: 15px 5px;
+        background-color: black;
+        color: #fff;
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 90px;
+        left: 35px;
+      }
+      .link__icon:hover + .link__hover {
+        display: block;
+      }
+      .popupchat__bottom {
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .popupchat__bottom p {
+        box-sizing: border-box;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        color: rgb(181, 183, 187);
+      }
+      .popupchat__bottom p span {
+        color: black;
+      }
+      .popupchat__bottom p i {
+        padding: 5px;
+        background-color: rgb(102, 100, 237);
+        background-image: linear-gradient(rgb(102, 100, 237), rgb(35, 33, 177));
+        border-radius: 50%;
+        color: #fff;
+      }
+      /* END POPUP CHAT MESSAGE */
+      /* -------END FOOTER----- */
+      .content1{
+        position: relative;
+        text-align: center;
+        color: #fff;
+        height: 50px;
+        line-height: 50px;
+        font-size: 13.2px;
+        background: #333;
+        margin: 0 0 10px;
+        border-radius: 5px;
+      }
+      .content_section1{
+        display: block;
+        padding: 20px;
+        width: 100%;
+        height: 150px;
+        background: #fff;
+        border: 0;
+        line-height: 1.6em;
+        font-size: 12px;
+      }
+      section{
+        border: 1px solid #dde7e9;
+        margin-bottom: 20px;
+      }
+      .fregister_term, .fregister_private{
+        position: relative;
+      }
+      section h2{
+        font-size: 14.4px;
+        text-align: left;
+        padding: 20px;
+        border-bottom: 1px solid #dde7e9;
+      }
+      #fregister_term input[type=checkbox]{
+        position: absolute;
+        top: 40%;
+        right: 2%;
+      }
+      #fregister_private input[type=checkbox]{
+        position: absolute;
+        top: 40%;
+        right: 2%;
+      }
+      textarea:focus {
+        box-shadow: 0 0 5px #9ed4ff;
+        border: 1px solid #558ab7;
+        outline: none;
+      }
+      .table{
+        width: 90%;
+        margin: 20px auto;
+      }
+      .title, .line1, .line2{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        font-size: 12px;
+        border: 1px solid #dde7e9;
+      }
+      .line1, .line2{
+        text-align: left;
+      }
+      .line1{
+        border-bottom: none;
+        border-top: none;
+      }
+      .th, .td{
+        padding: 10px;
+        display: grid;
+        align-content: center;
+      }
+      .title{
+        background-color: #f7f7f9;
+        border: 1px solid #d8dbdf;
+
+      }
+      .th1, .td1, .td4, .th2, .td2, .td5{
+        border-right: 1px solid #dde7e9;
+      }
+      .th1, .th2{
+        border-right: 1px solid #d8dbdf;
+      }
+      .fregister_chkall{
+        border: 1px solid #dde7e9;
+        background-color: #f5f7fa;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+      }
+      .fregister_chkall input{
+        position: absolute;
+        top: 35%;
+        right: 2%;
+      }
+      label{
+        font-size: 14.4px;
+        text-align: left;
+        padding: 20px;
+      }
+      label:hover{
+        color: #2172f8;
+      }
+      .confirm{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        margin-top: 20px;
+        column-gap: 20px;
+      }
+      button[type=submit]{
+        outline: none;
+        border: none;
+        float: left;
+        height: 50px !important;
+        font-size: 13px;
+        background: #333;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 3px;
+      }
+      .confirm a{
+        color: black;
+        font-size: 13px;
+        float: left;
+        height: 50px !important;
+        border: 1px solid #dcdcdc;
+        cursor: pointer;
+        border-radius: 3px;
+        background: #fff;
+        display: grid;
+        align-content: center;
+      }
+      
+      @media only screen and (min-width: 360px) and (max-width: 1024px){
+        .container{
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+   <!-- HEADER -->
+   <header class="header">
+    <div class="header__menu">
+      <div class="header__menu-icon">
+        <img src="./images/logo.png" alt="" />
+      </div>
+      <nav class="header__menu-nav">
+        <ul>
+          <li><a href="">Beat Camp</a></li>
+          <li><a href="">Curriculum</a></li>
+          <li><a href="">Employment and Startup Support Center</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Mentoring</a></li>
+          <li><a href="">CONTACT US</a></li>
+        </ul>
+      </nav>
+      <div class="header__menu-nav-btn">
+        <i class="fas fa-align-justify" id="subnav"></i>
+      </div>
+    </div>
+  </header>
+  <!-- menu nav when hover -->
+  <section class="nav__menu">
+    <div class="nav__menu-title">
+      <h5>All Menu</h5>
+      <i class="fas fa-times" id="closesubmenu"></i>
+    </div>
+    <hr />
+    <div class="nav__menu-btn">
+      <div class="language">
+        <button>Ko</button>
+      </div>
+      <div class="language">
+        <button>En</button>
+      </div>
+      <div class="singup">
+        <button>Sign Up</button>
+      </div>
+      <div class="login">
+        <button>Login</button>
+      </div>
+    </div>
+    <div class="nav__menu-link">
+      <div class="item1">
+        <h5>Beat Camp</h5>
+        <ul>
+          <li><a href="">Bit Camp Introduction</a></li>
+          <li><a href="">Directions</a></li>
+        </ul>
+      </div>
+      <div class="item2">
+        <h5>Curriculum</h5>
+        <ul>
+          <li><a href="">Government funding process</a></li>
+          <li><a href="">Incumbent Course</a></li>
+          <li><a href="">Basic lecture</a></li>
+          <li><a href="">General Course</a></li>
+        </ul>
+      </div>
+      <div class="item3">
+        <h5>Employment and Startup Support Center</h5>
+        <ul>
+          <li><a href="">Employment and Startup Support Center</a></li>
+          <li><a href="">Recruitment Announcement</a></li>
+          <li><a href="">Overseas employment and start-up</a></li>
+        </ul>
+      </div>
+      <div class="item4">
+        <h5>blog</h5>
+        <ul>
+          <li><a href="">blog</a></li>
+        </ul>
+      </div>
+      <div class="item5">
+        <h5>Mentoring</h5>
+        <ul>
+          <li><a href="">Mentoring</a></li>
+          <li><a href="">Find a Mentor</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="contactus">
+      <h5><a href="">CONTACT US</a></h5>
+    </div>
+  </section>
+  <!-- END HEADER -->
+    <div class="wrapper">
+      <div class="container">
+        <form action="">
+          <div class="content1 bold">
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            You must agree to the terms and conditions of membership and the information on the privacy policy to register as a member.
+          </div>
+          <section id="fregister_term">
+            <div class="fregister_term">
+              <h2>Membership Agreement</h2>
+              <input type="checkbox" id="term">
+            </div>
+            <textarea class="content_section1">
+              Partner Membership Agreement
+
+              Article 1 [Purpose
+              These terms and conditions are the terms and conditions of use of the affiliate marketing service Bitcamp (hereinafter referred to as the "service") provided by Bitcamp Co., Ltd. (hereinafter referred to as the "operator") in accordance with the provisions of related laws such as the Telecommunication Business Act and the Enforcement Decree of the same Act. It aims to stipulate matters related to.
+              
+              Article 2 Notice of Terms and Conditions
+              ① The contents of this agreement are posted on the service screen or notified to service partner subscribers (hereinafter referred to as "subscribers") in other ways, and the operator agrees to the contents of this agreement and submits information about himself/herself to the operator. It takes effect by approving the application through e-mail, etc.
+              ② The operator may change these terms and conditions, and the changed terms and conditions shall be notified to the subscriber through e-mail and announcements, and if there is no objection within the specified period at the time of notification, it will be interpreted as agreed and effective.
+              ③ This agreement is in principle valid for one year after the subscriber's subscription to the service, and the effect is automatically extended for one year if there is no separate notice from the subscriber or operator after one year.
+              
+              Article 3 Rules other than the terms and conditions>
+              Matters not specified in these terms and conditions shall comply with the provisions of the Basic Telecommunications Act, the Telecommunications Business Act and other related laws.
+              
+              Article 4 Definition of terms
+              The definitions of terms used in this agreement are as follows.
+              ① Service
+              It refers to a service that mediates an advertiser who wants to sell Internet advertisements and products and a site operator who wants to place Internet advertisements on his/her site and executes Internet advertisements and product distribution brokerage.
+              ② Operator
+              It refers to a person who is in charge of recruiting subscribers through the service, brokering the connection between subscribers and advertisers, measuring and reporting performance such as advertising and product sales, and calculating and paying fees according to performance.
+              ③ Subscriber (partner)
+              It refers to a person who has registered for the service for the purpose of earning profits for its performance by posting advertisements mediated by the operator on his site. Subscribers can be individuals, groups or corporations and receive a contracted price from the operator for performance.
+              ④ Visitor
+              It refers to a general Internet user who conducts commerce and other Internet use activities through the advertiser's site through various advertisements and promotions on the subscriber's site.
+              ⑤ Advertiser
+              It refers to a person who requests and pays a fee for the company's advertisements through various sites (subscribers sites) on the Internet. Advertisers must be individuals or corporations who have goods and services capable of online commerce and conduct business activities, and other detailed qualification requirements are subject to the regulations of the operator.
+              ⑥ Payment method per performance-CPA (Cost Per Action)
+              It refers to a method of paying a contracted amount to a subscriber when a new visitor accessed through a link from the subscriber's site responds to a questionnaire, provides additional information, or performs a predetermined action in the terms and conditions, such as registering as a member.
+              ⑦ Fees and advertising expenses
+              Fees refer to the amount the operator pays to subscribers when performance is achieved.
+              Advertising cost refers to the amount that the advertiser pays to the operator when the result is achieved.
+              ⑧ Termination
+              It means that the legal validity of the mutual terms and conditions is terminated due to the occurrence of the reason for termination after the subscriber opens the service.
+              
+              Article 5 (service subscription procedure)
+              ① In order to subscribe to the service provided by the operator, the applicant must agree to these terms and conditions.
+              ② The applicant must fill out the application in accordance with the principle of good faith.
+              
+              Article 6 (service subscriber qualification)
+              ① If the contents of the applicant's application and the site are related to the following, the operator may refuse to approve the subscription.
+              If the content of the application falls under the following
+              end. If it is not your own email.
+              I. If you applied using someone else's name.
+              All. In case of false information on the application form.
+              la. If the applicant is under 19 years of age.
+              hemp. Other cases where the application requirements set by the company are insufficient.
+              If the activity is:
+              end. Content that is linked to criminal activity and promotes illegal activity.
+              I. Content that infringes the copyright and intellectual property rights of operators and third parties.
+              All. Content that violates public order and morals.
+              la. Content that defames or defames other subscriptions and Internet users.
+              hemp. Contents that violate related laws
+              bar. Other content deemed inappropriate for the operator to judge.
+              ② If the approval of membership is rejected, the applicant may reapply after consulting the operator and adjusting the contents.
+              
+              Article 7 (Obligation of Operator)
+              ① The operator shall not divulge and distribute the subscriber's personal information known to the service provision to a third party without his/her permission. However, if there is a request from a state agency in accordance with the provisions of relevant laws such as the Telecommunications Business Act, a request from an investigative agency, the Information and Communication Ethics Committee, or other public institutions, or if there is a request in accordance with other relevant laws and regulations. Make an exception.
+              ② Within the scope of the purpose of Article 7 Paragraph 1, the operator can create statistical data on all or part of the subscriber's personal information in relation to the operator's business and use it or provide it to a third party. You can send cookies to your computer.
+              ③ The operator is obligated to accurately track the performance occurring at the subscriber site according to the principle of good faith and to report it to subscribers and advertisers to facilitate settlement of fees between both parties.
+              ④ If the subscriber wishes, the operator can provide information and consulting to increase the subscriber's profit under a separate contract.
+              
+              Article 8 (Obligations of Subscribers (Partners))
+              ① Subscribers do not raise objections to the results of performance measurement provided by the operator.
+              ② Subscribers must introduce or solicit advertisements to visitors in a legitimate and legal manner. Do not use methods that can harm the reputation of operators and advertisers, such as sending unauthorized spam mails, rewards for visitors, posting advertisements on bulletin boards on other sites, and using inappropriately produced advertisements.
+              ③ Subscriber cannot perform any of the following actions when using the service, and if caught, the subscriber's qualification will be immediately deprived.
+              1. Improper use of another subscriber's account.
+              2. The act of disclosing or distributing information obtained from the service to a third party without prior permission from the operator.
+              3. Violation of intellectual property rights and other rights including copyrights of operators and third parties.
+              4. The act of distributing information, sentences, figures, etc. in violation of public order and morals to others.
+              5. Acts associated with crime.
+              6. An act that harms the reputation of the operator by using unauthorized spam mail or bulletin board.
+              7. Actions that violate related laws.
+              8. Reward marketing that rewards visitors with cash and points.
+              9. Use of images that are not related to the advertisement, such as celebrities and celebrities.
+              10. Other apparent cheating.
+              11. Acts prohibited by the operator through separate notice.
+              12. Other apparent cheating.
+              13. Acts prohibited by the operator through separate notice.
+              ④ Subscriber cannot transfer, lend, or dispose of service usage rights and other terms and conditions to others.
+              ⑤ Subscribers (partners) must conduct marketing activities within a legal range, and subscribers (partners) are responsible for all damages caused by illegal methods or other promotional activities.
+              
+              Article 9 (subscriber's obligation to manage subscriber ID and password)
+              ① The subscriber is responsible for all management of ID and password, and the subscriber is responsible for all consequences caused by negligence or illegal use of the assigned ID and password.
+              ② If the subscriber learns that his/her ID has been used illegally, the subscriber must immediately notify the operator of the fact.
+              
+              Article 10 (provision of information)
+              The operator can provide the subscriber with various information deemed necessary when the subscriber uses the service through e-mail, etc., and if the subscriber does not want to, the subscriber can set the subscription application menu and the subscriber information modification menu to refuse to receive information.
+              However, if you need prompt notification of an emergency situation, you can contact us individually, such as sending e-mail or SMS, regardless of rejection.
+              
+              Article 11 (subscriber's post)
+              If the content of the site operated by the subscriber falls under Article 6, Paragraph 2, or does not comply with the standards for postings or advertisements prescribed by the operator, the operator can order correction of the objection. If not, order withdrawal from the subscription. I can.
+              
+              Article 12 (suspension of service provision and site closure)
+              ① The company temporarily or permanently suspends the service without prior notice or notice when normal service is impossible due to urgent system inspection, expansion and replacement, natural disaster, national emergency, power outage, service facility failure, or congestion of service users. can do.
+              ② When the service is terminated or the site is closed due to the company's circumstances or other reasons, it shall be notified on the bulletin board 1 month in advance. In this case, the member is not responsible for the termination of service use and site closure upon prior notice.
+              ③ Fees accumulated until service termination and site closure are paid on the 15th of the following month after closure.
+              ④ Upon service termination and site closure, the company deletes all members' personal information and related information such as fees.
+              
+              Article 13 (Visitor handling)
+              All services related to visitors accessed through the subscriber's site are handled under the responsibility of the visitor and advertiser, and all responsibilities arising from the processing are entirely with the visitor and advertiser.
+
+              Article 14 (Measurement of Affiliate Performance)
+              All results generated by clicking on the subscriber's site are based on the performance provided on the service page in operation.
+              
+              Article 15 (Method of Payment of Member (Partner) Fee)
+              ① Fee payment is made by the subscriber's request for remittance based on the computerized performance through the operator's site and the corresponding fee amount.
+              ② You can apply for fee payment only once a week, and you must apply for at least 10,000 won and can apply in units of 1,000 won.
+              ③ Fees paid are paid after withholding 3.3% of the requested amount for individuals, and this is not the case for general business operators.
+              ④ In principle, the fee is paid in cash. If the subscriber wishes, the fee may be paid in securities (gift certificates, etc.) other than cash and mileage points provided by the operator. Tax and utility charges, remittance fees, and postage, etc. in accordance with the payment of commissions are borne by the subscriber.
+              ⑤ Fees are paid within 3 business days.
+              ⑥ Tax invoices (business owners) or withholding documents (individuals) for payment of fees must be delivered to the operator by the day before payment, otherwise payment of fees will be rejected.
+              ⑦ If the subscriber does not receive the payment due to incorrect bank information notified by the subscriber, the cause attributable to the subscriber is the subscriber himself, and the operator does not compensate for it.
+              ⑧ Fees incurred in the current year are not carried over to the next year's fees. Fees incurred in the current year can be applied for withdrawal until the last withdrawal application period in February of the next year, and fees not normally applied for withdrawal by that date will automatically expire in March.
+              
+              Article 16 (Method of Payment of Fees upon Termination of Terms and Conditions)
+              ① In the case of termination of this Agreement, payment will be made only if the fee is 50,000 won or more by the date of termination, and any less than that will lapse.
+              ② If the terms and conditions are terminated pursuant to Article 18, the fee may not be paid.
+              
+              Article 17 (Logo Display)
+              The operator can use the logo to indicate a partnership relationship with the operator on the subscriber's site, and the subscriber can display this logo on his site.
+              
+              Article 18 (Termination of Terms and Restrictions on Use)
+              ① When a subscriber wishes to terminate this agreement, he/she must withdraw from the service or request termination by e-mail to the operator. The operator must check the contents of the e-mail that has arrived, and send an e-mail to the subscriber with permission to terminate the contract.
+              ② If it is difficult to post a specific advertisement anymore due to circumstances between the advertiser or the advertiser and the operator who requested the advertisement, the operator must notify the subscriber of the suspension of posting of the advertisement at least 3 days in advance, and the advertisement The accumulation of fees due to water shall be suspended from the date of notice during posting.
+              ③ If the subscriber does not log in to the service screen provided by the company more than once during a year, it is judged that he or she will not use the service and may terminate this agreement.
+              ④ If the subscriber falls under Article 6 Service Subscriber Qualifications Paragraphs 1 and 2 and Article 8 Subscriber's Duty Paragraph 3, despite the completion of the Article 5 service subscription procedure, the operator shall Can be terminated.
+              ⑤ In case of illegal publicity, proceeds will be confiscated according to the policy of the operation team, and you agree to withdraw without notice.
+              ⑥ In case of attacking similar documents of other companies or using other companies, as well as deleting the account, when a legal problem occurs, the member concerned is responsible for the legal problem, and the company is not responsible.
+              ⑦ In the event of a violation of the head office's public relations method being identified, it is obligated to promptly deal with it.
+              
+              Article 19 (Compensation for Damage)
+              ① The operator shall not be held liable for any damages incurred to the subscriber in connection with the use of the service while the subscriber is not performing.
+              ② Subscriber is responsible for indemnifying the operator for all material and monetary damages caused by interfering with the operator's normal business activities or violating the terms and conditions, and the operator is not responsible for any damage to a third party.
+              
+              Article 20 (set-off)
+              ① When a subscriber is obligated to pay the operator due to the arrival of the deadline or the obligation to repay before the deadline, the operator shall receive the debt and the bonds that the subscriber should be paid from the operator despite the deadline of the bond. It may be offset by notification.
+              ② In case of offsetting in accordance with paragraph ①, the calculation period for interest, etc. and delayed compensation shall be made until the day when the operator calculates for offset.
+              
+              Article 21 (Reports and Changes, etc.)
+              ① The subscriber must accurately fill in the name, trade name, representative, address, etc. necessary for the transaction in the form determined by the operator on the site.
+              ② When there is a change in the information to be reported pursuant to paragraph ①, the subscriber must immediately report the change in the form determined by the operator on the site, and before the report is made, even if it is processed as unchanged, there is no objection, and damage caused by processing as unchanged. Is to be borne by the subscriber and not to make any claims to the operator.
+              
+              Article 22 (effect of notification)
+              ① In the case of sending by e-mail to the final address reported by the subscriber (e-mail or the address where mail can be received), it is assumed that it has reached when the normal mailing period has elapsed.
+              ② The recipient must always check whether the e-mail has arrived, and the sender has sent e-mail, and all work related to e-mail transmission is terminated.
+              
+              Article 23 (disclaimer)
+              ① If the operator is unable to provide the service due to natural disasters or equivalent force majeure, the operator is exempted from responsibility for the provision of the service.
+              ② The operator is not responsible for any obstacles in service use due to reasons attributable to the subscriber.
+              ③ The operator is not responsible for the loss of the subscriber's expected profits from the service, and is not responsible for any other damages caused by the data obtained through the service.
+              ④ The operator is not responsible for the contents of the information, data, and facts posted on the service by subscribers and advertisers.
+              ⑤ The operator does not guarantee the subscribers' commission income over a certain amount.
+              ⑥ The operator is not responsible for illegal acts, unfair acts or other acts of subscribers or visitors.
+              ⑦ The operator is not involved in the marketing activities of subscribers (partners), and is not responsible for any damage caused by illegal methods or other promotional activities in which the subscribers (partners) infringe on intellectual property rights and other rights including copyrights of others. , The responsibility for it lies with the subscriber (partner).
+              
+              Article 24 (Jurisdiction)
+              The operator and subscriber endeavor to resolve disputes arising from the use of the service, and when a lawsuit is filed, the competent court shall have jurisdiction over the operator's address.
+              
+              ο These terms and conditions will be effective from February 09, 2018.</textarea>
+
+          </section>
+          <section id="fregister_private">
+            <div class="fregister_private">
+              <h2>Privacy Policy Guide</h2>
+              <input type="checkbox" id="private">
+            </div>
+            <div class="table">
+              <div class="title">
+                <div class="th1 th">Purpose</div>
+                <div class="th2 th">Item</div>
+                <div class="th3 th">Retention period</div>
+              </div>
+              <div class="line1">
+                <div class="td1 td">User identification and identification</div>
+                <div class="td2 td">ID, name, password</div>
+                <div class="td3 td">Until membership withdrawal</div>
+              </div>
+              <div class="line2">
+                <div class="td4 td">Notification of customer service use,
+                  user identification for CS response</div>
+                <div class="td5 td">Contact (email, mobile phone number)</div>
+                <div class="td6 td">Until membership withdrawal</div>
+              </div>
+            </div>
+
+          </section>
+          <div class="fregister_chkall">
+            <label for="check_all">I agree to all terms and conditions</label>
+            <input type="checkbox" id="check_all">
+          </div>
+          <div class="confirm">
+            <a href="" class="cancel bold">Cancel </a>
+            <button type="submit" class="bold submit">Sign Up</button>
+          </div>
+        </form>
+        
+
+      </div>
+    </div>
+    <footer>
+      <div class="footer__content">
+        <!-- Title -->
+        <div class="footer__content-title">
+          <h5>Bitcamp representative inquiry</h5>
+          <h5>080-861-0909</h5>
+        </div>
+        <!-- Infor -->
+        <div class="footer__content-infor">
+          <div class="infor__left">
+            <h5>
+              * For administrative work of existing students, please contact the
+              relevant center.
+            </h5>
+            <ul>
+              <li>Seocho Main Garden</li>
+              <li>02. 3486. 9600</li>
+              <li>Sinchon Center</li>
+              <li>02. 707. 1480</li>
+            </ul>
+            <ul>
+              <li>Gangnam Center</li>
+              <li>02. 3453. 5404</li>
+              <li>Jongno Center</li>
+              <li>02. 722. 1481</li>
+            </ul>
+            <ul>
+              <li>weekday</li>
+              <li>AM 09:00-PM 18:30</li>
+              <li>Saturdays, Sundays, and holidays</li>
+              <li>AM 09:00-PM 18:00</li>
+            </ul>
+          </div>
+          <div class="infor__right">
+            <div class="infor__right-icon1">
+              <img src="./images/ft_icon1.png" alt="icon 1" />
+            </div>
+            <div class="infor__right-icon2">
+              <img src="./images/ft_icon2.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <hr class="hrfooter" />
+        <div class="footer__content-company">
+          <div class="footer__left">
+            <p>
+              Bit Camp ｜ 459 Gangnam-daero, Seocho-gu, Seoul (Seocho-dong,
+              Baekam Building) ｜ Business Registration Number: 214-85-24928
+            </p>
+            <p>
+              Bit Computer Co., Ltd. Seo Cho Bonwon CEO: Cho Hyun-jung ｜
+              Inquiries : 02-3486-9600 ｜ Fax: 02-6007-1245
+            </p>
+            <p>
+              Mail-order business report number: Seocho-00098 ｜ Personal
+              information protection manager: Choi Jong- jin
+            </p>
+          </div>
+          <div class="footer__right">
+            <img src="./images/logo.png" alt="" />
+          </div>
+        </div>
+        <div class="footer__content-btn">
+          <div class="footer__buton-left">
+            <button>Privacy Policy</button>
+            <button>Terms of Use</button>
+            <button>Directions</button>
+          </div>
+          <div class="footer__copyright">
+            <p>Copyright (c) Bitcamp All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+      <!-- message chatbox -->
+      <div class="mess">
+        <i class="fas fa-comment-dots"></i>
+      </div>
+      <!-- popup chat message -->
+      <div class="popupchat">
+        <div class="popupchat__content">
+          <div class="popupchat__content-title">
+            <div>
+              <h5>Beat camp</h5>
+            </div>
+            <div>
+              <i class="fas fa-cog"></i>
+              <i class="fas fa-times" id="closeChat"></i>
+            </div>
+          </div>
+          <div class="popupchat__content-active">
+            <div class="popupchat__active">
+              <h5>Available</h5>
+              <p>Replies within an hour</p>
+            </div>
+            <div class="popupchat__online">
+              <div>
+                <img src="./images/available_1.png" alt="" />
+              </div>
+              <div>
+                <img src="./images/available_2.png" alt="" />
+              </div>
+              <div>
+                <img src="./images/available_3.png" alt="" />
+              </div>
+              <div>
+                <img src="./images/available_4.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="startchat">
+            <div class="startchat__title">
+              <img src="./images/startchat.png" alt="" />
+              <div>
+                <h5>Bitcamp</h5>
+                <p>Welcome! How can I help you today?</p>
+              </div>
+            </div>
+            <div class="startchat__btn">
+              <button>
+                <p><i class="fas fa-play"></i> Start a new chat</p>
+              </button>
+            </div>
+          </div>
+          <div class="link">
+            <div class="link__icon">
+              <i class="fas fa-link"></i>
+            </div>
+            <div class="link__hover">
+              <p>Chat link copy: bitcamp1:chann...</p>
+            </div>
+          </div>
+        </div>
+        <div class="popupchat__bottom">
+          <p>
+            <i class="far fa-comment-dots"></i> Powered by
+            <span>Channel.io</span>
+          </p>
+        </div>
+      </div>
+      <!-- topheader -->
+      <div class="topheader">
+        <div class="topheader__call">
+          <img src="./images/call_quick.png" alt="" />
+        </div>
+        <div class="topheader__btn">
+          <i class="fas fa-arrow-up"></i>
+        </div>
+      </div>
+    </footer>
+    <script>
+
+
+      //check all
+        let check_all = document.querySelector('#check_all')
+        let private = document.querySelector('#private')
+        let term = document.querySelector('#term')
+        let submit = document.querySelector('.submit')
+        check_all.onchange = function(){
+          if(check_all.checked){
+            private.checked = true
+            term.checked = true
+          }
+          else{
+            private.checked = false
+            term.checked = false
+          }
+        }
+        submit.onclick = function(e){
+          if(term.checked ===false || private.checked===false){
+            e.preventDefault();
+            alert('회원가입익관의 내용에 동의하셔야 회원가밉 하실 수 있습니다 ')
+          }
+        }
+
+      // -------sub menu-------------
+      // get element event
+      const iconmenu = document.querySelector("#subnav");
+      const popupnav = document.querySelector(".nav__menu");
+      const closemenu = document.querySelector("#closesubmenu");
+
+      //add event "click"
+      iconmenu.addEventListener("click", openModal);
+      closemenu.addEventListener("click", closesub);
+
+      // function event
+      // open
+      function openModal() {
+        popupnav.style.display = "block";
+      }
+      // close menu
+      function closesub() {
+        popupnav.style.display = "none";
+      }
+
+      //-------message----------
+      const mes = document.querySelector(".mess");
+      const openChat = document.querySelector(".popupchat");
+      const turnoff = document.querySelector("#closeChat");
+
+      mes.addEventListener("click", openMes);
+      turnoff.addEventListener("click", closeChat);
+
+      function openMes() {
+        openChat.style.display = "block";
+      }
+
+      function closeChat() {
+        openChat.style.display = "none";
+      }
+
+      // -----scrollTop-------
+      const btnScrollTop = document.querySelector(".topheader__btn");
+
+      btnScrollTop.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // scroll header if scroll >30 then change background
+      const headerChange = document.querySelector(".header");
+      const changeColora = document.querySelectorAll(".header__menu-nav li a");
+      const changeImg = document.querySelector(".header__menu-icon img");
+      const changeIcon = document.querySelector(".header__menu-nav-btn i");
+      window.onscroll = function () {
+        myFunction();
+      };
+      function myFunction() {
+        if (
+          document.body.scrollTop > 50 ||
+          document.documentElement.scrollTop > 50
+        ) {
+          headerChange.style.backgroundColor = "#fff";
+          changeImg.style.backgroundColor = "blue";
+          changeIcon.style.color = "black";
+          for (let i = 0; i < changeColora.length; i++) {
+            changeColora[i].style.color = "black";
+          }
+        } else {
+          headerChange.style.backgroundColor = "#151726";
+          changeImg.style.backgroundColor = "";
+          changeIcon.style.color = "white";
+          for (let i = 0; i < changeColora.length; i++) {
+            changeColora[i].style.color = "white";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
