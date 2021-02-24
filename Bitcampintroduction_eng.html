@@ -3,14 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/ce85036718.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Contact Us</title>
+    <title>Company Introduction</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
     <style>
       * {
@@ -19,294 +15,6 @@
         box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif;
       }
-      .bold {
-        font-weight: 700;
-      }
-      .purple {
-        color: #7b49b9;
-      }
-      .coral {
-        color: #da5c5f;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      input:focus {
-        box-shadow: 0 0 5px #9ed4ff;
-        border: 1px solid #558ab7;
-        outline: none;
-      }
-      textarea:focus {
-        box-shadow: 0 0 5px #9ed4ff;
-        border: 1px solid #558ab7;
-        outline: none;
-      }
-      input[type="text"] {
-        width: 100%;
-        border: 1px solid #ccc;
-        background: #fff;
-        color: #000;
-        vertical-align: middle;
-        border-radius: 0px;
-        padding: 5px;
-        margin-top: 10px;
-        height: 40px;
-      }
-      .contacts input {
-        width: 33.3333%;
-      }
-      .contact_input {
-        display: flex;
-      }
-      .title {
-        display: grid;
-        align-items: center;
-        justify-items: center;
-        position: relative;
-      }
-
-      .title img {
-        width: 100%;
-      }
-
-      .title p {
-        position: absolute;
-        top: 40%;
-        text-align: center;
-        color: #fff;
-        font-size: 35px;
-      }
-      .content1 {
-        margin-top: 60px;
-      }
-      .title_content1 {
-        display: inline;
-        border-bottom: 2px solid #333;
-        font-size: 25px;
-        margin-bottom: 50px;
-      }
-      .body_content1 {
-        line-height: 1.6em;
-        font-size: 20px;
-        margin: 30px 0;
-        cursor: default;
-      }
-      textarea {
-        border: 1px solid #ccc;
-        background: #fff;
-        color: #000;
-        vertical-align: middle;
-        border-radius: 0px;
-        padding: 5px;
-        width: 100%;
-        height: 120px;
-        -webkit-box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
-        -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-        box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
-        resize: none;
-        margin-top: 10px;
-      }
-      .line1,
-      .line2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 20px;
-        margin-bottom: 20px;
-      }
-      .required:after {
-        content: " *";
-        color: red;
-      }
-      .company_name {
-        position: relative;
-      }
-      .required {
-        position: absolute;
-        top: 20%;
-      }
-      .com_name_required {
-        top: 42%;
-        left: 98%;
-      }
-      .contact_input1_required {
-        left: 31%;
-      }
-      .contact_input2_required {
-        left: 64%;
-      }
-      .contact_input3_required {
-        left: 98%;
-      }
-      .contact_input {
-        position: relative;
-      }
-      label {
-        margin-bottom: 10px;
-        font-size: 16px;
-      }
-
-      .btn_submit {
-        display: grid;
-        justify-content: center;
-      }
-      .btn_complete {
-        background: #041d79;
-        width: 320px;
-        height: 50px;
-        line-height: 50px;
-        color: white;
-        cursor: pointer;
-      }
-      .span {
-        border: 1px solid black;
-        cursor: pointer;
-      }
-      .span_content {
-        display: none;
-      }
-      #checkbox:checked ~ .span_content {
-        display: block;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        width: 600px;
-        height: 525px;
-        margin-top: -250px;
-        margin-left: -300px;
-        z-index: 99999;
-        box-shadow: 2px 5px 5px 2px rgb(0 0 0 / 50%);
-        background: #fff;
-      }
-      .title_check {
-        height: 50px;
-        line-height: 50px;
-        background: #fff;
-        color: #b78bff;
-        text-align: center;
-        font-size: 20px;
-        position: relative;
-      }
-      .content_check {
-        width: 100%;
-        height: 470px;
-        border: none;
-        resize: none;
-        padding: 15px;
-        background: #fff;
-        font-size: 1em;
-        line-height: 14px;
-      }
-      .close {
-        position: absolute;
-        top: -10%;
-        right: 3%;
-        color: black;
-      }
-      .write_agree {
-        display: grid;
-        justify-items: center;
-        margin: 20px 0;
-      }
-      @media only screen and (max-width: 600px) and (min-width: 360px) {
-        .title {
-          overflow: hidden;
-        }
-        .title img {
-          height: 200px;
-          width: auto;
-        }
-        .title p {
-          font-size: 25px;
-        }
-        .line1,
-        .line2 {
-          grid-template-columns: 1fr;
-          row-gap: 20px;
-        }
-        #checkbox:checked ~ .span_content {
-          width: 90%;
-          margin-left: -45%;
-          height: 300px;
-          margin-top: -150px;
-          overflow: hidden;
-        }
-        .title_content1 {
-          font-size: 20px;
-        }
-        .body_content1 {
-          font-size: 16px;
-        }
-        .com_name_required {
-          left: 97%;
-        }
-        .contact_input1_required {
-          left: 30%;
-        }
-        .contact_input2_required {
-          left: 62%;
-        }
-        .contact_input3_required {
-          left: 96%;
-        }
-        label[for="check"] {
-          font-size: 12px;
-        }
-        .span {
-          padding: 5px 15px;
-          font-size: 12px;
-        }
-      }
-
-      @media only screen and (max-width: 360px) {
-        .container {
-          max-width: 324px;
-        }
-      }
-      @media only screen and (max-width: 375px) and (min-width: 361px) {
-        .container {
-          max-width: 337.5px;
-        }
-      }
-      @media only screen and (max-width: 414px) and (min-width: 376px) {
-        .container {
-          max-width: 372.6px;
-        }
-      }
-      @media only screen and (max-width: 480px) and (min-width: 415px) {
-        .container {
-          max-width: 432px;
-        }
-      }
-      @media only screen and (max-width: 600px) and (min-width: 481px) {
-        .container {
-          max-width: 540px;
-        }
-      }
-      @media only screen and (max-width: 768px) and (min-width: 601px) {
-        .container {
-          max-width: 691.2px;
-        }
-        .contact_input1_required {
-          left: 30%;
-        }
-        .contact_input2_required {
-          left: 62%;
-        }
-        .contact_input3_required {
-          left: 96%;
-        }
-        .com_name_required {
-          left: 97%;
-        }
-      }
-      @media only screen and (max-width: 1024px) and (min-width: 769px) {
-        .container {
-          max-width: 921.6px;
-        }
-      }
-
       /* HEADER */
       .header {
         background-color: #151726;
@@ -698,47 +406,341 @@
       }
       /* END POPUP CHAT MESSAGE */
       /* -------END FOOTER----- */
-      /* capthcha */
-      .captcha__content {
+      .bold {
+        font-weight: 700;
+      }
+      .purple {
+        color: #7b49b9;
+      }
+      .coral {
+        color: #da5c5f;
+      }
+      header {
+        height: 80px;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .title {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        position: relative;
+      }
+      .title img {
+        width: 100%;
+      }
+      .title p {
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        color: #fff;
+        font-size: 35px;
+      }
+      .content1 {
+        padding-top: 150px;
+        padding-bottom: 50px;
+        position: relative;
+      }
+      .content1 .content1_p1,
+      .content1_p2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        font-size: 35px;
+        text-align: center;
+      }
+      .content2 {
+        background: url("./img-cong/company1.jpg") no-repeat center center;
+        position: relative;
+        margin-top: 250px;
+      }
+      .img-robot {
+        position: absolute;
+        top: -250px;
+        left: 28%;
+      }
+      .logo-content {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 250px;
+        padding-bottom: 50px;
+      }
+      .logo-content span {
+        color: white;
+        font-size: 25px;
+      }
+      .content2_bottom {
+        padding-bottom: 60px;
+      }
+      .text_content2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .line {
+        font-size: 20px;
+        color: white;
+        padding: 5px 0;
+      }
+      .content3,
+      .content5,
+      .content7 {
+        padding-top: 150px;
+        padding-bottom: 50px;
+      }
+      .content3-top {
+        margin: auto;
+        font-size: 25px;
+        text-align: center;
+        padding: 5px 0;
+      }
+      .content3-bottom {
+        font-size: 25px;
+        font-weight: 300;
+        width: 210px;
+        border: 1px solid #333;
+        margin: auto;
+        border-radius: 30px;
+        padding: 10px 20px;
+        line-height: 23px;
+      }
+      .content4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 50px;
+      }
+      .left-content4 img {
+        width: 100%;
+      }
+      .right-content4 ul li {
+        font-size: 18px;
+        margin: 2px 10px 2px 40px;
+        line-height: 1.6em;
+      }
+      .content5-text,
+      .content7-text {
+        text-align: center;
+        color: #252525;
+        font-size: 25px;
+      }
+      .content6 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        text-align: center;
+      }
+      .content6_p1 {
+        font-size: 30px;
+      }
+      .content6_p2 {
+        font-size: 25px;
+      }
+      .content6_p3 {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      .content8 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .content8_left .content_left_p2,
+      .content_left_p3 {
+        font-size: 25px;
+      }
+      .content8_left .content_left_p5,
+      .content_left_p6,
+      .content_left_p7 {
+        font-size: 16px;
+        color: #c1c1c1;
+      }
+      .content8_left .content_left_p5 {
+        margin-top: 16px;
+      }
+      .content8_left .content_left_p2 {
         margin-top: 10px;
       }
-      #mainCaptcha {
-        border: 1px solid black;
-        box-sizing: border-box;
-        padding: 0 10px;
-        line-height: 50px;
-        font-size: 30px;
-        margin-right: 5px;
+      .content8_left .content_left_p3 {
+        margin-bottom: 10px;
       }
-      #refresh {
-        background-color: brown;
-        width: 5%;
-        cursor: pointer;
+      .content8_right img {
+        width: 100%;
       }
-      #txtInput {
-        width: 10%;
-        height: 51px;
-        margin-top: 0;
-        margin-right: 5px;
+      @media only screen and (max-width: 1024px) and (min-width: 360px){
+        .container {
+          width: 90%;
+          margin: 0 auto;
+        }
+        .logo-content span{
+          font-size: 18px;
+        }
+        .title img {
+          height: 200px;
+        }
+        .title p {
+          font-size: 25px;
+        }
+        .content1 {
+          width: 90%;
+          margin: 0 auto;
+          text-align: center;
+        }
+        .content1 .content1_p1,
+        .content1_p2 {
+          font-size: 25px;
+        }
+        .line {
+          font-size: 16px;
+        }
+        .text_content2 {
+          width: 90%;
+          margin: 0 auto;
+        }
+        .content3-top,
+        .content3-bottom {
+          font-size: 20px;
+          text-align: center;
+        }
+        .content3,
+        .content5,
+        .content7 {
+          padding-top: 70px;
+          padding-bottom: 25px;
+        }
+        .content3-bottom {
+          line-height: 10px;
+        }
+        .right-content4 ul li {
+          font-size: 16px;
+        }
+        .content5-text {
+          font-size: 20px;
+        }
+        .content6_p1 {
+          font-size: 25px;
+        }
+        .content6_p2 {
+          font-size: 20px;
+        }
+        .content6_p3 {
+          font-size: 16px;
+        }
+        .content8_left .content_left_p2,
+        .content_left_p3 {
+          font-size: 20px;
+        }
+        .content7-text {
+          font-size: 20px;
+        }
+      }   
+      
+      @media only screen and (max-width: 600px) and (min-width: 360px){
+        .content1 {
+          padding-top: 60px;
+        }
+        .content1 .content1_p1,
+        .content1_p2 {
+          display: inline;
+        }
+        .img-robot {
+          position: unset;
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 20px;
+        }
+        .img-robot img {
+          width: 100%;
+        }
+        .content2 {
+          margin-top: 0;
+          background: unset;
+        }
+        .content2_bottom {
+          padding-bottom: 70px;
+          background: url("./img-cong/company1.jpg") no-repeat center center;
+        }
+        .logo-content {
+          padding-top: 70px;
+          font-size: 20px;
+          padding-bottom: 5px;
+        }
+        .content4,
+        .content6 {
+          grid-template-columns: 1fr;
+        }
+        
+        .right-content4 {
+          margin-top: 20px;
+        }
+        .content8 {
+          grid-template-columns: 1fr;
+        }
+        .content8_left {
+          margin-bottom: 15px;
+        }
       }
-      #checkcap {
-        width: 5%;
-        margin-right: 5px;
-        cursor: pointer;
+      /* ---ipad ------- */
+      @media only screen and (max-width: 768px) and (min-width: 601px) {
+        .img-robot {
+          left: 10%;
+        }
+        .img-robot img {
+          width: 100%;
+        }
+        .content4,
+        .content6 {
+          grid-template-columns: 1fr;
+        }
+        .right-content4 {
+          margin-top: 20px;
+        }
+        .content8 {
+          grid-template-columns: 1fr;
+        }
+        .content8_left {
+          margin-bottom: 15px;
+        }
       }
-      .captcha__warning {
-        margin-top: 5px;
+      /* ---ipad pro------- */
+      @media only screen and (max-width: 1024px) and (min-width: 769px) {
+        .img-robot {
+          left: 20%;
+        }
+        .img-robot img {
+          width: 100%;
+        }
+        .content4 {
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 0;
+        }
+        .content6 {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        .right-content4 {
+          margin-top: -5px;
+        }
+        .content8 {
+          grid-template-columns: 1fr 1fr;
+        }
+        .content8_left {
+          margin-bottom: 15px;
+        }
+        .content6 {
+          justify-items: initial;
+        }
+        .content3 {
+          padding-bottom: 80px;
+        }
       }
-      /* end capthcha */
     </style>
   </head>
-  <body onload="Captcha();">
+  <body>
     <!-- HEADER -->
     <header class="header">
       <div class="header__menu">
         <div class="header__menu-icon">
-          <img src="./images/logo.png" alt="" />
+          <img src="./images/logo.png" alt=""/>
         </div>
         <nav class="header__menu-nav">
           <ul>
@@ -822,86 +824,152 @@
     <!-- END HEADER -->
     <div class="wrapper">
       <div class="title">
-        <img src="./img-cong/title_06.jpg" alt="" />
-        <p class="title_main bold">CONTACT US</p>
+        <img src="./img-cong/title_01.jpg" alt="" />
+        <p class="title_main bold">About Us</p>
+      </div>
+      <div class="content1">
+        <span class="bold purple content1_p1">History and tradition,</span>
+        <span class="bold purple content1_p2"
+          >Practice-oriented educational institution leading IT education</span
+        >
+      </div>
+      <div class="content2">
+        <div class="img-robot">
+          <img src="./img-cong/company0.png" alt="" />
+        </div>
+        <div class="content2_bottom">
+          <div class="logo-content">
+            <img src="./img-cong/logo.png" alt="" />
+            <span>Company introduction and purpose of establishment</span>
+          </div>
+          <div class="text_content2">
+            <div class="line line1">
+              This educational institution was founded in 1983 as the first venture company, leading the digital era.
+            </div>
+            <div class="line line2">
+              Established by Bit Computer Co. , Ltd. for the purpose of [the more technology is shared, the larger] [to cultivate excellent human resources and give back to society] .
+            </div>
+            <div class="line line3">
+              Therefore, the head of the agency understands and empathizes with the direction of government policy as the best IT expert in Korea.
+            </div>
+            <div class="line line4">
+              We operate high-quality training courses to cultivate human resources that industries need.
+            </div>
+            <div class="line line5">
+              In addition, for the purpose of sound development and promotion of the domestic software industry, such as the activities of the chairman of the Korea Software Industry Association.
+            </div>
+            <div class="line line6 bold">
+              We are engaged in various activities to raise awareness of the software industry and to improve the software industry policy and system.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content3">
+        <div class="container">
+          <div class="content3-top bold">Main business and performance</div>
+          <div class="content3-bottom">1990 ~ present</div>
+        </div>
       </div>
       <div class="container">
-        <div class="content1">
-          <div class="title_content1 bold">CONTACT US</div>
-          <div class="body_content1">
-            We are looking forward to partnering with Bitcamp talents. <br />
-            If you are a company that wants to be affiliated, please leave an
-            inquiry and we will contact you.
+        <div class="content4">
+          <div class="left-content4">
+            <img src="./img-cong/company2.jpg" alt="" />
           </div>
-          <form class="form">
-            <div class="line1">
-              <div class="company_name">
-                <label for="com_name">Company name</label><br />
-                <input type="text" placeholder="Company name" required />
-                <div class="com_name_required required"></div>
-              </div>
-              <div class="pic">
-                <label for="com_name">Person in charge</label><br />
-                <input type="text" placeholder="Person in charge" />
-              </div>
+          <div class="right-content4">
+            <ul>
+              <li>Produced beet graduates with tradition and history since 1990</li>
+              <li>
+                Ministry of Science and ICT [Innovative Growth Youth Talent Training Project] 3 years
+              </li>
+              <li>
+                Ministry of Science and Technology Information and Communication SW Professional Training Institute (Java, embedded, big data, AI, autonomous driving, etc.)
+              </li>
+              <li>2018~Present Seoul New Deal Job Policy Project</li>
+              <li>Ministry of Employment and Labor is operating national training for strategic industrial occupations</li>
+              <li>Domestic and overseas employment support</li>
+              <li>Selected as an excellent training institution for certification evaluation by the Ministry of Employment and Labor in 2019</li>
+              <li>Ministry of Employment and Labor 3-year certification body</li>
+              <li>Ministry of Employment and Labor Completion A grade institution</li>
+              <li>Selected as an excellent course for strengthening SW core competencies by the Ministry of Knowledge Economy</li>
+              <li>Unemployment Countermeasure Promotion Achievement Award (Prime Minister Award)</li>
+              <li>Group study and project-oriented practical training course</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="content5">
+        <div class="container">
+          <div class="content5-text bold">Training IT professionals</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="content6">
+          <div class="content6_1">
+            <div class="content6_img">
+              <img src="./img-cong/company3.png" alt="" />
             </div>
-            <div class="line2">
-              <div class="contacts">
-                <label for="com_name">Contact </label><br />
-                <div class="contact_input">
-                  <input type="text" placeholder="010" required />
-                  <input type="text" placeholder="1234" required />
-                  <input type="text" placeholder="5678" required />
-                  <div class="contact_input1_required required"></div>
-                  <div class="contact_input2_required required"></div>
-                  <div class="contact_input3_required required"></div>
-                </div>
-              </div>
-              <div class="email">
-                <label for="com_name">E-mail</label><br />
-                <input type="text" placeholder="E-mail" />
-              </div>
+            <div class="content6_p1 coral bold">01</div>
+            <div class="content6_p2 coral bold">Nurturing customized professionals</div>
+            <div class="content6_p3">
+              <div class="content6_p3_top">Relieve manpower in industrial sites and</div>
+              <div class="content6_p3_bot">Strengthening corporate competitiveness</div>
             </div>
-            <div class="contents">
-              <label for="Contents">Contents</label>
-              <br />
-              <textarea name="" id="" cols="30" rows="10"></textarea>
+          </div>
+          <div class="content6_2">
+            <div class="content6_img">
+              <img src="./img-cong/company4.png" alt="" />
             </div>
-            <div class="captcha">
-              <div class="captcha__content">
-                <p type="text" id="mainCaptcha"></p>
-                <input type="text" id="txtInput" />
-                <button
-                  id="checkcap"
-                  type="button"
-                  value="Check"
-                  onclick="alert(ValidCaptcha());"
-                >
-                  <i class="fas fa-check-circle"></i>
-                </button>
-                <button class="btn" id="refresh" onclick="Captcha();">
-                  <i class="fas fa-sync-alt"></i>
-                </button>
-              </div>
-              <div class="captcha__warning">
-                <p>
-                  Enter the number of automatic registration prevention numbers
-                  in order.
-                </p>
-              </div>
+            <div class="content6_p1 coral bold">02</div>
+            <div class="content6_p2 coral bold">Convergence-type professional manpower training</div>
+            <div class="content6_p3">
+              <div class="content6_p3_top">Other industries in the field of artificial intelligence</div>
+              <div class="content6_p3_bot">Strengthening industrial competitiveness through convergence</div>
             </div>
-            <div class="write_agree">
-              <div class="checkbox">
-                <input type="checkbox" id="check" />
-                <label for="check">I agree to the privacy policy</label>
-                <label class="span" for="checkbox">See More</label>
-                <input type="checkbox" id="checkbox" hidden />
-              </div>
+          </div>
+          <div class="content6_3">
+            <div class="content6_img">
+              <img src="./img-cong/company5.png" alt="" />
             </div>
-            <div class="btn_submit">
-              <button type="submit" class="btn_complete">Completed</button>
+            <div class="content6_p1 coral bold">03</div>
+            <div class="content6_p2 coral bold">Nurturing leader-level professionals</div>
+            <div class="content6_p3">
+              <div class="content6_p3_top">Overseas market in artificial intelligence</div>
+              <div class="content6_p3_bot">Strengthening national competitiveness through advancement, etc.</div>
             </div>
-          </form>
+          </div>
+        </div>
+      </div>
+      <div class="content7">
+        <div class="container">
+          <div class="content7-text bold">Bitcamp's slogan</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="content8">
+          <div class="content8_left">
+            <div class="content_left_p1">
+              <img src="./img-cong/company_mark.jpg" alt="" />
+            </div>
+            <div class="content_left_p2">
+              <span class="">The more you share your skills, the bigger it gets.</span>
+            </div>
+            <div class="content_left_p3">
+              <span class="">We cultivate excellent human resources and give back to society .</span> 
+            </div>
+            <div class="content_left_p4">
+              <img src="./img-cong/company_font.jpg" alt="" />
+            </div>
+            <div class="content_left_p5">
+              Technology grows as it is divided.
+            </div>
+            <div class="content_left_p6">
+              cultivate talented people and give them back to society.
+            </div>
+            <div class="content_left_p7">Bit Camp Preparing for the Top</div>
+          </div>
+          <div class="content8_right">
+            <img src="./img-cong/company6.png" alt="" />
+          </div>
         </div>
       </div>
     </div>
@@ -1129,38 +1197,6 @@
             changeColora[i].style.color = "white";
           }
         }
-      }
-
-      // captcha
-      function Captcha() {
-        var alpha = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
-        var i;
-        for (i = 0; i < 5; i++) {
-          var a = alpha[Math.floor(Math.random() * 9)];
-          var b = alpha[Math.floor(Math.random() * 9)];
-          var c = alpha[Math.floor(Math.random() * 9)];
-          var d = alpha[Math.floor(Math.random() * 9)];
-          var e = alpha[Math.floor(Math.random() * 9)];
-          var f = alpha[Math.floor(Math.random() * 9)];
-        }
-        var code = a + " " + b + " " + " " + c + " " + d + " " + e + " " + f;
-        document.getElementById("mainCaptcha").innerHTML = code;
-        document.getElementById("mainCaptcha").value = code;
-      }
-      function ValidCaptcha() {
-        var string1 = removeSpaces(
-          document.getElementById("mainCaptcha").value
-        );
-        var string2 = removeSpaces(document.getElementById("txtInput").value);
-        if (string1 == string2) {
-          return true;
-          string2.value = "";
-        } else {
-          return false;
-        }
-      }
-      function removeSpaces(string) {
-        return string.split(" ").join("");
       }
     </script>
   </body>

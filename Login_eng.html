@@ -7,17 +7,16 @@
       src="https://kit.fontawesome.com/ce85036718.js"
       crossorigin="anonymous"
     ></script>
-    <title>Contact Us</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <title>Login</title>
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif;
+      }
+      .wrapper{
+        overflow: hidden;
       }
       .bold {
         font-weight: 700;
@@ -30,20 +29,17 @@
       }
 
       .container {
-        max-width: 1200px;
-        margin: 0 auto;
+        max-width: 360px;
+        margin: 80px auto;
+        margin-top: 150px;
       }
       input:focus {
         box-shadow: 0 0 5px #9ed4ff;
         border: 1px solid #558ab7;
         outline: none;
       }
-      textarea:focus {
-        box-shadow: 0 0 5px #9ed4ff;
-        border: 1px solid #558ab7;
-        outline: none;
-      }
-      input[type="text"] {
+
+      input[type=text], input[type=password] {
         width: 100%;
         border: 1px solid #ccc;
         background: #fff;
@@ -53,68 +49,9 @@
         padding: 5px;
         margin-top: 10px;
         height: 40px;
-      }
-      .contacts input {
-        width: 33.3333%;
-      }
-      .contact_input {
-        display: flex;
-      }
-      .title {
-        display: grid;
-        align-items: center;
-        justify-items: center;
-        position: relative;
+        border-radius: 3px;
       }
 
-      .title img {
-        width: 100%;
-      }
-
-      .title p {
-        position: absolute;
-        top: 40%;
-        text-align: center;
-        color: #fff;
-        font-size: 35px;
-      }
-      .content1 {
-        margin-top: 60px;
-      }
-      .title_content1 {
-        display: inline;
-        border-bottom: 2px solid #333;
-        font-size: 25px;
-        margin-bottom: 50px;
-      }
-      .body_content1 {
-        line-height: 1.6em;
-        font-size: 20px;
-        margin: 30px 0;
-        cursor: default;
-      }
-      textarea {
-        border: 1px solid #ccc;
-        background: #fff;
-        color: #000;
-        vertical-align: middle;
-        border-radius: 0px;
-        padding: 5px;
-        width: 100%;
-        height: 120px;
-        -webkit-box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
-        -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-        box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
-        resize: none;
-        margin-top: 10px;
-      }
-      .line1,
-      .line2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 20px;
-        margin-bottom: 20px;
-      }
       .required:after {
         content: " *";
         color: red;
@@ -126,187 +63,85 @@
         position: absolute;
         top: 20%;
       }
-      .com_name_required {
-        top: 42%;
-        left: 98%;
-      }
-      .contact_input1_required {
-        left: 31%;
-      }
-      .contact_input2_required {
-        left: 64%;
-      }
-      .contact_input3_required {
-        left: 98%;
-      }
-      .contact_input {
-        position: relative;
-      }
-      label {
-        margin-bottom: 10px;
-        font-size: 16px;
-      }
 
-      .btn_submit {
-        display: grid;
-        justify-content: center;
+    .box{
+      border: 1px solid #dde7e9;
+      background: #fff;
+      width: 360px;
+      height: 312px;
+    }
+    .box_cate{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+    }
+    .box_cate a{
+      padding: 15px;
+      width: 100%;
+      text-align: center;
+    }
+    .login{
+      background-color: #f7f7f7;
+      cursor: pointer;
+    }
+    .signin, .login{
+      font-size: 12px;
+    }
+    form{
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+      padding: 15px;
+    }
+    button[type=submit]{
+      width: 100%;
+      background: #333;
+      height: 45px;
+      font-weight: bold;
+      font-size: 15px;
+      margin: 0 0 15px;
+      color: #fff;
+      
+    }
+    .lostPw{
+      position: absolute;
+      right: 15px;
+      background-color: #fff;
+      border: 1px solid #dde7e9;
+      font-size: 12px;
+      padding: 5px;
+      cursor: pointer;
+    }
+    .username{
+      margin-bottom: 10px;
+      height: 50px;
+      position: relative;
+    }
+    .password{
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .userName_required, .passWord_required{
+      position: absolute;
+      top: 45%;
+      left: 97%;
+    }
+    .passWord_required{
+      top: 26%;
+    }
+    label{
+      font-size: 12px;
+    }
+    @media only screen and (max-width: 360px){
+      .container {
+        max-width: 324px;
+        margin: 80px auto;
       }
-      .btn_complete {
-        background: #041d79;
-        width: 320px;
-        height: 50px;
-        line-height: 50px;
-        color: white;
-        cursor: pointer;
+      .box{
+        width: 324px;
       }
-      .span {
-        border: 1px solid black;
-        cursor: pointer;
-      }
-      .span_content {
-        display: none;
-      }
-      #checkbox:checked ~ .span_content {
-        display: block;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        width: 600px;
-        height: 525px;
-        margin-top: -250px;
-        margin-left: -300px;
-        z-index: 99999;
-        box-shadow: 2px 5px 5px 2px rgb(0 0 0 / 50%);
-        background: #fff;
-      }
-      .title_check {
-        height: 50px;
-        line-height: 50px;
-        background: #fff;
-        color: #b78bff;
-        text-align: center;
-        font-size: 20px;
-        position: relative;
-      }
-      .content_check {
-        width: 100%;
-        height: 470px;
-        border: none;
-        resize: none;
-        padding: 15px;
-        background: #fff;
-        font-size: 1em;
-        line-height: 14px;
-      }
-      .close {
-        position: absolute;
-        top: -10%;
-        right: 3%;
-        color: black;
-      }
-      .write_agree {
-        display: grid;
-        justify-items: center;
-        margin: 20px 0;
-      }
-      @media only screen and (max-width: 600px) and (min-width: 360px) {
-        .title {
-          overflow: hidden;
-        }
-        .title img {
-          height: 200px;
-          width: auto;
-        }
-        .title p {
-          font-size: 25px;
-        }
-        .line1,
-        .line2 {
-          grid-template-columns: 1fr;
-          row-gap: 20px;
-        }
-        #checkbox:checked ~ .span_content {
-          width: 90%;
-          margin-left: -45%;
-          height: 300px;
-          margin-top: -150px;
-          overflow: hidden;
-        }
-        .title_content1 {
-          font-size: 20px;
-        }
-        .body_content1 {
-          font-size: 16px;
-        }
-        .com_name_required {
-          left: 97%;
-        }
-        .contact_input1_required {
-          left: 30%;
-        }
-        .contact_input2_required {
-          left: 62%;
-        }
-        .contact_input3_required {
-          left: 96%;
-        }
-        label[for="check"] {
-          font-size: 12px;
-        }
-        .span {
-          padding: 5px 15px;
-          font-size: 12px;
-        }
-      }
-
-      @media only screen and (max-width: 360px) {
-        .container {
-          max-width: 324px;
-        }
-      }
-      @media only screen and (max-width: 375px) and (min-width: 361px) {
-        .container {
-          max-width: 337.5px;
-        }
-      }
-      @media only screen and (max-width: 414px) and (min-width: 376px) {
-        .container {
-          max-width: 372.6px;
-        }
-      }
-      @media only screen and (max-width: 480px) and (min-width: 415px) {
-        .container {
-          max-width: 432px;
-        }
-      }
-      @media only screen and (max-width: 600px) and (min-width: 481px) {
-        .container {
-          max-width: 540px;
-        }
-      }
-      @media only screen and (max-width: 768px) and (min-width: 601px) {
-        .container {
-          max-width: 691.2px;
-        }
-        .contact_input1_required {
-          left: 30%;
-        }
-        .contact_input2_required {
-          left: 62%;
-        }
-        .contact_input3_required {
-          left: 96%;
-        }
-        .com_name_required {
-          left: 97%;
-        }
-      }
-      @media only screen and (max-width: 1024px) and (min-width: 769px) {
-        .container {
-          max-width: 921.6px;
-        }
-      }
-
+    }
+    
       /* HEADER */
       .header {
         background-color: #151726;
@@ -698,209 +533,117 @@
       }
       /* END POPUP CHAT MESSAGE */
       /* -------END FOOTER----- */
-      /* capthcha */
-      .captcha__content {
-        display: flex;
-        margin-top: 10px;
-      }
-      #mainCaptcha {
-        border: 1px solid black;
-        box-sizing: border-box;
-        padding: 0 10px;
-        line-height: 50px;
-        font-size: 30px;
-        margin-right: 5px;
-      }
-      #refresh {
-        background-color: brown;
-        width: 5%;
-        cursor: pointer;
-      }
-      #txtInput {
-        width: 10%;
-        height: 51px;
-        margin-top: 0;
-        margin-right: 5px;
-      }
-      #checkcap {
-        width: 5%;
-        margin-right: 5px;
-        cursor: pointer;
-      }
-      .captcha__warning {
-        margin-top: 5px;
-      }
-      /* end capthcha */
     </style>
   </head>
-  <body onload="Captcha();">
-    <!-- HEADER -->
-    <header class="header">
-      <div class="header__menu">
-        <div class="header__menu-icon">
-          <img src="./images/logo.png" alt="" />
-        </div>
-        <nav class="header__menu-nav">
-          <ul>
-            <li><a href="">Beat Camp</a></li>
-            <li><a href="">Curriculum</a></li>
-            <li><a href="">Employment and Startup Support Center</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Mentoring</a></li>
-            <li><a href="">CONTACT US</a></li>
-          </ul>
-        </nav>
-        <div class="header__menu-nav-btn">
-          <i class="fas fa-align-justify" id="subnav"></i>
-        </div>
+  <body>
+   <!-- HEADER -->
+   <header class="header">
+    <div class="header__menu">
+      <div class="header__menu-icon">
+        <img src="./images/logo.png" alt="" />
       </div>
-    </header>
-    <!-- menu nav when hover -->
-    <section class="nav__menu">
-      <div class="nav__menu-title">
-        <h5>All Menu</h5>
-        <i class="fas fa-times" id="closesubmenu"></i>
+      <nav class="header__menu-nav">
+        <ul>
+          <li><a href="">Beat Camp</a></li>
+          <li><a href="">Curriculum</a></li>
+          <li><a href="">Employment and Startup Support Center</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Mentoring</a></li>
+          <li><a href="">CONTACT US</a></li>
+        </ul>
+      </nav>
+      <div class="header__menu-nav-btn">
+        <i class="fas fa-align-justify" id="subnav"></i>
       </div>
-      <hr />
-      <div class="nav__menu-btn">
-        <div class="language">
-          <button>Ko</button>
-        </div>
-        <div class="language">
-          <button>En</button>
-        </div>
-        <div class="singup">
-          <button>Sign Up</button>
-        </div>
-        <div class="login">
-          <button>Login</button>
-        </div>
+    </div>
+  </header>
+  <!-- menu nav when hover -->
+  <section class="nav__menu">
+    <div class="nav__menu-title">
+      <h5>All Menu</h5>
+      <i class="fas fa-times" id="closesubmenu"></i>
+    </div>
+    <hr />
+    <div class="nav__menu-btn">
+      <div class="language">
+        <button>Ko</button>
       </div>
-      <div class="nav__menu-link">
-        <div class="item1">
-          <h5>Beat Camp</h5>
-          <ul>
-            <li><a href="">Bit Camp Introduction</a></li>
-            <li><a href="">Directions</a></li>
-          </ul>
-        </div>
-        <div class="item2">
-          <h5>Curriculum</h5>
-          <ul>
-            <li><a href="">Government funding process</a></li>
-            <li><a href="">Incumbent Course</a></li>
-            <li><a href="">Basic lecture</a></li>
-            <li><a href="">General Course</a></li>
-          </ul>
-        </div>
-        <div class="item3">
-          <h5>Employment and Startup Support Center</h5>
-          <ul>
-            <li><a href="">Employment and Startup Support Center</a></li>
-            <li><a href="">Recruitment Announcement</a></li>
-            <li><a href="">Overseas employment and start-up</a></li>
-          </ul>
-        </div>
-        <div class="item4">
-          <h5>blog</h5>
-          <ul>
-            <li><a href="">blog</a></li>
-          </ul>
-        </div>
-        <div class="item5">
-          <h5>Mentoring</h5>
-          <ul>
-            <li><a href="">Mentoring</a></li>
-            <li><a href="">Find a Mentor</a></li>
-          </ul>
-        </div>
+      <div class="language">
+        <button>En</button>
       </div>
-      <div class="contactus">
-        <h5><a href="">CONTACT US</a></h5>
+      <div class="singup">
+        <button>Sign Up</button>
       </div>
-    </section>
-    <!-- END HEADER -->
+      <div class="login">
+        <button>Login</button>
+      </div>
+    </div>
+    <div class="nav__menu-link">
+      <div class="item1">
+        <h5>Beat Camp</h5>
+        <ul>
+          <li><a href="">Bit Camp Introduction</a></li>
+          <li><a href="">Directions</a></li>
+        </ul>
+      </div>
+      <div class="item2">
+        <h5>Curriculum</h5>
+        <ul>
+          <li><a href="">Government funding process</a></li>
+          <li><a href="">Incumbent Course</a></li>
+          <li><a href="">Basic lecture</a></li>
+          <li><a href="">General Course</a></li>
+        </ul>
+      </div>
+      <div class="item3">
+        <h5>Employment and Startup Support Center</h5>
+        <ul>
+          <li><a href="">Employment and Startup Support Center</a></li>
+          <li><a href="">Recruitment Announcement</a></li>
+          <li><a href="">Overseas employment and start-up</a></li>
+        </ul>
+      </div>
+      <div class="item4">
+        <h5>blog</h5>
+        <ul>
+          <li><a href="">blog</a></li>
+        </ul>
+      </div>
+      <div class="item5">
+        <h5>Mentoring</h5>
+        <ul>
+          <li><a href="">Mentoring</a></li>
+          <li><a href="">Find a Mentor</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="contactus">
+      <h5><a href="">CONTACT US</a></h5>
+    </div>
+  </section>
+  <!-- END HEADER -->
     <div class="wrapper">
-      <div class="title">
-        <img src="./img-cong/title_06.jpg" alt="" />
-        <p class="title_main bold">CONTACT US</p>
-      </div>
       <div class="container">
-        <div class="content1">
-          <div class="title_content1 bold">CONTACT US</div>
-          <div class="body_content1">
-            We are looking forward to partnering with Bitcamp talents. <br />
-            If you are a company that wants to be affiliated, please leave an
-            inquiry and we will contact you.
+        <div class="box">
+          <div class="box_cate">
+            <a class="signin">Login</a>
+            <a class="login">Sign Up</a>
           </div>
-          <form class="form">
-            <div class="line1">
-              <div class="company_name">
-                <label for="com_name">Company name</label><br />
-                <input type="text" placeholder="Company name" required />
-                <div class="com_name_required required"></div>
-              </div>
-              <div class="pic">
-                <label for="com_name">Person in charge</label><br />
-                <input type="text" placeholder="Person in charge" />
-              </div>
+          <form action="">
+            <div class="username">
+              <input type="text" class="userName required" required placeholder="아이디">
+              <div class="required userName_required"></div>
             </div>
-            <div class="line2">
-              <div class="contacts">
-                <label for="com_name">Contact </label><br />
-                <div class="contact_input">
-                  <input type="text" placeholder="010" required />
-                  <input type="text" placeholder="1234" required />
-                  <input type="text" placeholder="5678" required />
-                  <div class="contact_input1_required required"></div>
-                  <div class="contact_input2_required required"></div>
-                  <div class="contact_input3_required required"></div>
-                </div>
-              </div>
-              <div class="email">
-                <label for="com_name">E-mail</label><br />
-                <input type="text" placeholder="E-mail" />
-              </div>
+            <div class="password">
+              <input type="password" class="passWord" class="required" required placeholder="비밀번호">
+              <div class="required passWord_required"></div>
             </div>
-            <div class="contents">
-              <label for="Contents">Contents</label>
-              <br />
-              <textarea name="" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div class="captcha">
-              <div class="captcha__content">
-                <p type="text" id="mainCaptcha"></p>
-                <input type="text" id="txtInput" />
-                <button
-                  id="checkcap"
-                  type="button"
-                  value="Check"
-                  onclick="alert(ValidCaptcha());"
-                >
-                  <i class="fas fa-check-circle"></i>
-                </button>
-                <button class="btn" id="refresh" onclick="Captcha();">
-                  <i class="fas fa-sync-alt"></i>
-                </button>
-              </div>
-              <div class="captcha__warning">
-                <p>
-                  Enter the number of automatic registration prevention numbers
-                  in order.
-                </p>
-              </div>
-            </div>
-            <div class="write_agree">
-              <div class="checkbox">
-                <input type="checkbox" id="check" />
-                <label for="check">I agree to the privacy policy</label>
-                <label class="span" for="checkbox">See More</label>
-                <input type="checkbox" id="checkbox" hidden />
-              </div>
-            </div>
-            <div class="btn_submit">
-              <button type="submit" class="btn_complete">Completed</button>
-            </div>
+            <button type="submit">Login</button>
+            <input type="checkbox" id="autoLogin">
+            <label for="autoLogin"> Login automatically</label>
+            <span class="lostPw">
+              Find information
+            </span>
           </form>
         </div>
       </div>
@@ -1055,6 +798,13 @@
       </div>
     </footer>
     <script>
+      //click check box
+      let checkbox = document.querySelector('#autoLogin')
+      checkbox.onchange = function(){
+        if(checkbox.checked){
+          alert('자동로그인을 사용하시면 다음부터 회원아이디와 비 일번호를 입력하실 필요가 없습 -- 다. \n \n 공공장소에서는 개읜정브가 유줄될 수 있으니 사용을 자제하여 주십시 오  \n \n 자동로그인을 사용하시겠습 니까？ ')
+        }
+      }
       // -------sub menu-------------
       // get element event
       const iconmenu = document.querySelector("#subnav");
@@ -1129,38 +879,6 @@
             changeColora[i].style.color = "white";
           }
         }
-      }
-
-      // captcha
-      function Captcha() {
-        var alpha = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
-        var i;
-        for (i = 0; i < 5; i++) {
-          var a = alpha[Math.floor(Math.random() * 9)];
-          var b = alpha[Math.floor(Math.random() * 9)];
-          var c = alpha[Math.floor(Math.random() * 9)];
-          var d = alpha[Math.floor(Math.random() * 9)];
-          var e = alpha[Math.floor(Math.random() * 9)];
-          var f = alpha[Math.floor(Math.random() * 9)];
-        }
-        var code = a + " " + b + " " + " " + c + " " + d + " " + e + " " + f;
-        document.getElementById("mainCaptcha").innerHTML = code;
-        document.getElementById("mainCaptcha").value = code;
-      }
-      function ValidCaptcha() {
-        var string1 = removeSpaces(
-          document.getElementById("mainCaptcha").value
-        );
-        var string2 = removeSpaces(document.getElementById("txtInput").value);
-        if (string1 == string2) {
-          return true;
-          string2.value = "";
-        } else {
-          return false;
-        }
-      }
-      function removeSpaces(string) {
-        return string.split(" ").join("");
       }
     </script>
   </body>

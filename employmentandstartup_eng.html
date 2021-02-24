@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,11 +7,7 @@
       src="https://kit.fontawesome.com/ce85036718.js"
       crossorigin="anonymous"
     ></script>
-    <title>Contact Us</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <title>Employment and start up Support Center</title>
     <style>
       * {
         margin: 0;
@@ -19,294 +15,6 @@
         box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif;
       }
-      .bold {
-        font-weight: 700;
-      }
-      .purple {
-        color: #7b49b9;
-      }
-      .coral {
-        color: #da5c5f;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      input:focus {
-        box-shadow: 0 0 5px #9ed4ff;
-        border: 1px solid #558ab7;
-        outline: none;
-      }
-      textarea:focus {
-        box-shadow: 0 0 5px #9ed4ff;
-        border: 1px solid #558ab7;
-        outline: none;
-      }
-      input[type="text"] {
-        width: 100%;
-        border: 1px solid #ccc;
-        background: #fff;
-        color: #000;
-        vertical-align: middle;
-        border-radius: 0px;
-        padding: 5px;
-        margin-top: 10px;
-        height: 40px;
-      }
-      .contacts input {
-        width: 33.3333%;
-      }
-      .contact_input {
-        display: flex;
-      }
-      .title {
-        display: grid;
-        align-items: center;
-        justify-items: center;
-        position: relative;
-      }
-
-      .title img {
-        width: 100%;
-      }
-
-      .title p {
-        position: absolute;
-        top: 40%;
-        text-align: center;
-        color: #fff;
-        font-size: 35px;
-      }
-      .content1 {
-        margin-top: 60px;
-      }
-      .title_content1 {
-        display: inline;
-        border-bottom: 2px solid #333;
-        font-size: 25px;
-        margin-bottom: 50px;
-      }
-      .body_content1 {
-        line-height: 1.6em;
-        font-size: 20px;
-        margin: 30px 0;
-        cursor: default;
-      }
-      textarea {
-        border: 1px solid #ccc;
-        background: #fff;
-        color: #000;
-        vertical-align: middle;
-        border-radius: 0px;
-        padding: 5px;
-        width: 100%;
-        height: 120px;
-        -webkit-box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
-        -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-        box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
-        resize: none;
-        margin-top: 10px;
-      }
-      .line1,
-      .line2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 20px;
-        margin-bottom: 20px;
-      }
-      .required:after {
-        content: " *";
-        color: red;
-      }
-      .company_name {
-        position: relative;
-      }
-      .required {
-        position: absolute;
-        top: 20%;
-      }
-      .com_name_required {
-        top: 42%;
-        left: 98%;
-      }
-      .contact_input1_required {
-        left: 31%;
-      }
-      .contact_input2_required {
-        left: 64%;
-      }
-      .contact_input3_required {
-        left: 98%;
-      }
-      .contact_input {
-        position: relative;
-      }
-      label {
-        margin-bottom: 10px;
-        font-size: 16px;
-      }
-
-      .btn_submit {
-        display: grid;
-        justify-content: center;
-      }
-      .btn_complete {
-        background: #041d79;
-        width: 320px;
-        height: 50px;
-        line-height: 50px;
-        color: white;
-        cursor: pointer;
-      }
-      .span {
-        border: 1px solid black;
-        cursor: pointer;
-      }
-      .span_content {
-        display: none;
-      }
-      #checkbox:checked ~ .span_content {
-        display: block;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        width: 600px;
-        height: 525px;
-        margin-top: -250px;
-        margin-left: -300px;
-        z-index: 99999;
-        box-shadow: 2px 5px 5px 2px rgb(0 0 0 / 50%);
-        background: #fff;
-      }
-      .title_check {
-        height: 50px;
-        line-height: 50px;
-        background: #fff;
-        color: #b78bff;
-        text-align: center;
-        font-size: 20px;
-        position: relative;
-      }
-      .content_check {
-        width: 100%;
-        height: 470px;
-        border: none;
-        resize: none;
-        padding: 15px;
-        background: #fff;
-        font-size: 1em;
-        line-height: 14px;
-      }
-      .close {
-        position: absolute;
-        top: -10%;
-        right: 3%;
-        color: black;
-      }
-      .write_agree {
-        display: grid;
-        justify-items: center;
-        margin: 20px 0;
-      }
-      @media only screen and (max-width: 600px) and (min-width: 360px) {
-        .title {
-          overflow: hidden;
-        }
-        .title img {
-          height: 200px;
-          width: auto;
-        }
-        .title p {
-          font-size: 25px;
-        }
-        .line1,
-        .line2 {
-          grid-template-columns: 1fr;
-          row-gap: 20px;
-        }
-        #checkbox:checked ~ .span_content {
-          width: 90%;
-          margin-left: -45%;
-          height: 300px;
-          margin-top: -150px;
-          overflow: hidden;
-        }
-        .title_content1 {
-          font-size: 20px;
-        }
-        .body_content1 {
-          font-size: 16px;
-        }
-        .com_name_required {
-          left: 97%;
-        }
-        .contact_input1_required {
-          left: 30%;
-        }
-        .contact_input2_required {
-          left: 62%;
-        }
-        .contact_input3_required {
-          left: 96%;
-        }
-        label[for="check"] {
-          font-size: 12px;
-        }
-        .span {
-          padding: 5px 15px;
-          font-size: 12px;
-        }
-      }
-
-      @media only screen and (max-width: 360px) {
-        .container {
-          max-width: 324px;
-        }
-      }
-      @media only screen and (max-width: 375px) and (min-width: 361px) {
-        .container {
-          max-width: 337.5px;
-        }
-      }
-      @media only screen and (max-width: 414px) and (min-width: 376px) {
-        .container {
-          max-width: 372.6px;
-        }
-      }
-      @media only screen and (max-width: 480px) and (min-width: 415px) {
-        .container {
-          max-width: 432px;
-        }
-      }
-      @media only screen and (max-width: 600px) and (min-width: 481px) {
-        .container {
-          max-width: 540px;
-        }
-      }
-      @media only screen and (max-width: 768px) and (min-width: 601px) {
-        .container {
-          max-width: 691.2px;
-        }
-        .contact_input1_required {
-          left: 30%;
-        }
-        .contact_input2_required {
-          left: 62%;
-        }
-        .contact_input3_required {
-          left: 96%;
-        }
-        .com_name_required {
-          left: 97%;
-        }
-      }
-      @media only screen and (max-width: 1024px) and (min-width: 769px) {
-        .container {
-          max-width: 921.6px;
-        }
-      }
-
       /* HEADER */
       .header {
         background-color: #151726;
@@ -698,42 +406,271 @@
       }
       /* END POPUP CHAT MESSAGE */
       /* -------END FOOTER----- */
-      /* capthcha */
-      .captcha__content {
-        display: flex;
+      a {
+        text-decoration: none;
+      }
+      .bold {
+        font-weight: 700;
+      }
+      .purple {
+        color: #7b49b9;
+      }
+      .coral {
+        color: #da5c5f;
+      }
+      header {
+        height: 80px;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .title {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        position: relative;
+      }
+      .title img {
+        width: 100%;
+      }
+      .title p {
+        position: absolute;
+        top: 40%;
+        text-align: center;
+        color: #fff;
+        font-size: 35px;
+      }
+      .content1,
+      .content2,
+      .content3,
+      .content4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .body_content6 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+      }
+      .content1 {
+        margin-top: 200px;
+      }
+      .content2,
+      .content3,
+      .content4 {
+        margin-top: 80px;
+        margin-bottom: 80px;
+      }
+      .title_content1,
+      .title_content2,
+      .title_content3,
+      .title_content4 {
+        padding: 35px 0 20px;
+        font-size: 35px;
+      }
+      .desc_content1,
+      .desc_content2,
+      .desc_content3,
+      .desc_content4 {
+        font-size: 20px;
+        font-weight: 300;
+      }
+      .content2_right,
+      .content4_right {
+        display: grid;
+        justify-content: end;
+      }
+      .content5 {
+        height: 120px;
+        line-height: 120px;
+        text-align: center;
+        background: #f8f8f8;
+        font-size: 22px;
+        font-weight: 300;
+      }
+      .content6 {
+        margin-top: 120px;
+      }
+      .title_content6 {
+        display: inline;
+        border-bottom: 2px solid #333;
+        font-size: 25px;
+        margin-bottom: 50px;
+      }
+      .body_content6 {
+        margin-top: 40px;
+      }
+      .line2 {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .line3,
+      .line4 {
+        font-size: 12px;
+      }
+      .line4 span {
+        background-color: #333333;
+        color: white;
+        padding: 10px 20px;
         margin-top: 10px;
       }
-      #mainCaptcha {
-        border: 1px solid black;
-        box-sizing: border-box;
-        padding: 0 10px;
-        line-height: 50px;
-        font-size: 30px;
+      .line1 img {
+        width: 100%;
+      }
+      .line1 {
+        margin-bottom: 10px;
+      }
+      .line2 {
+        margin-bottom: 50px;
+      }
+      .line3 {
+        margin-bottom: 20px;
+      }
+      .line3 span:nth-child(2) {
+        margin: 0 20px;
+        color: #777;
+      }
+      .line3 i{
         margin-right: 5px;
       }
-      #refresh {
-        background-color: brown;
-        width: 5%;
-        cursor: pointer;
+      .line3 span:nth-child(3) {
+        color: #777;
       }
-      #txtInput {
-        width: 10%;
-        height: 51px;
-        margin-top: 0;
-        margin-right: 5px;
+
+      @media only screen and (max-width: 1024px) and (min-width: 360px){
+        .container {
+          width: 90%;
+        }
+        .content1_left img,
+        .content2_right img,
+        .content3_left img,
+        .content4_right img {
+          width: 100%;
+        }
+        .content5 {
+          height: auto;
+          line-height: 1.6em;
+          padding: 20px;
+          text-align: left;
+          word-break: keep-all;
+          font-size: 20px;
+        }
+        .title_content6 {
+          font-size: 20px;
+        }
       }
-      #checkcap {
-        width: 5%;
-        margin-right: 5px;
-        cursor: pointer;
+      /* -----------------mobile---------------------- */
+
+      @media only screen and (max-width: 600px) and (min-width: 360px){
+        .title {
+          overflow: hidden;
+        }
+        .title img {
+          height: 200px;
+          width: auto;
+        }
+        .title p {
+          font-size: 25px;
+        }
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          padding: 10px 0 20px;
+        }
+        .content1,
+        .content2,
+        .content3,
+        .content4 {
+          grid-template-columns: 1fr;
+          grid-row-gap: 10px;
+        }
+        .body_content6 {
+          grid-template-columns: 1fr;
+        }
+       
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          font-size: 25px;
+        }
+        .desc_content1,
+        .desc_content2,
+        .desc_content3,
+        .desc_content4 {
+          font-size: 16px;
+        }
+        .content1_right,
+        .content3_right {
+          grid-column-start: 1;
+          grid-row-start: 1;
+        }
+        .body_content6 {
+          row-gap: 40px;
+        }
       }
-      .captcha__warning {
-        margin-top: 5px;
+      /* -----galaxy------ */
+      @media only screen and (max-width: 360px) {
       }
-      /* end capthcha */
+      /* ---ip6,7,8------- */
+      @media only screen and (max-width: 375px) and (min-width: 361px) {
+      }
+      /* ---ip6,7,8 plus------- */
+      @media only screen and (max-width: 414px) and (min-width: 376px) {
+      }
+      /* ---nokia N9------- */
+      @media only screen and (max-width: 480px) and (min-width: 415px) {
+      }
+      /* ---nexus 7------- */
+      @media only screen and (max-width: 600px) and (min-width: 481px) {
+      }
+      /* ---ipad ------- */
+      @media only screen and (max-width: 768px) and (min-width: 601px) {
+        .content1,
+        .content2,
+        .content3,
+        .content4 {
+          column-gap: 70px;
+        }
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          font-size: 20px;
+        }
+        .desc_content1,
+        .desc_content2,
+        .desc_content3,
+        .desc_content4 {
+          font-size: 16px;
+        }
+      }
+      /* ---ipad pro------- */
+      @media only screen and (max-width: 1024px) and (min-width: 769px) {
+        .content1,
+        .content2,
+        .content3,
+        .content4 {
+          column-gap: 70px;
+        }
+        .title_content1,
+        .title_content2,
+        .title_content3,
+        .title_content4 {
+          font-size: 20px;
+        }
+        .desc_content1,
+        .desc_content2,
+        .desc_content3,
+        .desc_content4 {
+          font-size: 16px;
+        }
+      }
     </style>
   </head>
-  <body onload="Captcha();">
+  <body>
     <!-- HEADER -->
     <header class="header">
       <div class="header__menu">
@@ -822,86 +759,121 @@
     <!-- END HEADER -->
     <div class="wrapper">
       <div class="title">
-        <img src="./img-cong/title_06.jpg" alt="" />
-        <p class="title_main bold">CONTACT US</p>
+        <img src="./img-cong/title_03.jpg" alt="" />
+        <p class="title_main bold">Employment and Startup Support Center</p>
       </div>
       <div class="container">
         <div class="content1">
-          <div class="title_content1 bold">CONTACT US</div>
-          <div class="body_content1">
-            We are looking forward to partnering with Bitcamp talents. <br />
-            If you are a company that wants to be affiliated, please leave an
-            inquiry and we will contact you.
+          <div class="content1_left">
+            <img src="./img-cong/local_img1.jpg" alt="" />
           </div>
-          <form class="form">
-            <div class="line1">
-              <div class="company_name">
-                <label for="com_name">Company name</label><br />
-                <input type="text" placeholder="Company name" required />
-                <div class="com_name_required required"></div>
+          <div class="content1_right">
+            <img src="./img-cong/local_num1.jpg" alt="" />
+            <div class="title_content1 bold">
+              IT domestic and overseas employment and start-up organizations
+            </div>
+            <div class="desc_content1">
+              The Bitcamp Employment and Startup Support Center actively supports the graduates' job
+               hunting by matching talents necessary for various IT jobs with companies. In addition, 
+               we provide a specific start-up consulting process to graduates who are preparing for 
+               domestic and overseas start-ups.
+            </div>
+          </div>
+        </div>
+        <div class="content2">
+          <div class="content2_left">
+            <img src="./img-cong/local_num2.jpg" alt="" />
+            <div class="title_content2 bold">IT job matching program</div>
+            <div class="desc_content2">
+              We operate a talent pool of 50,000 people from current students and graduates with 
+              experience in development, and supply talent to more than 800 affiliated companies. 
+              We provide a job matching program for current students, as we have a personalized job-specific 
+              program for graduates and experienced students, as we have a process and TOOl for achievement and 
+              career development. In addition, the demand for overseas IT manpower, especially for programmers 
+              and SW development manpower, is high, so we promote manpower development and have a number of companies 
+              and employment support infrastructure.
+            </div>
+          </div>
+          <div class="content2_right">
+            <img src="./img-cong/local_img2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="content3">
+          <div class="content3_left">
+            <img src="./img-cong/local_img3.jpg" alt="" />
+          </div>
+          <div class="content3_right">
+            <img src="./img-cong/local_num3.jpg" alt="" />
+            <div class="title_content3 bold">Mentoring operation</div>
+            <div class="desc_content3">
+              We support face-to-face and non-face-to-face mentoring services through 
+              specialized mentor pools specialized in each field, such as employment, entrepreneurship, 
+              and government tasks. Based on the rich experience and know-how of venture companies in 
+              various fields, we diagnose the technical management difficulties of entrepreneurs with 
+              innovative technologies and present solutions.
+            </div>
+          </div>
+        </div>
+        <div class="content4">
+          <div class="content4_left">
+            <img src="./img-cong/local_num4.jpg" alt="" />
+            <div class="title_content4 bold">Online Offline Seminar</div>
+            <div class="desc_content4">
+              Bit entrepreneurs or experts in each field are invited to provide a place to communicate
+               with current students by telling stories of seniors in the field.
+            </div>
+          </div>
+          <div class="content4_right">
+            <img src="./img-cong/local_img4.jpg" alt="" />
+          </div>
+        </div>
+        <div class="content5">
+          The Employment Startup Support Center service is
+          <span class="coral bold">
+            a service that is supported only for new graduates and graduates .</span
+          >
+        </div>
+        <div class="content6">
+          <div class="title_content6 bold">Content to be together</div>
+          <div class="body_content6">
+            <div class="body6_p1">
+              <div class="line1"><img src="./img-cong/body1.png" alt="" /></div>
+              <div class="line2">
+                National Employment Support System</div>
+              <div class="line3">
+                <span>Master</span>
+                <span><i class="far fa-clock"></i>01-29</span>
+                <span><i class="far fa-eye"></i>76</span>
               </div>
-              <div class="pic">
-                <label for="com_name">Person in charge</label><br />
-                <input type="text" placeholder="Person in charge" />
+              <div class="line4">
+                <a href="#"><span>Read more +</span></a>
               </div>
             </div>
-            <div class="line2">
-              <div class="contacts">
-                <label for="com_name">Contact </label><br />
-                <div class="contact_input">
-                  <input type="text" placeholder="010" required />
-                  <input type="text" placeholder="1234" required />
-                  <input type="text" placeholder="5678" required />
-                  <div class="contact_input1_required required"></div>
-                  <div class="contact_input2_required required"></div>
-                  <div class="contact_input3_required required"></div>
-                </div>
+            <div class="body6_p2">
+              <div class="line1"><img src="./img-cong/body2.png" alt="" /></div>
+              <div class="line2">National Employment Support System</div>
+              <div class="line3">
+                <span>Master</span>
+                <span><i class="far fa-clock"></i>01-29</span>
+                <span><i class="far fa-eye"></i>76</span>
               </div>
-              <div class="email">
-                <label for="com_name">E-mail</label><br />
-                <input type="text" placeholder="E-mail" />
+              <div class="line4">
+                <a href="#"><span>Read more +</span></a>
               </div>
             </div>
-            <div class="contents">
-              <label for="Contents">Contents</label>
-              <br />
-              <textarea name="" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div class="captcha">
-              <div class="captcha__content">
-                <p type="text" id="mainCaptcha"></p>
-                <input type="text" id="txtInput" />
-                <button
-                  id="checkcap"
-                  type="button"
-                  value="Check"
-                  onclick="alert(ValidCaptcha());"
-                >
-                  <i class="fas fa-check-circle"></i>
-                </button>
-                <button class="btn" id="refresh" onclick="Captcha();">
-                  <i class="fas fa-sync-alt"></i>
-                </button>
+            <div class="body6_p3">
+              <div class="line1"><img src="./img-cong/body3.png" alt="" /></div>
+              <div class="line2 bold">National Employment Support System</div>
+              <div class="line3">
+                <span>Master</span>
+                <span><i class="far fa-clock"></i>01-29</span>
+                <span><i class="far fa-eye"></i>76</span>
               </div>
-              <div class="captcha__warning">
-                <p>
-                  Enter the number of automatic registration prevention numbers
-                  in order.
-                </p>
+              <div class="line4">
+                <a href="#"><span>Read more +</span></a>
               </div>
             </div>
-            <div class="write_agree">
-              <div class="checkbox">
-                <input type="checkbox" id="check" />
-                <label for="check">I agree to the privacy policy</label>
-                <label class="span" for="checkbox">See More</label>
-                <input type="checkbox" id="checkbox" hidden />
-              </div>
-            </div>
-            <div class="btn_submit">
-              <button type="submit" class="btn_complete">Completed</button>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
@@ -1129,38 +1101,6 @@
             changeColora[i].style.color = "white";
           }
         }
-      }
-
-      // captcha
-      function Captcha() {
-        var alpha = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
-        var i;
-        for (i = 0; i < 5; i++) {
-          var a = alpha[Math.floor(Math.random() * 9)];
-          var b = alpha[Math.floor(Math.random() * 9)];
-          var c = alpha[Math.floor(Math.random() * 9)];
-          var d = alpha[Math.floor(Math.random() * 9)];
-          var e = alpha[Math.floor(Math.random() * 9)];
-          var f = alpha[Math.floor(Math.random() * 9)];
-        }
-        var code = a + " " + b + " " + " " + c + " " + d + " " + e + " " + f;
-        document.getElementById("mainCaptcha").innerHTML = code;
-        document.getElementById("mainCaptcha").value = code;
-      }
-      function ValidCaptcha() {
-        var string1 = removeSpaces(
-          document.getElementById("mainCaptcha").value
-        );
-        var string2 = removeSpaces(document.getElementById("txtInput").value);
-        if (string1 == string2) {
-          return true;
-          string2.value = "";
-        } else {
-          return false;
-        }
-      }
-      function removeSpaces(string) {
-        return string.split(" ").join("");
       }
     </script>
   </body>
