@@ -55,8 +55,8 @@
       .bold {
         font-weight: 700;
       }
-      .mr_bt_10{
-            margin-bottom: 10px;
+      .mr_bt_10 {
+        margin-bottom: 10px;
       }
       /* HEADER */
       .header {
@@ -97,6 +97,32 @@
       .header__menu-nav-btn:hover + .nav__menu {
         display: block;
       }
+      /* header submenu */
+      .header__submenu {
+        display: none;
+        position: absolute;
+        top: 76px;
+        z-index: 999999;
+        box-shadow: 1px 1px 1px black;
+      }
+      .header__submenu ul {
+        flex-direction: column;
+        background-color: #fff;
+        width: 200px;
+      }
+      .header__submenu li {
+        padding: 0 10px;
+        height: 65px;
+        margin-top: -20px;
+        font-size: 12px;
+      }
+      .header__submenu .header__submenu-a {
+        color: black !important;
+      }
+      .header__menu-nav ul li:hover .header__submenu {
+        display: block;
+      }
+      /* end header submenu */
       /* END HEADER */
       /* nav menu show/hidden when click icon */
       .nav__menu {
@@ -450,72 +476,70 @@
       /* END POPUP CHAT MESSAGE */
       /* -------END FOOTER----- */
       /* Reponsive */
-     @media screen and (max-width: 600px){       
-       .header__menu-nav{
-         display: none;
-       }
-       .header__menu{
-        display: grid;
-        grid-template-columns: 80% 20%;
-        
-       }
-       .mess{
-         display: none;
-       }
-       .topheader{
-         display: none;
-       }
-       .requitment .requitment__list{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-gap: 20px;
+      @media screen and (max-width: 600px) {
+        .header__menu-nav {
+          display: none;
+        }
+        .header__menu {
+          display: grid;
+          grid-template-columns: 80% 20%;
+        }
+        .mess {
+          display: none;
+        }
+        .topheader {
+          display: none;
+        }
+        .requitment .requitment__list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        .container__curricul .curricul .curricul__list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 20px;
+        }
+        img {
+          width: 10%;
+        }
+        .nav__menu-link {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          width: 94%;
+          margin: 0 auto;
+        }
       }
-      .container__curricul .curricul .curricul__list{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        grid-gap: 20px;
+
+      @media screen and (max-width: 900px) {
+        .header__menu-nav {
+          display: none;
+        }
+        .header__menu {
+          display: grid;
+          grid-template-columns: 80% 20%;
+        }
+        .requitment .requitment__list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        .container__curricul .curricul .curricul__list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 20px;
+        }
+        img {
+          width: 80%;
+        }
+        .nav__menu-link {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          width: 94%;
+          margin: 0 auto;
+        }
       }
-      img{
-        width: 10%;
-      }
-      .nav__menu-link{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        width: 94%;
-        margin: 0 auto;       
-      }
-     }
-    
-     @media screen and (max-width: 900px){     
-       .header__menu-nav{
-        display: none;
-       }
-       .header__menu{
-        display: grid;
-        grid-template-columns: 80% 20%;
-        
-       }
-       .requitment .requitment__list{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-gap: 20px;
-      }
-      .container__curricul .curricul .curricul__list{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        grid-gap: 20px;
-      }
-      img{
-        width: 80%;
-      }
-      .nav__menu-link{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        width: 94%;
-        margin: 0 auto;       
-      }
-     }    
-     /* End Reponsive */
+      /* End Reponsive */
 
       /* -----------------------------BEGIN MAIN CSS-----------------------------------------*/
       #wapper {
@@ -659,11 +683,85 @@
         </div>
         <nav class="header__menu-nav">
           <ul>
-            <li><a href="">Beat Camp</a></li>
-            <li><a href="">Curriculum</a></li>
-            <li><a href="">Employment and Startup Support Center</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Mentoring</a></li>
+            <li>
+              <a href="">Beat Camp</a>
+              <div class="header__submenu">
+                <ul>
+                  <li>
+                    <a class="header__submenu-a" href=""
+                      >Bit Camp Introduction</a
+                    >
+                  </li>
+                  <li><a class="header__submenu-a" href="">Directions</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="">Curriculum</a>
+              <div class="header__submenu">
+                <ul>
+                  <li>
+                    <a class="header__submenu-a" href=""
+                      >Government funding process</a
+                    >
+                  </li>
+                  <li>
+                    <a class="header__submenu-a" href="">Incumbent Course</a>
+                  </li>
+                  <li>
+                    <a class="header__submenu-a" href="">Basic lecture</a>
+                  </li>
+                  <li>
+                    <a class="header__submenu-a" href="">General Course</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="">Employment and Startup Support Center</a>
+              <div class="header__submenu">
+                <ul>
+                  <li>
+                    <a class="header__submenu-a" href=""
+                      >Employment and Startup</a
+                    >
+                  </li>
+                  <li>
+                    <a class="header__submenu-a" href="">Suport Center</a>
+                  </li>
+                  <li>
+                    <a class="header__submenu-a" href=""
+                      >Recruitment Announcement</a
+                    >
+                  </li>
+                  <li>
+                    <a class="header__submenu-a" href=""
+                      >Overseas employment
+                    </a>
+                  </li>
+                  <li><a class="header__submenu-a" href="">Start up</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="">Blog</a>
+              <div class="header__submenu">
+                <ul>
+                  <li><a class="header__submenu-a" href="">Blog</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="">Mentoring</a>
+              <div class="header__submenu">
+                <ul>
+                  <li><a class="header__submenu-a" href="">Mentoring</a></li>
+                  <li>
+                    <a class="header__submenu-a" href="">Find a Mentor</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li><a href="">CONTACT US</a></li>
           </ul>
         </nav>
@@ -737,7 +835,7 @@
       </div>
     </section>
     <!-- END HEADER -->
-     <!---------------------------------BEGIN MAIN HTML------------------------------------->
+    <!---------------------------------BEGIN MAIN HTML------------------------------------->
     <div id="wapper">
       <div id="container_title_box">
         <img
@@ -1260,7 +1358,7 @@
         </div>
       </div>
     </div>
-     <!---------------------------------End MAIN HTML------------------------------------->
+    <!---------------------------------End MAIN HTML------------------------------------->
     <footer>
       <div class="footer__content">
         <!-- Title -->

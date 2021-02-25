@@ -64,40 +64,59 @@
         border-bottom: -2px solid rgb(243, 237, 237);
         position: fixed;
       }
-
       .header .header__menu .header__menu-icon {
         margin-top: 10px;
       }
-
       .header .header__menu {
         width: 96%;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 15% 70% 15%;
       }
-
       .header__menu .header__menu-nav ul {
         display: flex;
         justify-content: space-between;
         list-style-type: none;
       }
-
       .header__menu-nav li a {
         color: white;
         text-decoration: none;
         font-weight: 500;
         letter-spacing: 0.5px;
       }
-
       .header .header__menu .header__menu-nav-btn {
         text-align: right;
         cursor: pointer;
       }
-
       .header__menu-nav-btn:hover + .nav__menu {
         display: block;
       }
-
+      /* header submenu */
+      .header__submenu {
+        display: none;
+        position: absolute;
+        top: 76px;
+        z-index: 999999;
+        box-shadow: 1px 1px 1px black;
+      }
+      .header__submenu ul {
+        flex-direction: column;
+        background-color: #fff;
+        width: 200px;
+      }
+      .header__submenu li {
+        padding: 0 10px;
+        height: 65px;
+        margin-top: -20px;
+        font-size: 12px;
+      }
+      .header__submenu .header__submenu-a {
+        color: black !important;
+      }
+      .header__menu-nav ul li:hover .header__submenu {
+        display: block;
+      }
+      /* end header submenu */
       /* END HEADER */
       /* nav menu show/hidden when click icon */
       .nav__menu {
@@ -735,11 +754,85 @@
         </div>
         <nav class="header__menu-nav">
           <ul>
-            <li><a href="">Beat Camp</a></li>
-            <li><a href="">Curriculum</a></li>
-            <li><a href="">Employment and Startup Support Center</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Mentoring</a></li>
+            <li>
+              <a href="">Beat Camp</a>
+              <div class="header__submenu">
+                <ul>
+                  <li>
+                    <a class="header__submenu-a" href=""
+                      >Bit Camp Introduction</a
+                    >
+                  </li>
+                  <li><a class="header__submenu-a" href="">Directions</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="">Curriculum</a>
+              <div class="header__submenu">
+                <ul>
+                  <li>
+                    <a class="header__submenu-a" href=""
+                      >Government funding process</a
+                    >
+                  </li>
+                  <li>
+                    <a class="header__submenu-a" href="">Incumbent Course</a>
+                  </li>
+                  <li>
+                    <a class="header__submenu-a" href="">Basic lecture</a>
+                  </li>
+                  <li>
+                    <a class="header__submenu-a" href="">General Course</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="">Employment and Startup Support Center</a>
+              <div class="header__submenu">
+                <ul>
+                  <li>
+                    <a class="header__submenu-a" href=""
+                      >Employment and Startup</a
+                    >
+                  </li>
+                  <li>
+                    <a class="header__submenu-a" href="">Suport Center</a>
+                  </li>
+                  <li>
+                    <a class="header__submenu-a" href=""
+                      >Recruitment Announcement</a
+                    >
+                  </li>
+                  <li>
+                    <a class="header__submenu-a" href=""
+                      >Overseas employment
+                    </a>
+                  </li>
+                  <li><a class="header__submenu-a" href="">Start up</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="">Blog</a>
+              <div class="header__submenu">
+                <ul>
+                  <li><a class="header__submenu-a" href="">Blog</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="">Mentoring</a>
+              <div class="header__submenu">
+                <ul>
+                  <li><a class="header__submenu-a" href="">Mentoring</a></li>
+                  <li>
+                    <a class="header__submenu-a" href="">Find a Mentor</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li><a href="">CONTACT US</a></li>
           </ul>
         </nav>
